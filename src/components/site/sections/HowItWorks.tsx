@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/site/Motion";
-import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 import { Database, MessageSquareText, CalendarCheck2 } from "lucide-react";
 
 const steps = [
@@ -36,11 +36,17 @@ export function HowItWorks() {
 
         <div className="mt-16 relative">
           <div className="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-          <ScrollReveal className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+          <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
             {steps.map((s, i) => {
               const Icon = s.icon;
               return (
-                <ScrollRevealItem key={i}>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                >
                   <div className="relative text-center lg:text-left">
                     <div className="relative inline-flex">
                       <div className="w-24 h-24 rounded-full border border-gold/30 bg-navy flex items-center justify-center mx-auto lg:mx-0">
@@ -53,10 +59,10 @@ export function HowItWorks() {
                     <h3 className="mt-6 font-display text-2xl sm:text-3xl">{s.title}</h3>
                     <p className="mt-3 text-foreground/70 leading-relaxed">{s.body}</p>
                   </div>
-                </ScrollRevealItem>
+                </motion.div>
               );
             })}
-          </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
