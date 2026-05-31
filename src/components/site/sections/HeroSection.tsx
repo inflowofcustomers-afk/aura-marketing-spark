@@ -212,7 +212,7 @@ export function HeroSection() {
       tl.kill();
       driftTweens.forEach((t) => t?.kill());
     };
-  }, [particles, reduce]);
+  }, [particles, reduce, isMobile]);
 
   return (
     <section
