@@ -170,6 +170,15 @@ function ApplyPage() {
                     placeholder="[Prompt copy for the applicant.]"
                   />
 
+                  <ConsentCheckbox
+                    checked={consent}
+                    onChange={(v) => {
+                      setConsent(v);
+                      if (v) setConsentError(false);
+                    }}
+                    error={consentError}
+                  />
+
                   <button
                     type="submit"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy-deep px-7 py-3.5 text-[15px] font-medium hover:bg-gold-light transition-all hover:-translate-y-0.5 shadow-[0_10px_40px_-12px_rgba(184,150,62,0.6)]"
