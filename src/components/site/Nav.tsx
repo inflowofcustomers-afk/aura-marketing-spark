@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -6,6 +6,15 @@ import { Menu, X } from "lucide-react";
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+
+  // Pages whose top section is cream — nav needs dark text when transparent
+  const isLightPage = pathname !== "/";
+
+  // Unscrolled text colours: dark on cream pages, light on dark hero
+  const navText = !scrolled && isLightPage ? "text-navy-deep/70 hover:text-navy-deep" : "text-foreground/80 hover:text-gold";
+  const logoText = !scrolled && isLightPage ? "text-navy-deep" : "text-foreground";
+  const eyebrowText = !scrolled && isLightPage ? "text-navy-deep/60" : "";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -29,10 +38,10 @@ export function Nav() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display text-xl sm:text-2xl tracking-wider text-foreground">
+          <span className={`font-display text-xl sm:text-2xl tracking-wider transition-colors duration-300 ${logoText}`}>
             AURA
           </span>
-          <span className="text-[10px] eyebrow inline-block translate-y-[1px]">
+          <span className={`text-[10px] eyebrow inline-block translate-y-[1px] transition-colors duration-300 ${eyebrowText}`}>
             Invites
           </span>
         </Link>
@@ -42,7 +51,7 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-foreground/80 hover:text-gold transition-colors"
+              className={`text-sm transition-colors duration-300 ${navText}`}
             >
               {l.label}
             </a>
@@ -56,7 +65,7 @@ export function Nav() {
         </nav>
 
         <button
-          className="md:hidden p-2 text-foreground"
+          className={`md:hidden p-2 transition-colors duration-300 ${!scrolled && isLightPage ? "text-navy-deep" : "text-foreground"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
