@@ -140,6 +140,11 @@ function ApplyPage() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    if (!consent) {
+                      setConsentError(true);
+                      return;
+                    }
+                    setConsentError(false);
                     setSent(true);
                   }}
                   className="space-y-5"
