@@ -282,7 +282,9 @@ export function HeroSection() {
         className="absolute inset-0 flex items-center justify-center"
         style={{
           zIndex: 3,
-          ...(isMobile ? { animation: "fade-in 600ms ease-out both" } : {}),
+          ...(isMobile
+            ? { animation: "hero-mobile-fade-in 600ms ease-out both" }
+            : {}),
         }}
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8 text-center">
