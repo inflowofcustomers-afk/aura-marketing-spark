@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <div className="font-display text-2xl tracking-wider">AURA</div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-              [TAGLINE — patient reactivation for MedSpa owners.]
+              Patient reactivation for MedSpa owners.
             </p>
           </div>
           <div>

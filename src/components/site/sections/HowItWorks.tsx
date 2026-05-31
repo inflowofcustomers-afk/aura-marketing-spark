@@ -4,18 +4,18 @@ import { Database, MessageSquareText, CalendarCheck2 } from "lucide-react";
 const steps = [
   {
     icon: Database,
-    title: "[STEP 1 TITLE]",
-    body: "[Step 1 description.]",
+    title: "Connect",
+    body: "You connect your Mangomint or Boulevard account — or upload a CSV export. Takes 15 minutes. We handle everything after that.",
   },
   {
     icon: MessageSquareText,
-    title: "[STEP 2 TITLE]",
-    body: "[Step 2 description.]",
+    title: "Launch",
+    body: "Our team builds your campaign — segmentation, copy, sequencing, dedicated phone number. Your campaign goes live within 7 days.",
   },
   {
     icon: CalendarCheck2,
-    title: "[STEP 3 TITLE]",
-    body: "[Step 3 description.]",
+    title: "Collect",
+    body: "Patients respond. Appointments book. You get a weekly report showing exactly what came in. The only thing you do is show up for the appointment.",
   },
 ];
 
@@ -28,7 +28,7 @@ export function HowItWorks() {
             <span className="eyebrow">The Process</span>
             <h2 className="mt-4 font-display text-3xl sm:text-5xl">How It Works</h2>
             <p className="mt-4 max-w-xl mx-auto text-foreground/70">
-              [Short subhead about the simplicity of the 3-step process.]
+              Three steps. Seven days. Appointments on your calendar.
             </p>
           </div>
         </Reveal>

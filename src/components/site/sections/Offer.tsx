@@ -3,12 +3,14 @@ import { Reveal } from "@/components/site/Motion";
 import { CTALink } from "@/components/site/CTA";
 
 const includes = [
-  "[Feature / deliverable line 1]",
-  "[Feature / deliverable line 2]",
-  "[Feature / deliverable line 3]",
-  "[Feature / deliverable line 4]",
-  "[Feature / deliverable line 5]",
-  "[Feature / deliverable line 6]",
+  "AURA platform deployment",
+  "Native Mangomint or Boulevard integration",
+  "Full patient database segmentation",
+  "Complete SMS + email campaign creative",
+  "Dedicated phone number for your practice",
+  "Live tracking dashboard",
+  "Weekly performance reports",
+  "60-day campaign window",
 ];
 
 export function Offer() {
@@ -20,10 +22,10 @@ export function Offer() {
           <div className="text-center">
             <span className="eyebrow">The Offer</span>
             <h2 className="mt-4 font-display text-3xl sm:text-5xl">
-              [OFFER HEADLINE]
+              The AURA Reactivation Pilot.
             </h2>
             <p className="mt-4 text-foreground/70 max-w-xl mx-auto">
-              [Short subhead introducing the founder offer.]
+              Three founder spots. Lower setup cost. Direct access to our team. Locked-in rate that won't be available to anyone else.
             </p>
           </div>
         </Reveal>
@@ -37,11 +39,11 @@ export function Offer() {
                 <div className="eyebrow">Founder Pricing</div>
                 <div className="mt-3 flex items-baseline gap-2">
                   <span className="font-display text-5xl sm:text-6xl gold-gradient-text">
-                    [$X]
+                    $5,000
                   </span>
-                  <span className="text-foreground/60 text-sm">[/period]</span>
+                  <span className="text-foreground/60 text-sm">setup fee</span>
                 </div>
-                <p className="mt-3 text-sm text-foreground/60">[Brief pricing detail.]</p>
+                <p className="mt-3 text-sm text-foreground/60">Includes your first 20 booked appointments. $250 per booking after that.</p>
               </div>
               <div className="flex sm:justify-end sm:items-end">
                 <CTALink to="/apply" variant="gold">

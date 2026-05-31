@@ -2,16 +2,17 @@ import { Check, X } from "lucide-react";
 import { Reveal } from "@/components/site/Motion";
 
 const forYou = [
-  "[You-are-a-fit point 1]",
-  "[You-are-a-fit point 2]",
-  "[You-are-a-fit point 3]",
-  "[You-are-a-fit point 4]",
+  "Single-location MedSpa doing $40K–$120K/month",
+  "Running Mangomint or Boulevard",
+  "200+ patients in your database",
+  "Want results in 60 days, not a 6-month strategy",
+  "Done with tools that require you to run them",
 ];
 const notForYou = [
-  "[Not-a-fit point 1]",
-  "[Not-a-fit point 2]",
-  "[Not-a-fit point 3]",
-  "[Not-a-fit point 4]",
+  "You run multiple locations and need enterprise custom build",
+  "You want to approve every message before it sends",
+  "Your practice is under a year old",
+  "You're looking for a general marketing agency",
 ];
 
 export function WhoFor() {
