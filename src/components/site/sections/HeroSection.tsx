@@ -75,17 +75,19 @@ export function HeroSection() {
     const glow = glowRef.current;
     const els = particleRefs.current.filter(Boolean);
 
-    if (!section || !content || !glow || els.length === 0) return;
+    if (!section || !content || !glow) return;
 
-    const isMobile = window.innerWidth < 768;
+    const mobile = window.innerWidth < 768;
 
-    // Show content immediately if reduced motion or mobile
-    if (reduce || isMobile) {
-      gsap.set(content, { opacity: 1, y: 0 });
+    // On mobile or reduced motion: skip particle animation entirely.
+    // Content uses a CSS fade-in; nothing else to set up.
+    if (reduce || mobile) {
+      gsap.set(content, { clearProps: "all" });
       gsap.set(glow, { opacity: 0 });
-      els.forEach((el) => gsap.set(el, { opacity: 0 }));
       return;
     }
+
+    if (els.length === 0) return;
 
     const hw = window.innerWidth / 2;
     const hh = window.innerHeight / 2;
