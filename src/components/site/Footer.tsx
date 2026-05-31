@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-14 sm:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="font-display text-2xl tracking-wider">AURA</div>
+            <div className="font-display text-2xl tracking-wider">AURA&trade;</div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
               Purpose-built patient reactivation for MedSpa owners.
             </p>
