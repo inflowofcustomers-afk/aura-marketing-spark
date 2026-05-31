@@ -230,31 +230,33 @@ export function HeroSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-      {/* Particle layer */}
-      <div
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        aria-hidden
-        style={{ zIndex: 1 }}
-      >
-        {particles.map((p, i) => (
-          <div
-            key={p.id}
-            ref={(el) => {
-              if (el) particleRefs.current[i] = el;
-            }}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              width: p.size,
-              height: p.size,
-              filter: `drop-shadow(0 0 5px ${GOLD}90)`,
-            }}
-          >
-            <PersonSVG size={p.size} />
-          </div>
-        ))}
-      </div>
+      {/* Particle layer — desktop only */}
+      {!isMobile && (
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          aria-hidden
+          style={{ zIndex: 1 }}
+        >
+          {particles.map((p, i) => (
+            <div
+              key={p.id}
+              ref={(el) => {
+                if (el) particleRefs.current[i] = el;
+              }}
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                width: p.size,
+                height: p.size,
+                filter: `drop-shadow(0 0 5px ${GOLD}90)`,
+              }}
+            >
+              <PersonSVG size={p.size} />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Convergence glow (center pulse) */}
       <div
