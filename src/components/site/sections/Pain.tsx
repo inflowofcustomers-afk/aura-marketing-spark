@@ -10,7 +10,7 @@ const pains = [
 
 export function Pain() {
   return (
-    <section className="navy-section py-20 sm:py-32 relative overflow-hidden">
+    <section className="navy-section pt-20 sm:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.25_0.06_250/_0.6),_transparent_60%)]" />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
