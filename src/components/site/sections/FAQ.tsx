@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Motion";
-import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const faqs = [
   { q: "My patient list is old. Will this still work?", a: "Yes — and older lists often outperform newer ones. A patient who visited 18 months ago and never received a single follow-up isn't a lost cause. They're an untouched opportunity." },
