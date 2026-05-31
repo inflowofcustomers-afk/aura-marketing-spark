@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -44,6 +44,14 @@ export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
   const particleRefs = useRef<HTMLDivElement[]>([]);
   const reduce = useReducedMotion();
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const particles = useMemo<Particle[]>(
     () =>
@@ -67,17 +75,19 @@ export function HeroSection() {
     const glow = glowRef.current;
     const els = particleRefs.current.filter(Boolean);
 
-    if (!section || !content || !glow || els.length === 0) return;
+    if (!section || !content || !glow) return;
 
-    const isMobile = window.innerWidth < 768;
+    const mobile = window.innerWidth < 768;
 
-    // Show content immediately if reduced motion or mobile
-    if (reduce || isMobile) {
-      gsap.set(content, { opacity: 1, y: 0 });
+    // On mobile or reduced motion: skip particle animation entirely.
+    // Content uses a CSS fade-in; nothing else to set up.
+    if (reduce || mobile) {
+      gsap.set(content, { clearProps: "all" });
       gsap.set(glow, { opacity: 0 });
-      els.forEach((el) => gsap.set(el, { opacity: 0 }));
       return;
     }
+
+    if (els.length === 0) return;
 
     const hw = window.innerWidth / 2;
     const hh = window.innerHeight / 2;
@@ -202,7 +212,7 @@ export function HeroSection() {
       tl.kill();
       driftTweens.forEach((t) => t?.kill());
     };
-  }, [particles, reduce]);
+  }, [particles, reduce, isMobile]);
 
   return (
     <section
@@ -220,31 +230,33 @@ export function HeroSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-      {/* Particle layer */}
-      <div
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        aria-hidden
-        style={{ zIndex: 1 }}
-      >
-        {particles.map((p, i) => (
-          <div
-            key={p.id}
-            ref={(el) => {
-              if (el) particleRefs.current[i] = el;
-            }}
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              width: p.size,
-              height: p.size,
-              filter: `drop-shadow(0 0 5px ${GOLD}90)`,
-            }}
-          >
-            <PersonSVG size={p.size} />
-          </div>
-        ))}
-      </div>
+      {/* Particle layer — desktop only */}
+      {!isMobile && (
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          aria-hidden
+          style={{ zIndex: 1 }}
+        >
+          {particles.map((p, i) => (
+            <div
+              key={p.id}
+              ref={(el) => {
+                if (el) particleRefs.current[i] = el;
+              }}
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                width: p.size,
+                height: p.size,
+                filter: `drop-shadow(0 0 5px ${GOLD}90)`,
+              }}
+            >
+              <PersonSVG size={p.size} />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Convergence glow (center pulse) */}
       <div
@@ -268,7 +280,12 @@ export function HeroSection() {
       <div
         ref={contentRef}
         className="absolute inset-0 flex items-center justify-center"
-        style={{ zIndex: 3 }}
+        style={{
+          zIndex: 3,
+          ...(isMobile
+            ? { animation: "hero-mobile-fade-in 600ms ease-out both" }
+            : {}),
+        }}
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8 text-center">
           <span className="eyebrow inline-block">Purpose-built for MedSpa owners</span>
