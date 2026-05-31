@@ -1,4 +1,5 @@
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -26,16 +27,47 @@ export function ScrollReveal({
   className?: string;
 }) {
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
 
-  if (reduce) return <div className={className}>{children}</div>;
+  useEffect(() => {
+    if (shown) return;
+    const el = ref.current;
+    if (!el) return;
+
+    // Fallback: always reveal after 1.2s regardless of observer state.
+    const fallback = window.setTimeout(() => setShown(true), 1200);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            setShown(true);
+            io.disconnect();
+            window.clearTimeout(fallback);
+            break;
+          }
+        }
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.01 },
+    );
+    io.observe(el);
+
+    return () => {
+      io.disconnect();
+      window.clearTimeout(fallback);
+    };
+  }, [shown]);
+
+  if (reduce) return <div ref={ref} className={className}>{children}</div>;
 
   return (
     <motion.div
+      ref={ref}
       className={className}
       variants={containerVariants}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
+      animate={shown ? "show" : "hidden"}
     >
       {children}
     </motion.div>
