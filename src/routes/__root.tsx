@@ -86,6 +86,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "AURA Invites — Patient reactivation for MedSpa owners" },
+      { name: "twitter:title", content: "AURA Invites — Patient reactivation for MedSpa owners" },
+      { name: "description", content: "A premium, animated marketing website for AURA Invites, a patient reactivation platform for MedSpa owners." },
+      { property: "og:description", content: "A premium, animated marketing website for AURA Invites, a patient reactivation platform for MedSpa owners." },
+      { name: "twitter:description", content: "A premium, animated marketing website for AURA Invites, a patient reactivation platform for MedSpa owners." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e2464267-66a1-4579-a99d-de1c406f1d79/id-preview-e748641d--5207088c-9dda-4e3d-9273-04deeaa80d32.lovable.app-1780198969604.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e2464267-66a1-4579-a99d-de1c406f1d79/id-preview-e748641d--5207088c-9dda-4e3d-9273-04deeaa80d32.lovable.app-1780198969604.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
