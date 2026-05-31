@@ -280,7 +280,10 @@ export function HeroSection() {
       <div
         ref={contentRef}
         className="absolute inset-0 flex items-center justify-center"
-        style={{ zIndex: 3 }}
+        style={{
+          zIndex: 3,
+          ...(isMobile ? { animation: "fade-in 600ms ease-out both" } : {}),
+        }}
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8 text-center">
           <span className="eyebrow inline-block">Purpose-built for MedSpa owners</span>
