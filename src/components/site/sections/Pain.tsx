@@ -22,9 +22,15 @@ export function Pain() {
           </div>
         </Reveal>
 
-        <ScrollReveal className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {pains.map((p, i) => (
-            <ScrollRevealItem key={i}>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
               <div className="card-hairline rounded-2xl p-7 sm:p-9 h-full transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="font-display text-3xl gold-gradient-text leading-none">
@@ -38,9 +44,9 @@ export function Pain() {
                   </div>
                 </div>
               </div>
-            </ScrollRevealItem>
+            </motion.div>
           ))}
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );
