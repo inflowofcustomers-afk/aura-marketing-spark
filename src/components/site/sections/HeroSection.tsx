@@ -200,8 +200,9 @@ export function HeroSection() {
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: "+=80%",
-      pin: false,
+      end: "+=150%",
+      pin: true,
+      anticipatePin: 1,
       scrub: 1.2,
       animation: tl,
     });
