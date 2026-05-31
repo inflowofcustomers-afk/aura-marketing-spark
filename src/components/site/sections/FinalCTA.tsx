@@ -18,7 +18,7 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-6 text-foreground/75 max-w-xl mx-auto">
-            [Short closing line reinforcing the offer.]
+            If the math makes sense for your practice, the application takes 3 minutes. We'll reach out within 24 hours — and if it's a fit, your campaign goes live within 7 days.
           </p>
         </Reveal>
         <Reveal delay={0.3}>

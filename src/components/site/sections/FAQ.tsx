@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Reveal } from "@/components/site/Motion";
 
 const faqs = [
-  { q: "[FAQ QUESTION 1]", a: "[FAQ answer 1.]" },
-  { q: "[FAQ QUESTION 2]", a: "[FAQ answer 2.]" },
-  { q: "[FAQ QUESTION 3]", a: "[FAQ answer 3.]" },
-  { q: "[FAQ QUESTION 4]", a: "[FAQ answer 4.]" },
-  { q: "[FAQ QUESTION 5]", a: "[FAQ answer 5.]" },
+  { q: "My patient list is old. Will this still work?", a: "Yes — and older lists often outperform newer ones. A patient who visited 18 months ago and never received a single follow-up isn't a lost cause. They're an untouched opportunity." },
+  { q: "How is this different from an email blast?", a: "Three differences: personalization by treatment type, SMS vs email (higher open rates, faster response), and a multi-touch sequence vs a single blast." },
+  { q: "What booking software do you support?", a: "Mangomint and Boulevard natively. If you use something else, we work from a CSV export — most owners can generate that in under 5 minutes." },
+  { q: "What do I have to do?", a: "Twenty minutes on an onboarding call. Connect your account or send the CSV. Answer a few questions so we write messaging that sounds like you. That's it." },
+  { q: "Is there a guarantee?", a: "The $5,000 setup includes 20 booked appointments. If we don't deliver 20 in the 60-day window, we keep working at no additional cost until we do." },
 ];
 
 export function FAQ() {
