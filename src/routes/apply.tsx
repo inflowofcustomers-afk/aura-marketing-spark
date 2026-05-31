@@ -119,7 +119,7 @@ function ApplyPage() {
                 <span className="gold-gradient-text italic">Founder Spot</span>
               </h1>
               <p className="mt-5 text-foreground/75 max-w-xl mx-auto">
-                [Short intro paragraph about the application process and what happens next.]
+                Three founder spots available at locked-in pricing. Tell us about your practice and we'll reach out within 24 hours. If it's a fit, your campaign goes live within 7 days.
               </p>
             </div>
           </Reveal>
@@ -167,7 +167,7 @@ function ApplyPage() {
                     label="Tell us about your goals"
                     name="goals"
                     textarea
-                    placeholder="[Prompt copy for the applicant.]"
+                    placeholder="What's the biggest challenge in your practice right now? (optional)"
                   />
 
                   <ConsentCheckbox
@@ -186,7 +186,7 @@ function ApplyPage() {
                     Submit Application <ArrowRight size={16} />
                   </button>
                   <p className="text-xs text-muted-foreground">
-                    [Disclaimer / privacy reassurance copy.]
+                    By submitting this form you agree to our Terms of Service and Privacy Policy. We'll never share your information with third parties.
                   </p>
                 </form>
               )}
