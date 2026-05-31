@@ -103,6 +103,8 @@ function Field({
 
 function ApplyPage() {
   const [sent, setSent] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
 
   return (
     <PageShell>
