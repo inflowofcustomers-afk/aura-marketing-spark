@@ -1,5 +1,6 @@
 import { Check, X } from "lucide-react";
 import { Reveal } from "@/components/site/Motion";
+import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const forYou = [
   "Single-location MedSpa doing $40K–$120K/month",
@@ -26,8 +27,8 @@ export function WhoFor() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <Reveal>
+        <ScrollReveal className="mt-14 grid gap-6 lg:grid-cols-2">
+          <ScrollRevealItem>
             <div className="card-hairline rounded-2xl p-8 h-full">
               <div className="eyebrow" style={{ color: "oklch(0.72 0.16 150)" }}>
                 Built for you if
@@ -43,8 +44,8 @@ export function WhoFor() {
                 ))}
               </ul>
             </div>
-          </Reveal>
-          <Reveal delay={0.1}>
+          </ScrollRevealItem>
+          <ScrollRevealItem>
             <div className="card-hairline rounded-2xl p-8 h-full">
               <div className="eyebrow" style={{ color: "oklch(0.7 0.2 25)" }}>
                 Not a fit if
@@ -60,8 +61,8 @@ export function WhoFor() {
                 ))}
               </ul>
             </div>
-          </Reveal>
-        </div>
+          </ScrollRevealItem>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/site/Motion";
+import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 import { Database, MessageSquareText, CalendarCheck2 } from "lucide-react";
 
 const steps = [
@@ -35,11 +36,11 @@ export function HowItWorks() {
 
         <div className="mt-16 relative">
           <div className="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-          <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+          <ScrollReveal className="grid gap-8 lg:grid-cols-3 lg:gap-10">
             {steps.map((s, i) => {
               const Icon = s.icon;
               return (
-                <Reveal key={i} delay={i * 0.15}>
+                <ScrollRevealItem key={i}>
                   <div className="relative text-center lg:text-left">
                     <div className="relative inline-flex">
                       <div className="w-24 h-24 rounded-full border border-gold/30 bg-navy flex items-center justify-center mx-auto lg:mx-0">
@@ -52,10 +53,10 @@ export function HowItWorks() {
                     <h3 className="mt-6 font-display text-2xl sm:text-3xl">{s.title}</h3>
                     <p className="mt-3 text-foreground/70 leading-relaxed">{s.body}</p>
                   </div>
-                </Reveal>
+                </ScrollRevealItem>
               );
             })}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export function CTA({
     "inline-flex items-center justify-center gap-2 rounded-full px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-[15px] font-medium tracking-wide transition-all duration-300";
   const styles: Record<Variant, string> = {
     gold:
-      "bg-gold text-navy-deep hover:bg-gold-light shadow-[0_10px_40px_-12px_rgba(184,150,62,0.6)] hover:shadow-[0_18px_60px_-12px_rgba(184,150,62,0.85)] hover:-translate-y-0.5",
+      "btn-shimmer bg-gold text-navy-deep hover:bg-gold-light shadow-[0_10px_40px_-12px_rgba(184,150,62,0.6)] hover:shadow-[0_18px_60px_-12px_rgba(184,150,62,0.85)] hover:-translate-y-0.5",
     ghost:
       "bg-transparent text-foreground border border-foreground/25 hover:border-gold hover:text-gold",
     outline:
@@ -41,7 +41,7 @@ export function CTALink({
     "inline-flex items-center justify-center gap-2 rounded-full px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-[15px] font-medium tracking-wide transition-all duration-300";
   const styles: Record<Variant, string> = {
     gold:
-      "bg-gold text-navy-deep hover:bg-gold-light shadow-[0_10px_40px_-12px_rgba(184,150,62,0.6)] hover:shadow-[0_18px_60px_-12px_rgba(184,150,62,0.85)] hover:-translate-y-0.5",
+      "btn-shimmer bg-gold text-navy-deep hover:bg-gold-light shadow-[0_10px_40px_-12px_rgba(184,150,62,0.6)] hover:shadow-[0_18px_60px_-12px_rgba(184,150,62,0.85)] hover:-translate-y-0.5",
     ghost:
       "bg-transparent text-foreground border border-foreground/25 hover:border-gold hover:text-gold",
     outline:

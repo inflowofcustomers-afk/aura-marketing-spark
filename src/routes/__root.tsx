@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { LoadingScreen } from "@/components/site/LoadingScreen";
+import { GrainOverlay } from "@/components/site/GrainOverlay";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +132,8 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <LoadingScreen />
+      <GrainOverlay />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

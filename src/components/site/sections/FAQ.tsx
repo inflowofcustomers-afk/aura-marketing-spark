@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/site/Motion";
+import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const faqs = [
   { q: "My patient list is old. Will this still work?", a: "Yes — and older lists often outperform newer ones. A patient who visited 18 months ago and never received a single follow-up isn't a lost cause. They're an untouched opportunity." },
@@ -23,11 +24,11 @@ export function FAQ() {
           </div>
         </Reveal>
 
-        <div className="mt-12 divide-y divide-border border-y border-border">
+        <ScrollReveal className="mt-12 divide-y divide-border border-y border-border">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <Reveal key={i} delay={i * 0.05}>
+              <ScrollRevealItem key={i}>
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left py-6 flex items-start justify-between gap-6 group"
@@ -56,10 +57,10 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </Reveal>
+              </ScrollRevealItem>
             );
           })}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

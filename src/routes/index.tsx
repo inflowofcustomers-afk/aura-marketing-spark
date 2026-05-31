@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
-import { Hero } from "@/components/site/sections/Hero";
+import { HeroSection } from "@/components/site/sections/HeroSection";
 import { Pain } from "@/components/site/sections/Pain";
 import { WhatIs } from "@/components/site/sections/WhatIs";
 import { HowItWorks } from "@/components/site/sections/HowItWorks";
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <PageShell>
-      <Hero />
+      <HeroSection />
       <Pain />
       <WhatIs />
       <HowItWorks />

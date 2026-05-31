@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/site/Motion";
+import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const pains = [
   { title: "400 patients who visited once and never came back", body: "They're not gone. They're waiting to be asked. Most owners have hundreds of dormant patients sitting in their system while they spend money chasing new ones." },
@@ -21,9 +22,9 @@ export function Pain() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <ScrollReveal className="mt-14 grid gap-5 sm:grid-cols-2">
           {pains.map((p, i) => (
-            <Reveal key={i} delay={i * 0.08}>
+            <ScrollRevealItem key={i}>
               <div className="card-hairline rounded-2xl p-7 sm:p-9 h-full transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="font-display text-3xl gold-gradient-text leading-none">
@@ -37,9 +38,9 @@ export function Pain() {
                   </div>
                 </div>
               </div>
-            </Reveal>
+            </ScrollRevealItem>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
