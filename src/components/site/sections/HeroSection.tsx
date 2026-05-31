@@ -44,6 +44,14 @@ export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
   const particleRefs = useRef<HTMLDivElement[]>([]);
   const reduce = useReducedMotion();
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const particles = useMemo<Particle[]>(
     () =>
