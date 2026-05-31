@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/site/Motion";
-import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const forYou = [
   "Single-location MedSpa doing $40K–$120K/month",
@@ -16,6 +16,13 @@ const notForYou = [
   "You're looking for a general marketing agency",
 ];
 
+const itemAnim = (i: number) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "0px 0px -10% 0px" },
+  transition: { duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
+});
+
 export function WhoFor() {
   return (
     <section id="who-its-for" className="navy-section py-20 sm:py-32 relative">
@@ -27,8 +34,8 @@ export function WhoFor() {
           </div>
         </Reveal>
 
-        <ScrollReveal className="mt-14 grid gap-6 lg:grid-cols-2">
-          <ScrollRevealItem>
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          <motion.div {...itemAnim(0)}>
             <div className="card-hairline rounded-2xl p-8 h-full">
               <div className="eyebrow" style={{ color: "oklch(0.72 0.16 150)" }}>
                 Built for you if
@@ -44,8 +51,8 @@ export function WhoFor() {
                 ))}
               </ul>
             </div>
-          </ScrollRevealItem>
-          <ScrollRevealItem>
+          </motion.div>
+          <motion.div {...itemAnim(1)}>
             <div className="card-hairline rounded-2xl p-8 h-full">
               <div className="eyebrow" style={{ color: "oklch(0.7 0.2 25)" }}>
                 Not a fit if
@@ -61,8 +68,8 @@ export function WhoFor() {
                 ))}
               </ul>
             </div>
-          </ScrollRevealItem>
-        </ScrollReveal>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
