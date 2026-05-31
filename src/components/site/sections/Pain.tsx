@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/site/Motion";
-import { ScrollReveal, ScrollRevealItem } from "@/components/site/ScrollReveal";
 
 const pains = [
   { title: "400 patients who visited once and never came back", body: "They're not gone. They're waiting to be asked. Most owners have hundreds of dormant patients sitting in their system while they spend money chasing new ones." },
