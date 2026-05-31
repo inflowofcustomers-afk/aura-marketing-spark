@@ -17,8 +17,8 @@ export function WhatIs() {
         <Reveal delay={0.2}>
           <div className="mt-8 grid lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-3 space-y-5 text-navy-deep/80 text-base sm:text-lg leading-relaxed">
-              <p>[BODY COPY — paragraph 1.]</p>
-              <p>[BODY COPY — paragraph 2.]</p>
+              <p>Most patient reactivation attempts fail because they're generic — a newsletter blast, a promo email, a discount nobody asked for. Patients ignore them because they feel like junk mail.</p>
+              <p>AURA connects directly to your Mangomint or Boulevard account, analyzes your full patient history, segments your dormant list by treatment type and last visit, and deploys a personalized SMS and email sequence that feels like it came from your practice — not a marketing platform.</p>
             </div>
             <div className="lg:col-span-2">
               <div
@@ -33,7 +33,7 @@ export function WhatIs() {
                   The Result
                 </div>
                 <p className="mt-3 font-display text-2xl text-navy-deep leading-tight">
-                  [GOLD CALLOUT — punchy outcome statement.]
+                  First message goes out within 7 days of onboarding. You don't touch a single thing.
                 </p>
               </div>
             </div>
