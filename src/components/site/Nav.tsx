@@ -30,7 +30,7 @@ export function Nav() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="font-display text-xl sm:text-2xl tracking-wider text-foreground">
-            AURA
+            AURA&trade;
           </span>
           <span className="text-[10px] eyebrow inline-block translate-y-[1px]">
             Invites
