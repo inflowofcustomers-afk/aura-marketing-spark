@@ -11,7 +11,7 @@ export function WhatIs() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 font-display text-3xl sm:text-5xl text-navy-deep max-w-3xl">
-            [HEADLINE — what AURA is, in one sentence.]
+            A reactivation engine purpose-built for MedSpas.
           </h2>
         </Reveal>
         <Reveal delay={0.2}>

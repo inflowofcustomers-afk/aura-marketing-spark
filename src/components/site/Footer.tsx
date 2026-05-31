@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <div className="font-display text-2xl tracking-wider">AURA</div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-              Patient reactivation for MedSpa owners.
+              Purpose-built patient reactivation for MedSpa owners.
             </p>
           </div>
           <div>
