@@ -25,45 +25,65 @@ const itemAnim = (i: number) => ({
 
 export function WhoFor() {
   return (
-    <section id="who-its-for" className="navy-section py-20 sm:py-32 relative">
+    <section id="who-its-for" className="cream-section py-20 sm:py-32 relative">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <div className="text-center">
-            <span className="eyebrow">The Fit</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-5xl">Who It's For</h2>
+            <span className="eyebrow" style={{ color: "var(--gold-dark)" }}>The Fit</span>
+            <h2 className="mt-4 font-display text-3xl sm:text-5xl text-navy-deep">Who It's For</h2>
           </div>
         </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <motion.div {...itemAnim(0)}>
-            <div className="card-hairline rounded-2xl p-8 h-full">
-              <div className="eyebrow" style={{ color: "oklch(0.72 0.16 150)" }}>
+            <div
+              className="rounded-2xl p-8 h-full border"
+              style={{
+                background: "linear-gradient(180deg, #ffffff, oklch(0.95 0.015 80))",
+                borderColor: "oklch(0.72 0.16 150 / 40%)",
+                boxShadow: "0 4px 24px -8px oklch(0.72 0.16 150 / 15%)",
+              }}
+            >
+              <div className="eyebrow" style={{ color: "oklch(0.55 0.16 150)" }}>
                 Built for you if
               </div>
               <ul className="mt-6 space-y-4">
                 {forYou.map((t, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 w-6 h-6 rounded-full bg-success/15 border border-success/40 flex items-center justify-center flex-shrink-0">
+                    <span
+                      className="mt-0.5 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border"
+                      style={{ background: "oklch(0.72 0.16 150 / 12%)", borderColor: "oklch(0.72 0.16 150 / 50%)" }}
+                    >
                       <Check size={14} className="text-success" />
                     </span>
-                    <span className="text-foreground/85">{t}</span>
+                    <span className="text-navy-deep/80">{t}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </motion.div>
           <motion.div {...itemAnim(1)}>
-            <div className="card-hairline rounded-2xl p-8 h-full">
-              <div className="eyebrow" style={{ color: "oklch(0.7 0.2 25)" }}>
+            <div
+              className="rounded-2xl p-8 h-full border"
+              style={{
+                background: "linear-gradient(180deg, #ffffff, oklch(0.95 0.015 80))",
+                borderColor: "oklch(0.65 0.22 25 / 30%)",
+                boxShadow: "0 4px 24px -8px oklch(0.65 0.22 25 / 10%)",
+              }}
+            >
+              <div className="eyebrow" style={{ color: "oklch(0.55 0.22 25)" }}>
                 Not a fit if
               </div>
               <ul className="mt-6 space-y-4">
                 {notForYou.map((t, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 w-6 h-6 rounded-full bg-destructive/15 border border-destructive/40 flex items-center justify-center flex-shrink-0">
+                    <span
+                      className="mt-0.5 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border"
+                      style={{ background: "oklch(0.65 0.22 25 / 10%)", borderColor: "oklch(0.65 0.22 25 / 40%)" }}
+                    >
                       <X size={14} className="text-destructive" />
                     </span>
-                    <span className="text-foreground/70">{t}</span>
+                    <span className="text-navy-deep/60">{t}</span>
                   </li>
                 ))}
               </ul>
