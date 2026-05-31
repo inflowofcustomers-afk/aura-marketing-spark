@@ -38,7 +38,7 @@ export function Offer() {
               <div>
                 <div className="eyebrow">Founder Pricing</div>
                 <div className="mt-3 flex items-baseline gap-2">
-                  <span className="font-display text-5xl sm:text-6xl gold-gradient-text leading-none">
+                  <span className="font-display text-5xl sm:text-6xl gold-gradient-text block pt-2" style={{ lineHeight: 1.2, overflow: "visible" }}>
                     {"$5,000"}
                   </span>
                   <span className="text-foreground/60 text-sm">setup fee</span>
