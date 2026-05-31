@@ -2,7 +2,7 @@ import { Reveal } from "@/components/site/Motion";
 
 export function WhatIs() {
   return (
-    <section className="cream-section py-20 sm:py-32 relative">
+    <section className="cream-section pt-12 sm:pt-16 pb-20 sm:pb-32 relative">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <Reveal>
           <span className="eyebrow" style={{ color: "var(--gold-dark)" }}>
