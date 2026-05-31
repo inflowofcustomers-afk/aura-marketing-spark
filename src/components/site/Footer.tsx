@@ -35,8 +35,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} AURA Invites. All rights reserved.</div>
-          <div>aurainvites.com</div>
+          <div>© {new Date().getFullYear()} AURA Invites by AI Ops, LLC. All rights reserved.</div>
         </div>
       </div>
     </footer>
