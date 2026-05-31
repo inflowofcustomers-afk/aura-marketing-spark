@@ -32,7 +32,7 @@ export function Nav() {
           <span className="font-display text-xl sm:text-2xl tracking-wider text-foreground">
             AURA
           </span>
-          <span className="text-[10px] eyebrow hidden sm:inline-block translate-y-[1px]">
+          <span className="text-[10px] eyebrow inline-block translate-y-[1px]">
             Invites
           </span>
         </Link>
