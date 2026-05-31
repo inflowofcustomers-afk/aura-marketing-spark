@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export function Aurora() {
   return <div className="aurora" aria-hidden />;
@@ -41,6 +41,12 @@ export function Particles({ count = 24 }: { count?: number }) {
   );
 }
 
+/**
+ * Reveal: fades + slides children in once on enter.
+ * Uses IntersectionObserver with a guaranteed timeout fallback so content
+ * can never get stuck invisible (e.g. when a GSAP pin or layout race
+ * prevents the observer from firing).
+ */
 export function Reveal({
   children,
   delay = 0,
@@ -52,11 +58,48 @@ export function Reveal({
   y?: number;
   className?: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+  const reduce = useReducedMotion();
+
+  useEffect(() => {
+    if (shown) return;
+    const el = ref.current;
+    if (!el) return;
+
+    // Fallback: always reveal after 1.2s regardless of observer state.
+    const fallback = window.setTimeout(() => setShown(true), 1200);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            setShown(true);
+            io.disconnect();
+            window.clearTimeout(fallback);
+            break;
+          }
+        }
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.01 },
+    );
+    io.observe(el);
+
+    return () => {
+      io.disconnect();
+      window.clearTimeout(fallback);
+    };
+  }, [shown]);
+
+  if (reduce) {
+    return <div ref={ref} className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      animate={shown ? { opacity: 1, y: 0 } : { opacity: 0, y }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
