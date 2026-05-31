@@ -4,6 +4,53 @@ import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
+function ConsentCheckbox({
+  checked,
+  onChange,
+  error,
+}: {
+  checked: boolean;
+  onChange: (v: boolean) => void;
+  error?: boolean;
+}) {
+  return (
+    <label className="flex items-start gap-3 cursor-pointer group">
+      <span className="relative mt-0.5 flex-shrink-0 w-5 h-5 rounded border transition-colors"
+        style={{
+          borderColor: error ? "oklch(0.65 0.2 25)" : checked ? "oklch(0.72 0.12 80)" : "oklch(0.35 0.02 260)",
+          backgroundColor: checked ? "oklch(0.72 0.12 80 / 0.15)" : "transparent",
+        }}
+      >
+        <input
+          type="checkbox"
+          className="sr-only"
+          checked={checked}
+          onChange={(e) => onChange(e.target.checked)}
+        />
+        {checked && (
+          <svg
+            className="absolute inset-0 m-auto text-gold"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        )}
+      </span>
+      <span className="text-sm text-foreground/75 leading-relaxed">
+        I confirm that my patients have consented to receive communications from my practice and that I have the right to contact them via SMS.
+        <span className="text-gold ml-1">*</span>
+      </span>
+    </label>
+  );
+}
+
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
@@ -56,6 +103,8 @@ function Field({
 
 function ApplyPage() {
   const [sent, setSent] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
 
   return (
     <PageShell>
@@ -91,6 +140,11 @@ function ApplyPage() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    if (!consent) {
+                      setConsentError(true);
+                      return;
+                    }
+                    setConsentError(false);
                     setSent(true);
                   }}
                   className="space-y-5"
@@ -114,6 +168,15 @@ function ApplyPage() {
                     name="goals"
                     textarea
                     placeholder="[Prompt copy for the applicant.]"
+                  />
+
+                  <ConsentCheckbox
+                    checked={consent}
+                    onChange={(v) => {
+                      setConsent(v);
+                      if (v) setConsentError(false);
+                    }}
+                    error={consentError}
                   />
 
                   <button
