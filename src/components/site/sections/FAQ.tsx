@@ -23,11 +23,17 @@ export function FAQ() {
           </div>
         </Reveal>
 
-        <ScrollReveal className="mt-12 divide-y divide-border border-y border-border">
+        <div className="mt-12 divide-y divide-border border-y border-border">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <ScrollRevealItem key={i}>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left py-6 flex items-start justify-between gap-6 group"
@@ -56,10 +62,10 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </ScrollRevealItem>
+              </motion.div>
             );
           })}
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );
