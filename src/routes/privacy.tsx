@@ -13,46 +13,87 @@ export const Route = createFileRoute("/privacy")({
 
 function Privacy() {
   return (
-    <LegalLayout title="Privacy Policy" eyebrow="Legal" updated="May 30, 2025">
-      <LegalSection heading="1. Introduction">
+    <LegalLayout title="AURA Invites — Privacy Policy" eyebrow="Legal" updated="June 12, 2026">
+      <LegalSection heading="1. Who We Are">
         <p>
-          AURA Invites ("we", "our", "us") is committed to protecting your personal information. This Privacy Policy describes how we collect, use, and protect data submitted through aurainvites.com.
+          AURA Invites is operated by AI Ops, LLC ("Company," "we," "us," or "our"). We provide marketing automation and patient reactivation services for MedSpa businesses. For questions about this policy, contact us at privacy@aurainvites.com.
         </p>
       </LegalSection>
-      <LegalSection heading="2. Information We Collect">
+
+      <LegalSection heading="2. What Information We Collect">
+        <p>We collect information you provide directly to us, including:</p>
         <ul className="list-disc pl-5 space-y-2 text-foreground/75">
-          <li>Contact information (name, email, phone number).</li>
-          <li>Business information (practice name, revenue range, booking software, patient database size).</li>
-          <li>Communications via SMS or email related to our services.</li>
+          <li>Name and business name when you contact us or sign up for our services</li>
+          <li>Email address and phone number submitted through our contact forms or intake process</li>
+          <li>Business information such as your MedSpa name, location, and patient list data you provide for campaign purposes</li>
+          <li>Communications you send to us via email or contact forms</li>
         </ul>
       </LegalSection>
-      <LegalSection heading="3. How We Use Information">
+
+      <LegalSection heading="3. How We Use Your Information">
+        <p>We use the information we collect to:</p>
         <ul className="list-disc pl-5 space-y-2 text-foreground/75">
-          <li>To respond to your application and schedule calls.</li>
-          <li>To deliver the AURA Reactivation Pilot service.</li>
-          <li>To send SMS and email communications related to your account.</li>
-          <li>To improve our platform.</li>
+          <li>Respond to your inquiries and provide our services</li>
+          <li>Onboard you as a client and operate your reactivation campaigns</li>
+          <li>Send you service-related communications and reporting</li>
+          <li>Improve our platform and services</li>
+          <li>Comply with applicable legal obligations</li>
         </ul>
       </LegalSection>
-      <LegalSection heading="4. SMS Communications">
+
+      <LegalSection heading="4. Patient Data">
         <p>
-          By submitting our application form and providing your phone number, you consent to receive SMS messages from AURA Invites. These may include application follow-ups, onboarding communications, and service updates. Message frequency varies. Reply STOP to opt out at any time. Message and data rates may apply.
+          If you engage AURA Invites for reactivation services, you may provide us with contact information belonging to your patients. You represent that you have the right to share this data with us and that you have obtained any required consents. We process this data solely to perform the services you have engaged us for and do not sell, rent, or otherwise disclose it to third parties.
         </p>
       </LegalSection>
-      <LegalSection heading="5. Data Sharing">
-        <p>
-          We do not sell your personal information. We may share data with service providers (including Twilio for SMS delivery) solely to operate our platform.
-        </p>
+
+      <LegalSection heading="5. How We Share Information">
+        <p>We do not sell your personal information. We may share information with:</p>
+        <ul className="list-disc pl-5 space-y-2 text-foreground/75">
+          <li>Service providers who assist us in operating our business (e.g., SMS and email delivery platforms), bound by confidentiality obligations</li>
+          <li>Professional advisors such as lawyers and accountants, under confidentiality obligations</li>
+          <li>Law enforcement or government authorities when required by law</li>
+        </ul>
       </LegalSection>
+
       <LegalSection heading="6. Data Retention">
         <p>
-          We retain your information as long as necessary to provide services. You may request deletion at any time by emailing hello@aurainvites.com.
+          We retain your information for as long as necessary to provide our services and fulfill the purposes described in this policy, or as required by law. When a client relationship ends, we will delete or return client data upon written request.
         </p>
       </LegalSection>
-      <LegalSection heading="7. Contact">
+
+      <LegalSection heading="7. Your California Privacy Rights (CCPA)">
+        <p>If you are a California resident, you have the right to:</p>
+        <ul className="list-disc pl-5 space-y-2 text-foreground/75">
+          <li>Know what personal information we collect about you</li>
+          <li>Request deletion of your personal information</li>
+          <li>Opt out of the sale of your personal information (we do not sell personal information)</li>
+        </ul>
+        <p>To exercise these rights, contact us at privacy@aurainvites.com.</p>
+      </LegalSection>
+
+      <LegalSection heading="8. Security">
         <p>
-          AURA Invites | hello@aurainvites.com | aurainvites.com
+          We use reasonable administrative, technical, and physical safeguards to protect your information. No method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
         </p>
+      </LegalSection>
+
+      <LegalSection heading="9. Third-Party Links">
+        <p>
+          Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="10. Changes to This Policy">
+        <p>
+          We may update this Privacy Policy from time to time. We will post the updated policy on our website with a revised effective date. Continued use of our services after changes constitutes acceptance of the updated policy.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="11. Contact Us">
+        <p>AI Ops, LLC</p>
+        <p>Email: privacy@aurainvites.com</p>
+        <p>Website: aurainvites.com</p>
       </LegalSection>
     </LegalLayout>
   );
