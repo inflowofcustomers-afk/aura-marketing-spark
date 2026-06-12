@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalLayout, LegalSection } from "@/components/site/PageShell";
 
 export const Route = createFileRoute("/sms-policy")({
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/sms-policy")({
 
 function SmsPolicy() {
   return (
-    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="May 30, 2025">
+    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="June 12, 2026">
       <LegalSection heading="1. Who sends SMS through AURA Invites">
         <p>
           AURA Invites operates an SMS-based patient reactivation platform for MedSpa businesses. Messages are sent to MedSpa patients who previously provided contact information to the MedSpa and consented to communications.
