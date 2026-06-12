@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalLayout, LegalSection } from "@/components/site/PageShell";
 
 export const Route = createFileRoute("/sms-policy")({
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/sms-policy")({
 
 function SmsPolicy() {
   return (
-    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="May 30, 2025">
+    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="June 12, 2026">
       <LegalSection heading="1. Who sends SMS through AURA Invites">
         <p>
           AURA Invites operates an SMS-based patient reactivation platform for MedSpa businesses. Messages are sent to MedSpa patients who previously provided contact information to the MedSpa and consented to communications.
@@ -41,17 +41,17 @@ function SmsPolicy() {
       </LegalSection>
       <LegalSection heading="6. Help (HELP)">
         <p>
-          Reply HELP to any message or contact hello@aurainvites.com.
+          Reply HELP to any message or contact privacy@aurainvites.com.
         </p>
       </LegalSection>
       <LegalSection heading="7. Privacy">
         <p>
-          See our Privacy Policy for details on how we handle your data.
+          See our <Link to="/privacy" className="text-gold underline hover:text-gold-light">Privacy Policy</Link> for details on how we handle your data.
         </p>
       </LegalSection>
       <LegalSection heading="8. Contact">
         <p>
-          AURA Invites | hello@aurainvites.com | aurainvites.com
+          AURA Invites | privacy@aurainvites.com | aurainvites.com
         </p>
       </LegalSection>
     </LegalLayout>
