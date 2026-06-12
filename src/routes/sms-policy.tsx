@@ -46,12 +46,12 @@ function SmsPolicy() {
       </LegalSection>
       <LegalSection heading="7. Privacy">
         <p>
-          See our Privacy Policy for details on how we handle your data.
+          See our <Link to="/privacy" className="text-gold underline hover:text-gold-light">Privacy Policy</Link> for details on how we handle your data.
         </p>
       </LegalSection>
       <LegalSection heading="8. Contact">
         <p>
-          AURA Invites | hello@aurainvites.com | aurainvites.com
+          AURA Invites | privacy@aurainvites.com | aurainvites.com
         </p>
       </LegalSection>
     </LegalLayout>
