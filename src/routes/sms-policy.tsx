@@ -41,7 +41,7 @@ function SmsPolicy() {
       </LegalSection>
       <LegalSection heading="6. Help (HELP)">
         <p>
-          Reply HELP to any message or contact hello@aurainvites.com.
+          Reply HELP to any message or contact privacy@aurainvites.com.
         </p>
       </LegalSection>
       <LegalSection heading="7. Privacy">
