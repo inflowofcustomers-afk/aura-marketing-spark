@@ -13,36 +13,87 @@ export const Route = createFileRoute("/terms")({
 
 function Terms() {
   return (
-    <LegalLayout title="Terms of Service" eyebrow="Legal" updated="May 30, 2025">
+    <LegalLayout title="AURA Invites — Terms of Service" eyebrow="Legal" updated="June 12, 2026">
       <LegalSection heading="1. Acceptance of Terms">
         <p>
-          By accessing aurainvites.com or engaging AURA Invites services, you agree to these Terms. If you do not agree, do not use our platform.
+          These Terms of Service ("Terms") govern your access to and use of the AURA Invites platform and services provided by AI Ops, LLC ("Company," "we," "us," or "our"). By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree, do not use our services.
         </p>
       </LegalSection>
+
       <LegalSection heading="2. Services">
         <p>
-          AURA Invites provides a patient reactivation platform for MedSpa owners including SMS and email campaign management, database segmentation, and performance reporting.
+          AURA Invites provides marketing automation services for MedSpa businesses, including patient reactivation campaigns via SMS and email, website templates, and related tools. The specific scope of services, pricing, and deliverables will be set forth in a separate service agreement or order form signed by both parties.
         </p>
       </LegalSection>
-      <LegalSection heading="3. Subscriptions &amp; Billing">
+
+      <LegalSection heading="3. Payment Terms">
         <p>
-          Pilot pricing is $5,000 setup fee (includes 20 booked appointments) plus $250 per booked appointment thereafter. Continuation retainer is $2,500/month or $497/month self-serve, billed month-to-month.
+          All fees are as specified in your service agreement. Setup fees are due prior to campaign launch. Performance-based fees (where applicable) are invoiced monthly based on verified results. Invoices are due net 15 days. Late payments are subject to a 1.5% monthly fee. All fees are non-refundable except as expressly stated in your service agreement.
         </p>
       </LegalSection>
+
       <LegalSection heading="4. Client Responsibilities">
+        <p>You are responsible for:</p>
+        <ul className="list-disc pl-5 space-y-2 text-foreground/75">
+          <li>Providing accurate business and contact data required for campaign setup</li>
+          <li>Ensuring you have obtained all required consents and have the legal right to contact the individuals in any patient list you provide</li>
+          <li>Complying with all applicable laws, including CAN-SPAM, TCPA, and HIPAA as applicable to your business</li>
+          <li>Reviewing and approving campaign creative before deployment</li>
+        </ul>
+      </LegalSection>
+
+      <LegalSection heading="5. No Guarantee of Results">
         <p>
-          Clients are responsible for providing accurate patient data, maintaining proper patient consent for marketing communications, and complying with applicable laws including HIPAA where applicable.
+          We will use commercially reasonable efforts to deliver the services described in your agreement. However, we do not guarantee specific revenue outcomes, booking volumes, or return on investment. Results depend on factors outside our control, including the quality and age of your patient list, market conditions, and patient behavior. Any case studies, benchmarks, or projections shared are illustrative only and not guarantees of future performance.
         </p>
       </LegalSection>
-      <LegalSection heading="5. Limitation of Liability">
+
+      <LegalSection heading="6. Intellectual Property">
         <p>
-          AURA Invites is not liable for indirect, incidental, or consequential damages. Total liability is limited to fees paid in the preceding 30 days.
+          AURA Invites retains all rights to its platform, templates, methodologies, and proprietary systems. Client data remains the property of the client. Campaign creative developed for a client is owned by the client upon full payment of all fees.
         </p>
       </LegalSection>
-      <LegalSection heading="6. Contact">
+
+      <LegalSection heading="7. Confidentiality">
         <p>
-          AURA Invites | hello@aurainvites.com | aurainvites.com
+          Each party agrees to keep confidential any non-public information received from the other party in connection with the services and to use such information solely for the purpose of performing under these Terms.
         </p>
+      </LegalSection>
+
+      <LegalSection heading="8. Limitation of Liability">
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL AI OPS, LLC BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE FEES PAID BY YOU IN THE THREE MONTHS PRECEDING THE CLAIM.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="9. Indemnification">
+        <p>
+          You agree to indemnify and hold harmless AI Ops, LLC and its officers, directors, and employees from any claims, damages, or expenses (including reasonable attorneys' fees) arising from your use of the services, your violation of these Terms, or your violation of any applicable law.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="10. Term and Termination">
+        <p>
+          These Terms remain in effect for the duration of your service engagement. Either party may terminate with written notice as specified in your service agreement. Upon termination, all outstanding fees become immediately due. Sections 5 through 9 survive termination.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="11. Governing Law">
+        <p>
+          These Terms are governed by the laws of the state in which AI Ops, LLC is incorporated, without regard to conflict of law principles. Any disputes shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="12. Changes to Terms">
+        <p>
+          We reserve the right to update these Terms at any time. We will notify existing clients of material changes. Continued use of our services after notice constitutes acceptance of the updated Terms.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="13. Contact">
+        <p>AI Ops, LLC</p>
+        <p>Email: privacy@aurainvites.com</p>
+        <p>Website: aurainvites.com</p>
       </LegalSection>
     </LegalLayout>
   );
