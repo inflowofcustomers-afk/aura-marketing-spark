@@ -9,7 +9,8 @@ export function Nav() {
   const { pathname } = useLocation();
 
   // Pages whose top section is cream — nav needs dark text when transparent
-  const isLightPage = pathname !== "/";
+  const darkTopPages = ["/privacy", "/terms", "/sms-policy"];
+  const isLightPage = pathname !== "/" && !darkTopPages.includes(pathname);
 
   // Unscrolled text colours: dark on cream pages, light on dark hero
   const navText = !scrolled && isLightPage ? "text-navy-deep/70 hover:text-navy-deep" : "text-foreground/80 hover:text-gold";
