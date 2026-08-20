@@ -95,6 +95,12 @@ function Privacy() {
         <p>Email: privacy@aurainvites.com</p>
         <p>Website: aurainvites.com</p>
       </LegalSection>
+
+      <LegalSection heading="12. SMS Opt-In and Text Messaging Privacy">
+        <p>
+          Regardless of any other provision in this Privacy Policy, no mobile information or SMS text messaging originator opt-in data and consent will be shared with, sold, or rented to third parties, affiliates, or partners for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+        </p>
+      </LegalSection>
     </LegalLayout>
   );
 }
