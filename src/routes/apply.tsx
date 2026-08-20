@@ -7,22 +7,18 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 function ConsentCheckbox({
   checked,
   onChange,
-  error,
 }: {
   checked: boolean;
   onChange: (v: boolean) => void;
-  error?: boolean;
 }) {
   return (
     <label className="flex items-start gap-3 cursor-pointer group">
       <span
         className="relative mt-0.5 flex-shrink-0 w-5 h-5 rounded border transition-colors"
         style={{
-          borderColor: error
-            ? "oklch(0.65 0.2 25)"
-            : checked
-              ? "var(--gold)"
-              : "oklch(0.72 0.12 80 / 50%)",
+          borderColor: checked
+            ? "var(--gold)"
+            : "oklch(0.72 0.12 80 / 50%)",
           backgroundColor: checked ? "oklch(0.72 0.12 80 / 0.12)" : "#fff",
         }}
       >
@@ -50,9 +46,10 @@ function ConsentCheckbox({
         )}
       </span>
       <span className="text-sm text-navy-deep/65 leading-relaxed">
-        I confirm that my patients have consented to receive communications from my
-        practice and that I have the right to contact them via SMS.
-        <span className="ml-1" style={{ color: "var(--gold-dark)" }}>*</span>
+        I agree to receive recurring automated marketing promotions, software updates,
+        and account notifications from AI Ops LLC (AURA Invites) at the phone number
+        provided. Consent is not a condition of purchase. Msg & data rates may apply.
+        Msg frequency varies. Reply STOP to unsubscribe, HELP for help.
       </span>
     </label>
   );
@@ -129,7 +126,6 @@ function Field({
 function ApplyPage() {
   const [sent, setSent] = useState(false);
   const [consent, setConsent] = useState(false);
-  const [consentError, setConsentError] = useState(false);
 
   return (
     <PageShell>
@@ -196,11 +192,6 @@ function ApplyPage() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    if (!consent) {
-                      setConsentError(true);
-                      return;
-                    }
-                    setConsentError(false);
                     setSent(true);
                   }}
                   className="space-y-5"
@@ -246,9 +237,7 @@ function ApplyPage() {
                     checked={consent}
                     onChange={(v) => {
                       setConsent(v);
-                      if (v) setConsentError(false);
                     }}
-                    error={consentError}
                   />
 
                   <button
