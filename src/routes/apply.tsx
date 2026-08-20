@@ -7,22 +7,18 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 function ConsentCheckbox({
   checked,
   onChange,
-  error,
 }: {
   checked: boolean;
   onChange: (v: boolean) => void;
-  error?: boolean;
 }) {
   return (
     <label className="flex items-start gap-3 cursor-pointer group">
       <span
         className="relative mt-0.5 flex-shrink-0 w-5 h-5 rounded border transition-colors"
         style={{
-          borderColor: error
-            ? "oklch(0.65 0.2 25)"
-            : checked
-              ? "var(--gold)"
-              : "oklch(0.72 0.12 80 / 50%)",
+          borderColor: checked
+            ? "var(--gold)"
+            : "oklch(0.72 0.12 80 / 50%)",
           backgroundColor: checked ? "oklch(0.72 0.12 80 / 0.12)" : "#fff",
         }}
       >
