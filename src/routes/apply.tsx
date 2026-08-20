@@ -241,9 +241,7 @@ function ApplyPage() {
                     checked={consent}
                     onChange={(v) => {
                       setConsent(v);
-                      if (v) setConsentError(false);
                     }}
-                    error={consentError}
                   />
 
                   <button
