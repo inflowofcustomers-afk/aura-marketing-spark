@@ -50,9 +50,10 @@ function ConsentCheckbox({
         )}
       </span>
       <span className="text-sm text-navy-deep/65 leading-relaxed">
-        I confirm that my patients have consented to receive communications from my
-        practice and that I have the right to contact them via SMS.
-        <span className="ml-1" style={{ color: "var(--gold-dark)" }}>*</span>
+        I agree to receive recurring automated marketing promotions, software updates,
+        and account notifications from AI Ops LLC (AURA Invites) at the phone number
+        provided. Consent is not a condition of purchase. Msg & data rates may apply.
+        Msg frequency varies. Reply STOP to unsubscribe, HELP for help.
       </span>
     </label>
   );
