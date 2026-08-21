@@ -263,10 +263,10 @@ function ApplyPage() {
                     >
                       Privacy Policy
                     </Link>
-                    . Agreeing to these does not enroll you in SMS marketing — that
-                    requires separately checking the box above. We'll never share your
-                    information with third parties. AI Ops, LLC operates the Aura Invites
-                    platform.
+                    . Agreeing to these does not enroll you in SMS marketing — that requires
+                    separately checking the box above. Mobile information and SMS consent will
+                    not be shared with third parties or affiliates for marketing or promotional
+                    purposes. AI Ops, LLC operates the Aura Invites platform.
                   </p>
                 </form>
               )}
