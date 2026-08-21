@@ -13,7 +13,7 @@ export const Route = createFileRoute("/terms")({
 
 function Terms() {
   return (
-    <LegalLayout title="AURA Invites — Terms of Service" eyebrow="Legal" updated="June 12, 2026">
+    <LegalLayout title="AURA Invites — Terms of Service" eyebrow="Legal" updated="August 20, 2026">
       <LegalSection heading="1. Acceptance of Terms">
         <p>
           These Terms of Service ("Terms") govern your access to and use of the AURA Invites platform and services provided by AI Ops, LLC ("Company," "we," "us," or "our"). By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree, do not use our services.
