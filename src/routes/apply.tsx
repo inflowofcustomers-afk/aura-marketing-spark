@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Motion";
@@ -46,10 +46,10 @@ function ConsentCheckbox({
         )}
       </span>
       <span className="text-sm text-navy-deep/65 leading-relaxed">
-        I agree to receive recurring automated marketing promotions, software updates,
-        and account notifications from AI Ops LLC (AURA Invites) at the phone number
-        provided. Consent is not a condition of purchase. Msg & data rates may apply.
-        Msg frequency varies. Reply STOP to unsubscribe, HELP for help.
+        I agree to receive recurring marketing text messages from AI Ops, LLC regarding
+        Aura Invites, including promotions, special offers, and related marketing
+        communications. Consent is not a condition of purchase. Message frequency varies.
+        Message and data rates may apply. Reply STOP to unsubscribe or HELP for help.
       </span>
     </label>
   );
@@ -247,8 +247,26 @@ function ApplyPage() {
                     Submit Application <ArrowRight size={16} />
                   </button>
                   <p className="text-xs text-navy-deep/45">
-                    By submitting this form you agree to our Terms of Service and Privacy
-                    Policy. We'll never share your information with third parties.
+                    By submitting this form you agree to our{" "}
+                    <Link
+                      to="/terms"
+                      className="underline hover:text-navy-deep/70"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      Terms of Service
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      to="/privacy"
+                      className="underline hover:text-navy-deep/70"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      Privacy Policy
+                    </Link>
+                    . Agreeing to these does not enroll you in SMS marketing — that
+                    requires separately checking the box above. We'll never share your
+                    information with third parties. AI Ops, LLC operates the Aura Invites
+                    platform.
                   </p>
                 </form>
               )}
