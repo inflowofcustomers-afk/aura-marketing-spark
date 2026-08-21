@@ -13,46 +13,99 @@ export const Route = createFileRoute("/sms-policy")({
 
 function SmsPolicy() {
   return (
-    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="June 12, 2026">
-      <LegalSection heading="1. Who sends SMS through AURA Invites">
+    <LegalLayout title="SMS Policy" eyebrow="Legal" updated="August 20, 2026">
+      <LegalSection heading="1. Who Sends SMS Messages">
         <p>
-          AURA Invites operates an SMS-based patient reactivation platform for MedSpa businesses. Messages are sent to MedSpa patients who previously provided contact information to the MedSpa and consented to communications.
+          AI Ops, LLC operates the Aura Invites platform. Marketing text messages sent through this program are sent by AI Ops, LLC regarding Aura Invites.
         </p>
       </LegalSection>
-      <LegalSection heading="2. Consent &amp; Opt-In">
+
+      <LegalSection heading="2. Consent & Opt-In">
         <p>
-          Patient phone numbers are collected and consented to directly by the MedSpa client prior to any AURA campaign. AURA Invites does not purchase phone number lists. All contacts have a prior relationship with the MedSpa practice.
+          Marketing text messages are sent only to individuals who provide separate, affirmative consent to receive them.
+        </p>
+        <p>
+          Users may opt in through our website by entering their mobile phone number and actively checking the optional SMS marketing consent checkbox.
+        </p>
+        <p>
+          The SMS marketing checkbox is unchecked by default and is not required to submit a form, purchase a product or service, or use Aura Invites.
+        </p>
+        <p>
+          Accepting our <Link to="/terms" className="text-gold underline hover:text-gold-light">Terms of Service</Link> or <Link to="/privacy" className="text-gold underline hover:text-gold-light">Privacy Policy</Link> does not enroll a user in SMS marketing.
+        </p>
+        <p>
+          We do not purchase phone number lists or use purchased consent for this SMS marketing program.
         </p>
       </LegalSection>
-      <LegalSection heading="3. Opt-Out (STOP)">
+
+      <LegalSection heading="3. Types of Messages">
         <p>
-          Recipients may opt out at any time by replying STOP. Opt-outs are processed immediately.
+          Subscribers may receive recurring marketing and promotional text messages from AI Ops, LLC regarding Aura Invites, including promotions, special offers, and related marketing communications.
+        </p>
+        <p>
+          This SMS marketing program does not currently include software updates, account notifications, transactional messages, appointment reminders, or other informational SMS categories.
         </p>
       </LegalSection>
-      <LegalSection heading="4. Message Frequency">
+
+      <LegalSection heading="4. Opt-Out — STOP">
         <p>
-          Typical campaigns involve 2–4 messages per contact over a 30-day period.
+          Recipients may opt out at any time by replying STOP to any marketing text message.
+        </p>
+        <p>
+          After an opt-out request is processed, marketing text messages will stop unless the recipient later provides new consent.
         </p>
       </LegalSection>
-      <LegalSection heading="5. Carrier &amp; Data Rates">
+
+      <LegalSection heading="5. Message Frequency">
         <p>
-          Standard message and data rates may apply.
+          Message frequency varies.
         </p>
       </LegalSection>
-      <LegalSection heading="6. Help (HELP)">
+
+      <LegalSection heading="6. Message and Data Rates">
         <p>
-          Reply HELP to any message or contact privacy@aurainvites.com.
+          Message and data rates may apply.
         </p>
       </LegalSection>
-      <LegalSection heading="7. Privacy">
+
+      <LegalSection heading="7. Help — HELP">
         <p>
-          See our <Link to="/privacy" className="text-gold underline hover:text-gold-light">Privacy Policy</Link> for details on how we handle your data.
+          Reply HELP to any message for assistance or contact <a href="mailto:privacy@aurainvites.com" className="text-gold underline hover:text-gold-light">privacy@aurainvites.com</a>.
         </p>
       </LegalSection>
-      <LegalSection heading="8. Contact">
+
+      <LegalSection heading="8. Privacy">
         <p>
-          AURA Invites | privacy@aurainvites.com | aurainvites.com
+          No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
         </p>
+        <p>
+          SMS opt-in data and consent will not be sold, rented, transferred, or shared with third parties or affiliates for their own marketing or promotional purposes.
+        </p>
+        <p>
+          Information may be provided to service providers acting on our behalf solely as necessary to deliver the messaging service.
+        </p>
+        <p>
+          See our <Link to="/privacy" className="text-gold underline hover:text-gold-light">Privacy Policy</Link> for additional information about how we collect, use, and protect personal information.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="9. Not a Condition of Purchase">
+        <p>
+          Consent to receive marketing text messages is not a condition of purchasing or using any product or service from AI Ops, LLC or Aura Invites.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="10. Carrier Liability">
+        <p>
+          Mobile carriers are not liable for delayed or undelivered messages.
+        </p>
+      </LegalSection>
+
+      <LegalSection heading="11. Contact">
+        <p>AI Ops, LLC</p>
+        <p>Aura Invites</p>
+        <p>Email: <a href="mailto:privacy@aurainvites.com" className="text-gold underline hover:text-gold-light">privacy@aurainvites.com</a></p>
+        <p>Website: aurainvites.com</p>
       </LegalSection>
     </LegalLayout>
   );
