@@ -96,9 +96,15 @@ function Privacy() {
         <p>Website: aurainvites.com</p>
       </LegalSection>
 
-      <LegalSection heading="12. SMS Opt-In and Text Messaging Privacy">
+      <LegalSection heading="12. SMS Messaging">
         <p>
-          Regardless of any other provision in this Privacy Policy, no mobile information or SMS text messaging originator opt-in data and consent will be shared with, sold, or rented to third parties, affiliates, or partners for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+          If you separately opt in to receive marketing text messages from AI Ops, LLC regarding Aura Invites, we may send recurring promotional or marketing messages to the mobile number you provide. Message frequency varies. Message and data rates may apply. You may reply STOP at any time to unsubscribe or HELP for assistance.
+        </p>
+        <p>
+          SMS consent is not a condition of purchasing or using our products or services, and it is separate from your acceptance of our Terms of Service or this Privacy Policy.
+        </p>
+        <p>
+          We do not sell, rent, share, or otherwise disclose mobile phone numbers, SMS opt-in data, or SMS consent information to third parties or affiliates for their own marketing or promotional purposes.
         </p>
       </LegalSection>
     </LegalLayout>
