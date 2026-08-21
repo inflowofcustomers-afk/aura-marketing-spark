@@ -247,8 +247,26 @@ function ApplyPage() {
                     Submit Application <ArrowRight size={16} />
                   </button>
                   <p className="text-xs text-navy-deep/45">
-                    By submitting this form you agree to our Terms of Service and Privacy
-                    Policy. We'll never share your information with third parties.
+                    By submitting this form you agree to our{" "}
+                    <Link
+                      to="/terms"
+                      className="underline hover:text-navy-deep/70"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      Terms of Service
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      to="/privacy"
+                      className="underline hover:text-navy-deep/70"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      Privacy Policy
+                    </Link>
+                    . Agreeing to these does not enroll you in SMS marketing — that
+                    requires separately checking the box above. We'll never share your
+                    information with third parties. AI Ops, LLC operates the Aura Invites
+                    platform.
                   </p>
                 </form>
               )}
