@@ -233,12 +233,20 @@ function ApplyPage() {
                     placeholder="What's the biggest challenge in your practice right now? (optional)"
                   />
 
-                  <ConsentCheckbox
-                    checked={consent}
-                    onChange={(v) => {
-                      setConsent(v);
-                    }}
-                  />
+                  <div>
+                    <span
+                      className="block text-xs eyebrow mb-2"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      Optional SMS Marketing Consent
+                    </span>
+                    <ConsentCheckbox
+                      checked={consent}
+                      onChange={(v) => {
+                        setConsent(v);
+                      }}
+                    />
+                  </div>
 
                   <button
                     type="submit"
