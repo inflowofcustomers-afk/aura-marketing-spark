@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SmsPolicyRouteImport } from './routes/sms-policy'
+import { Route as SmsOptInRouteImport } from './routes/sms-opt-in'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ApplyRouteImport } from './routes/apply'
@@ -24,6 +25,11 @@ const TermsRoute = TermsRouteImport.update({
 const SmsPolicyRoute = SmsPolicyRouteImport.update({
   id: '/sms-policy',
   path: '/sms-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmsOptInRoute = SmsOptInRouteImport.update({
+  id: '/sms-opt-in',
+  path: '/sms-opt-in',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/apply': typeof ApplyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sms-opt-in': typeof SmsOptInRoute
   '/sms-policy': typeof SmsPolicyRoute
   '/terms': typeof TermsRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/apply': typeof ApplyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sms-opt-in': typeof SmsOptInRoute
   '/sms-policy': typeof SmsPolicyRoute
   '/terms': typeof TermsRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/apply': typeof ApplyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sms-opt-in': typeof SmsOptInRoute
   '/sms-policy': typeof SmsPolicyRoute
   '/terms': typeof TermsRoute
 }
@@ -79,16 +88,25 @@ export interface FileRouteTypes {
     | '/apply'
     | '/privacy'
     | '/sitemap.xml'
+    | '/sms-opt-in'
     | '/sms-policy'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/apply' | '/privacy' | '/sitemap.xml' | '/sms-policy' | '/terms'
+  to:
+    | '/'
+    | '/apply'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/sms-opt-in'
+    | '/sms-policy'
+    | '/terms'
   id:
     | '__root__'
     | '/'
     | '/apply'
     | '/privacy'
     | '/sitemap.xml'
+    | '/sms-opt-in'
     | '/sms-policy'
     | '/terms'
   fileRoutesById: FileRoutesById
@@ -98,6 +116,7 @@ export interface RootRouteChildren {
   ApplyRoute: typeof ApplyRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SmsOptInRoute: typeof SmsOptInRoute
   SmsPolicyRoute: typeof SmsPolicyRoute
   TermsRoute: typeof TermsRoute
 }
@@ -116,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/sms-policy'
       fullPath: '/sms-policy'
       preLoaderRoute: typeof SmsPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sms-opt-in': {
+      id: '/sms-opt-in'
+      path: '/sms-opt-in'
+      fullPath: '/sms-opt-in'
+      preLoaderRoute: typeof SmsOptInRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -154,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApplyRoute: ApplyRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SmsOptInRoute: SmsOptInRoute,
   SmsPolicyRoute: SmsPolicyRoute,
   TermsRoute: TermsRoute,
 }
