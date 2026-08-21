@@ -116,8 +116,8 @@ export function HeroSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-      {/* Floating particle background — desktop only */}
-      {!isMobile && !reduce && (
+      {/* Floating particle background — desktop only, after hydration */}
+      {isMobile === false && !reduce && (
         <div
           className="absolute inset-0 overflow-hidden pointer-events-none"
           aria-hidden
