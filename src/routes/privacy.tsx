@@ -16,7 +16,7 @@ function Privacy() {
     <LegalLayout title="AURA Invites — Privacy Policy" eyebrow="Legal" updated="June 12, 2026">
       <LegalSection heading="1. Who We Are">
         <p>
-          AURA Invites is operated by AI Ops, LLC ("Company," "we," "us," or "our"). We provide marketing automation and patient reactivation services for MedSpa businesses. For questions about this policy, contact us at privacy@aurainvites.com.
+          AI Ops, LLC ("Company," "we," "us," or "our") operates the Aura Invites platform. We provide marketing automation and patient reactivation services for MedSpa businesses. For questions about this policy, contact us at privacy@aurainvites.com.
         </p>
       </LegalSection>
 
