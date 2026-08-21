@@ -161,12 +161,27 @@ function ApplyPage() {
                       required
                       placeholder="Business name"
                     />
-                    <Field
-                      label="Phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(555) 555-5555"
-                    />
+                    <div>
+                      <label className="block">
+                        <span
+                          className="block text-xs eyebrow mb-2"
+                          style={{ color: "var(--gold-dark)" }}
+                        >
+                          Business Phone (optional)
+                        </span>
+                        <input
+                          name="phone"
+                          type="tel"
+                          placeholder="(555) 555-5555"
+                          className="w-full bg-white border rounded-xl px-4 py-3 text-navy-deep placeholder:text-navy-deep/35 focus:outline-none transition focus:border-gold focus:ring-1 focus:ring-gold"
+                          style={{ borderColor: "oklch(0.72 0.12 80 / 35%)" }}
+                        />
+                      </label>
+                      <p className="mt-2 text-xs text-navy-deep/45 leading-relaxed">
+                        Used only to follow up regarding your application. Providing your
+                        phone number does not enroll you in marketing SMS.
+                      </p>
+                    </div>
                   </div>
                   <Field label="Website" name="website" type="url" placeholder="https://" />
                   <Field
@@ -204,16 +219,8 @@ function ApplyPage() {
                     >
                       Privacy Policy
                     </Link>
-                    . Submitting this application does not enroll you in SMS marketing.
-                    Marketing SMS consent is collected separately through our{" "}
-                    <Link
-                      to="/sms-opt-in"
-                      className="underline hover:text-navy-deep/70"
-                      style={{ color: "var(--gold-dark)" }}
-                    >
-                      SMS Opt-In page
-                    </Link>
-                    . AI Ops, LLC operates the Aura Invites platform.
+                    . Submitting this application does not enroll you in SMS
+                    marketing. AI Ops, LLC operates the Aura Invites platform.
                   </p>
                 </form>
               )}
