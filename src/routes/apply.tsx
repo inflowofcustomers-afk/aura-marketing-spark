@@ -46,10 +46,10 @@ function ConsentCheckbox({
         )}
       </span>
       <span className="text-sm text-navy-deep/65 leading-relaxed">
-        I agree to receive recurring automated marketing promotions, software updates,
-        and account notifications from AI Ops LLC (AURA Invites) at the phone number
-        provided. Consent is not a condition of purchase. Msg & data rates may apply.
-        Msg frequency varies. Reply STOP to unsubscribe, HELP for help.
+        I agree to receive recurring marketing text messages from AI Ops, LLC regarding
+        Aura Invites, including promotions, special offers, and related marketing
+        communications. Consent is not a condition of purchase. Message frequency varies.
+        Message and data rates may apply. Reply STOP to unsubscribe or HELP for help.
       </span>
     </label>
   );
