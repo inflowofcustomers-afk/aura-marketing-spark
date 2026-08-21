@@ -4,57 +4,6 @@ import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-function ConsentCheckbox({
-  checked,
-  onChange,
-}: {
-  checked: boolean;
-  onChange: (v: boolean) => void;
-}) {
-  return (
-    <label className="flex items-start gap-3 cursor-pointer group">
-      <span
-        className="relative mt-0.5 flex-shrink-0 w-5 h-5 rounded border transition-colors"
-        style={{
-          borderColor: checked
-            ? "var(--gold)"
-            : "oklch(0.72 0.12 80 / 50%)",
-          backgroundColor: checked ? "oklch(0.72 0.12 80 / 0.12)" : "#fff",
-        }}
-      >
-        <input
-          type="checkbox"
-          className="sr-only"
-          checked={checked}
-          onChange={(e) => onChange(e.target.checked)}
-        />
-        {checked && (
-          <svg
-            className="absolute inset-0 m-auto"
-            style={{ color: "var(--gold-dark)" }}
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        )}
-      </span>
-      <span className="text-sm text-navy-deep/65 leading-relaxed">
-        I agree to receive recurring marketing text messages from AI Ops, LLC regarding
-        Aura Invites, including promotions, special offers, and related marketing
-        communications. Consent is not a condition of purchase. Message frequency varies.
-        Message and data rates may apply. Reply STOP to unsubscribe or HELP for help.
-      </span>
-    </label>
-  );
-}
-
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
@@ -125,7 +74,6 @@ function Field({
 
 function ApplyPage() {
   const [sent, setSent] = useState(false);
-  const [consent, setConsent] = useState(false);
 
   return (
     <PageShell>
@@ -233,21 +181,6 @@ function ApplyPage() {
                     placeholder="What's the biggest challenge in your practice right now? (optional)"
                   />
 
-                  <div>
-                    <span
-                      className="block text-xs eyebrow mb-2"
-                      style={{ color: "var(--gold-dark)" }}
-                    >
-                      Optional SMS Marketing Consent
-                    </span>
-                    <ConsentCheckbox
-                      checked={consent}
-                      onChange={(v) => {
-                        setConsent(v);
-                      }}
-                    />
-                  </div>
-
                   <button
                     type="submit"
                     className="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy-deep px-7 py-3.5 text-[15px] font-medium hover:bg-gold-light transition-all hover:-translate-y-0.5 shadow-[0_10px_40px_-12px_rgba(184,150,62,0.5)]"
@@ -271,10 +204,16 @@ function ApplyPage() {
                     >
                       Privacy Policy
                     </Link>
-                    . Agreeing to these does not enroll you in SMS marketing — that requires
-                    separately checking the box above. Mobile information and SMS consent will
-                    not be shared with third parties or affiliates for marketing or promotional
-                    purposes. AI Ops, LLC operates the Aura Invites platform.
+                    . Submitting this application does not enroll you in SMS marketing.
+                    Marketing SMS consent is collected separately through our{" "}
+                    <Link
+                      to="/sms-opt-in"
+                      className="underline hover:text-navy-deep/70"
+                      style={{ color: "var(--gold-dark)" }}
+                    >
+                      SMS Opt-In page
+                    </Link>
+                    . AI Ops, LLC operates the Aura Invites platform.
                   </p>
                 </form>
               )}

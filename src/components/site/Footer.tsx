@@ -31,6 +31,7 @@ export function Footer() {
               <li><Link to="/privacy" className="hover:text-gold">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-gold">Terms of Service</Link></li>
               <li><Link to="/sms-policy" className="hover:text-gold">SMS Policy</Link></li>
+              <li><Link to="/sms-opt-in" className="hover:text-gold">SMS Opt-In</Link></li>
             </ul>
           </div>
         </div>
