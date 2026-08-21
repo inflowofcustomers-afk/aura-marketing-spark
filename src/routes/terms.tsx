@@ -90,15 +90,16 @@ function Terms() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="13. SMS Program Terms and Conditions">
+      <LegalSection heading="13. SMS Marketing Program Terms">
         <p>
-          By opting into text messaging programs provided through the AURA Invites platform, or by enabling AURA Invites to send text messages to your end-users, you agree to the following terms:
+          Accepting these Terms does not enroll you in SMS marketing. Marketing text messages are sent only after you provide separate, affirmative consent by checking the SMS marketing box on our application form.
         </p>
-        <p><strong>Program Description:</strong> AURA Invites sends a mix of marketing promotions, scheduling notifications, appointment reminders, and customer service follow-ups on behalf of our MedSpa clients to reactivate dormant patients.</p>
-        <p><strong>Message Frequency:</strong> Message frequency varies based on user interaction, campaign settings, and patient booking behavior.</p>
-        <p><strong>Pricing:</strong> Message and data rates may apply from your mobile carrier. AURA Invites does not charge end-users for receiving text messages.</p>
-        <p><strong>Stop & Help:</strong> End-users can cancel the SMS service at any time by texting "STOP" to our shortcode or dedicated long-code number. After texting "STOP", a confirmation message will be sent, and text communications will cease. For assistance, users can reply "HELP" or contact privacy@aurainvites.com.</p>
-        <p><strong>Carrier Liability:</strong> Mobile carriers (including but not limited to T-Mobile, AT&T, and Verizon) are not liable for delayed or undelivered messages.</p>
+        <p><strong>Program Description:</strong> AI Ops, LLC, which operates the Aura Invites platform, sends recurring marketing text messages, including promotions, special offers, and related marketing communications.</p>
+        <p><strong>Message Frequency:</strong> Message frequency varies.</p>
+        <p><strong>Pricing:</strong> Message and data rates may apply from your mobile carrier. We do not charge for receiving text messages.</p>
+        <p><strong>Stop &amp; Help:</strong> Reply STOP at any time to unsubscribe; a confirmation message will be sent and messages will cease. Reply HELP for assistance, or contact privacy@aurainvites.com.</p>
+        <p><strong>Not a Condition of Purchase:</strong> Consent to receive marketing SMS is not a condition of purchasing or using any product or service.</p>
+        <p><strong>Carrier Liability:</strong> Mobile carriers (including but not limited to T-Mobile, AT&amp;T, and Verizon) are not liable for delayed or undelivered messages.</p>
       </LegalSection>
 
       <LegalSection heading="14. Contact">
