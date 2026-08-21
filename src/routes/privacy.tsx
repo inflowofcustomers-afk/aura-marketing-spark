@@ -36,6 +36,7 @@ function Privacy() {
           <li>Respond to your inquiries and provide our services</li>
           <li>Onboard you as a client and operate your reactivation campaigns</li>
           <li>Send you service-related communications and reporting</li>
+          <li>Send marketing text messages when you have separately opted in to receive them</li>
           <li>Improve our platform and services</li>
           <li>Comply with applicable legal obligations</li>
         </ul>
@@ -50,7 +51,7 @@ function Privacy() {
       <LegalSection heading="5. How We Share Information">
         <p>We do not sell your personal information. We may share information with:</p>
         <ul className="list-disc pl-5 space-y-2 text-foreground/75">
-          <li>Service providers who assist us in operating our business (e.g., SMS and email delivery platforms), bound by confidentiality obligations</li>
+          <li>Service providers who assist us in operating our business, such as SMS and email delivery providers, solely as necessary to provide services on our behalf. These providers are not permitted to use mobile information, SMS opt-in data, or SMS consent for their own marketing or promotional purposes.</li>
           <li>Professional advisors such as lawyers and accountants, under confidentiality obligations</li>
           <li>Law enforcement or government authorities when required by law</li>
         </ul>
@@ -104,7 +105,7 @@ function Privacy() {
           SMS consent is not a condition of purchasing or using our products or services, and it is separate from your acceptance of our Terms of Service or this Privacy Policy.
         </p>
         <p>
-          We do not sell, rent, share, or otherwise disclose mobile phone numbers, SMS opt-in data, or SMS consent information to third parties or affiliates for their own marketing or promotional purposes.
+          No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. SMS opt-in data and consent will not be sold, rented, transferred, or shared with third parties or affiliates for their own marketing or promotional purposes. Information may be provided to service providers acting on our behalf solely as necessary to deliver the messaging service.
         </p>
       </LegalSection>
     </LegalLayout>
