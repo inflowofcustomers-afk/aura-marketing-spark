@@ -62,7 +62,7 @@ function Terms() {
 
       <LegalSection heading="8. Limitation of Liability">
         <p>
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL AI OPS, LLC BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE FEES PAID BY YOU IN THE THREE MONTHS PRECEDING THE CLAIM.
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL AI OPS, LLC BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGREGATE LIABILITY SHALL NOT EXCEED THE FEES PAID BY YOU IN THE THREE MONTHS PRECEDING THE CLAIM.
         </p>
       </LegalSection>
 
@@ -96,10 +96,11 @@ function Terms() {
         </p>
         <p><strong>Program Description:</strong> AI Ops, LLC, which operates the Aura Invites platform, sends recurring marketing text messages, including promotions, special offers, and related marketing communications.</p>
         <p><strong>Message Frequency:</strong> Message frequency varies.</p>
-        <p><strong>Pricing:</strong> Message and data rates may apply from your mobile carrier. We do not charge for receiving text messages.</p>
-        <p><strong>Stop &amp; Help:</strong> Reply STOP at any time to unsubscribe; a confirmation message will be sent and messages will cease. Reply HELP for assistance, or contact privacy@aurainvites.com.</p>
+        <p><strong>Pricing:</strong> Message and data rates may apply.</p>
+        <p><strong>Stop & Help:</strong> Reply <strong>STOP</strong> at any time to unsubscribe. Reply <strong>HELP</strong> for assistance, or contact <a href="mailto:privacy@aurainvites.com" className="text-accent hover:underline">privacy@aurainvites.com</a>.</p>
         <p><strong>Not a Condition of Purchase:</strong> Consent to receive marketing SMS is not a condition of purchasing or using any product or service.</p>
-        <p><strong>Carrier Liability:</strong> Mobile carriers (including but not limited to T-Mobile, AT&amp;T, and Verizon) are not liable for delayed or undelivered messages.</p>
+        <p><strong>Carrier Liability:</strong> Mobile carriers are not liable for delayed or undelivered messages.</p>
+        <p><strong>Privacy:</strong> For information about how we collect and use personal information, including mobile information and SMS consent data, please see our <Link to="/privacy" className="text-accent hover:underline">Privacy Policy</Link>.</p>
       </LegalSection>
 
       <LegalSection heading="14. Contact">
