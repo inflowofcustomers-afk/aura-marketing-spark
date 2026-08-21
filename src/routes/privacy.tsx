@@ -13,7 +13,7 @@ export const Route = createFileRoute("/privacy")({
 
 function Privacy() {
   return (
-    <LegalLayout title="AURA Invites — Privacy Policy" eyebrow="Legal" updated="June 12, 2026">
+    <LegalLayout title="AURA Invites — Privacy Policy" eyebrow="Legal" updated="August 20, 2026">
       <LegalSection heading="1. Who We Are">
         <p>
           AI Ops, LLC ("Company," "we," "us," or "our") operates the Aura Invites platform. We provide marketing automation and patient reactivation services for MedSpa businesses. For questions about this policy, contact us at privacy@aurainvites.com.
@@ -44,7 +44,7 @@ function Privacy() {
 
       <LegalSection heading="4. Patient Data">
         <p>
-          If you engage AURA Invites for reactivation services, you may provide us with contact information belonging to your patients. You represent that you have the right to share this data with us and that you have obtained any required consents. We process this data solely to perform the services you have engaged us for and do not sell, rent, or otherwise disclose it to third parties.
+          If you engage AURA Invites for reactivation services, you may provide us with contact information belonging to your patients. You represent that you have the right to share this data with us and that you have obtained any required consents. We process this data solely to perform the services you have engaged us for. We do not sell or rent patient data. We may disclose data to service providers acting on our behalf solely as necessary to provide the services, as described in Section 5.
         </p>
       </LegalSection>
 
