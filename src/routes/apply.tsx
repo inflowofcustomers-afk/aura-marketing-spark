@@ -219,16 +219,8 @@ function ApplyPage() {
                     >
                       Privacy Policy
                     </Link>
-                    . Submitting this application does not enroll you in SMS marketing.
-                    Marketing SMS consent is collected separately through our{" "}
-                    <Link
-                      to="/sms-opt-in"
-                      className="underline hover:text-navy-deep/70"
-                      style={{ color: "var(--gold-dark)" }}
-                    >
-                      SMS Opt-In page
-                    </Link>
-                    . AI Ops, LLC operates the Aura Invites platform.
+                    . Submitting this application does not enroll you in SMS
+                    marketing. AI Ops, LLC operates the Aura Invites platform.
                   </p>
                 </form>
               )}
