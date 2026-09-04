@@ -101,7 +101,7 @@
 @layer utilities {
   .eyebrow {
     font-family: var(--font-sans);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.32em;
     text-transform: uppercase;
@@ -113,28 +113,48 @@
   .display-xl {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(3rem, 8.2vw, 7rem);
-    line-height: 1.02;
+    font-size: clamp(3.25rem, 8.6vw, 7.5rem);
+    line-height: 1.0;
     letter-spacing: -0.02em;
   }
   .display-lg {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1.06;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.04;
     letter-spacing: -0.015em;
   }
   .display-md {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
-    line-height: 1.15;
+    font-size: clamp(1.875rem, 3.2vw, 2.625rem);
+    line-height: 1.12;
   }
   .body-editorial {
     font-size: 1.0625rem;
-    line-height: 1.85;
+    line-height: 1.8;
     font-weight: 300;
     letter-spacing: 0.005em;
+  }
+  @media (min-width: 1024px) {
+    .body-editorial { font-size: 1.125rem; }
+  }
+  .body-support {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  @media (min-width: 1024px) {
+    .body-support { font-size: 1rem; }
+  }
+  .numeral-xl {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.85;
+    color: var(--gold);
+    opacity: 0.55;
+    letter-spacing: -0.02em;
   }
 
   .gold-gradient-text { color: var(--gold); }
@@ -154,11 +174,11 @@
     justify-content: center;
     gap: 0.75rem;
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 400;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    padding: 1rem 2rem;
+    padding: 1.15rem 2.5rem;
     border: 1px solid rgba(198, 161, 91, 0.5);
     color: var(--gold);
     background: transparent;

@@ -36,23 +36,23 @@ function Column({
   return (
     <div>
       <div className="eyebrow eyebrow-dark">{label}</div>
-      <ul className="mt-10">
+      <ul className="mt-12">
         {items.map((t, i) => (
           <li
             key={i}
-            className="flex items-baseline gap-6 py-6"
-            style={{ borderTop: "1px solid rgba(21,21,21,0.1)" }}
+            className="flex items-baseline gap-7 py-7"
+            style={{ borderTop: "1px solid rgba(21,21,21,0.14)" }}
           >
             <span
-              className="text-sm leading-none w-4 shrink-0"
+              className="text-base leading-none w-4 shrink-0"
               style={{ color: muted ? "var(--warm-gray)" : "var(--gold-dark)" }}
               aria-hidden
             >
               {marker}
             </span>
             <span
-              className={`text-[1.0625rem] font-light leading-relaxed ${
-                muted ? "text-navy-deep/45" : "text-navy-deep/80"
+              className={`font-display text-[1.5rem] sm:text-[1.875rem] leading-[1.25] tracking-[-0.005em] ${
+                muted ? "text-navy-deep/60" : "text-navy-deep/90"
               }`}
             >
               {t}
@@ -66,17 +66,17 @@ function Column({
 
 export function WhoFor() {
   return (
-    <section id="who-its-for" className="cream-section pt-28 sm:pt-44 pb-28 sm:pb-44">
-      <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
+    <section id="who-its-for" className="cream-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
         <Reveal>
           <div className="flex items-center gap-5">
-            <span className="w-10" style={{ height: 1, background: "var(--gold-dark)" }} />
+            <span className="w-12" style={{ height: 1, background: "var(--gold-dark)" }} />
             <span className="eyebrow eyebrow-dark">The Fit</span>
           </div>
           <h2 className="mt-10 display-lg text-navy-deep">Who It's For</h2>
         </Reveal>
 
-        <div className="mt-20 sm:mt-28 grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="mt-20 sm:mt-32 grid lg:grid-cols-2 gap-16 lg:gap-28">
           <motion.div {...anim(0)}>
             <Column label="Built for you if" items={forYou} marker="—" />
           </motion.div>
