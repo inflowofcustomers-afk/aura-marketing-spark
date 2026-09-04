@@ -16,7 +16,7 @@ export function FinalCTA() {
           <h2
             className="mt-16 font-display font-light text-navy-deep"
             style={{
-              fontSize: "clamp(3.5rem, 10vw, 9rem)",
+              fontSize: "clamp(3rem, 7.5vw, 6.5rem)",
               lineHeight: 0.98,
               letterSpacing: "-0.025em",
             }}
