@@ -44,7 +44,7 @@ function CinematicBand() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(6,22,37,0.72) 0%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0.92) 100%)",
+            "linear-gradient(180deg, rgba(6,22,37,0.55) 0%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0.92) 100%)",
         }}
       />
     </div>

@@ -25,7 +25,8 @@ export function HeroSection() {
             <span className="eyebrow">Purpose-built for MedSpa owners</span>
           </motion.div>
 
-          <motion.h1 {...rise(0.12)} className="mt-10 display-xl text-foreground max-w-[13ch]">
+          <motion.h1 {...rise(0.12)} className="mt-10 font-display font-light text-foreground max-w-[16ch]"
+            style={{ fontSize: "clamp(2.75rem, 5.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.02em" }}>
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
