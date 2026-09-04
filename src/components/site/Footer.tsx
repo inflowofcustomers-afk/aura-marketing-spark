@@ -1,42 +1,53 @@
 import { Link } from "@tanstack/react-router";
 
+const linkCls =
+  "text-[13px] font-light text-foreground/55 hover:text-gold transition-colors duration-500";
+
 export function Footer() {
   return (
-    <footer className="navy-section border-t border-border">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 py-14 sm:py-20">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="font-display text-2xl tracking-wider">AURA Invites<span className="text-xs align-top">&trade;</span></div>
-            <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+    <footer className="navy-section">
+      <div className="mx-auto max-w-[92rem] px-6 sm:px-12">
+        <div className="rule-faint" />
+        <div className="py-20 sm:py-28 grid gap-14 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-1">
+            <div className="font-display text-2xl tracking-[0.28em]">
+              AURA
+              <span className="text-[9px] align-top tracking-normal ml-1">&trade;</span>
+            </div>
+            <div className="mt-1 text-[9px] uppercase tracking-[0.34em] text-foreground/40">
+              Invites
+            </div>
+            <p className="mt-8 text-[13px] font-light leading-relaxed text-foreground/45 max-w-[24ch]">
               Purpose-built patient reactivation for MedSpa owners.
             </p>
           </div>
           <div>
-            <div className="eyebrow mb-4">Product</div>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li><a href="/#how-it-works" className="hover:text-gold">How It Works</a></li>
-              <li><a href="/#who-its-for" className="hover:text-gold">Who It's For</a></li>
-              <li><a href="/#faq" className="hover:text-gold">FAQ</a></li>
+            <div className="eyebrow">Product</div>
+            <ul className="mt-7 space-y-4">
+              <li><a href="/#how-it-works" className={linkCls}>How It Works</a></li>
+              <li><a href="/#who-its-for" className={linkCls}>Who It's For</a></li>
+              <li><a href="/#faq" className={linkCls}>FAQ</a></li>
             </ul>
           </div>
           <div>
-            <div className="eyebrow mb-4">Get Started</div>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li><Link to="/apply" className="hover:text-gold">Apply</Link></li>
+            <div className="eyebrow">Get Started</div>
+            <ul className="mt-7 space-y-4">
+              <li><Link to="/apply" className={linkCls}>Apply</Link></li>
             </ul>
           </div>
           <div>
-            <div className="eyebrow mb-4">Legal</div>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li><Link to="/privacy" className="hover:text-gold">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-gold">Terms of Service</Link></li>
-              <li><Link to="/sms-policy" className="hover:text-gold">SMS Policy</Link></li>
-              <li><Link to="/sms-opt-in" className="hover:text-gold">SMS Opt-In</Link></li>
+            <div className="eyebrow">Legal</div>
+            <ul className="mt-7 space-y-4">
+              <li><Link to="/privacy" className={linkCls}>Privacy Policy</Link></li>
+              <li><Link to="/terms" className={linkCls}>Terms of Service</Link></li>
+              <li><Link to="/sms-policy" className={linkCls}>SMS Policy</Link></li>
+              <li><Link to="/sms-opt-in" className={linkCls}>SMS Opt-In</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} AURA Invites by AI Ops, LLC. All rights reserved.</div>
+        <div className="rule-faint" />
+        <div className="py-10 text-[11px] font-light tracking-wide text-foreground/35">
+          © {new Date().getFullYear()} AURA Invites by AI Ops, LLC. All rights reserved.
         </div>
       </div>
     </footer>
