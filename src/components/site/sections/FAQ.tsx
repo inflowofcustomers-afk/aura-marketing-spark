@@ -13,8 +13,8 @@ const faqs = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="navy-section pt-28 sm:pt-44 pb-28 sm:pb-44">
-      <div className="mx-auto max-w-[72rem] px-6 sm:px-12">
+    <section id="faq" className="navy-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-10 rule-gold" />
@@ -23,7 +23,7 @@ export function FAQ() {
           <h2 className="mt-10 display-lg text-foreground">Frequently Asked</h2>
         </Reveal>
 
-        <div className="mt-20 sm:mt-28 lg:pl-[8%]">
+        <div className="mt-20 sm:mt-32 max-w-[800px]">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -41,7 +41,7 @@ export function FAQ() {
                   aria-expanded={isOpen}
                 >
                   <span
-                    className={`font-display text-[1.5rem] sm:text-[2rem] leading-tight transition-colors duration-500 ${
+                    className={`font-display text-[1.75rem] sm:text-[2.375rem] leading-[1.18] transition-colors duration-500 ${
                       isOpen ? "text-gold" : "text-foreground group-hover:text-gold"
                     }`}
                   >
@@ -66,7 +66,7 @@ export function FAQ() {
                       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-10 max-w-2xl body-editorial text-foreground/55">{f.a}</p>
+                      <p className="pb-12 max-w-2xl body-editorial text-foreground/65">{f.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
