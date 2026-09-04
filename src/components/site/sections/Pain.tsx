@@ -8,21 +8,21 @@ const pains = [
   { title: "Every missed patient is $500–$800 walking out the door", body: "That's not a rounding error. For a practice doing $60K/month, a 30% lapse rate is $18,000/month in recoverable revenue sitting dormant." },
 ];
 
-const numerals = ["I", "II", "III", "IV"];
+const numerals = ["01", "02", "03", "04"];
 
 export function Pain() {
   return (
-    <section className="navy-section pt-28 sm:pt-44 pb-20 sm:pb-28">
-      <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
+    <section className="navy-section pt-32 sm:pt-52 pb-24 sm:pb-32">
+      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
         <Reveal>
           <div className="flex items-center gap-5">
-            <span className="w-10 rule-gold" />
+            <span className="w-12 rule-gold" />
             <span className="eyebrow">The Reality</span>
           </div>
           <h2 className="mt-10 display-lg text-foreground max-w-[14ch]">Sound familiar?</h2>
         </Reveal>
 
-        <div className="mt-20 sm:mt-28">
+        <div className="mt-20 sm:mt-32">
           {pains.map((p, i) => (
             <motion.article
               key={i}
@@ -30,19 +30,18 @@ export function Pain() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -12% 0px" }}
               transition={{ duration: 1, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className={i % 2 === 1 ? "lg:pl-[16%]" : ""}
             >
               <div className="rule-faint" />
-              <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 py-12 sm:py-16">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 py-16 sm:py-24 items-start">
                 <div className="lg:col-span-1">
-                  <span className="font-display text-lg text-gold/70 tracking-[0.2em]">
+                  <span className="font-display text-2xl sm:text-3xl text-gold/60 tabular-nums leading-none">
                     {numerals[i]}
                   </span>
                 </div>
-                <h3 className="lg:col-span-6 display-md text-foreground max-w-[22ch]">
+                <h3 className="lg:col-span-6 display-md text-foreground max-w-[20ch]">
                   {p.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/55">{p.body}</p>
+                <p className="lg:col-span-5 body-editorial text-foreground/60">{p.body}</p>
               </div>
             </motion.article>
           ))}
