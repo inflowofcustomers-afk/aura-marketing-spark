@@ -8,44 +8,45 @@ const pains = [
   { title: "Every missed patient is $500–$800 walking out the door", body: "That's not a rounding error. For a practice doing $60K/month, a 30% lapse rate is $18,000/month in recoverable revenue sitting dormant." },
 ];
 
+const numerals = ["I", "II", "III", "IV"];
+
 export function Pain() {
   return (
-    <section className="navy-section pt-20 sm:pt-32 pb-12 sm:pb-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_oklch(0.25_0.06_250/_0.6),_transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="navy-section pt-28 sm:pt-44 pb-20 sm:pb-28">
+      <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
         <Reveal>
-          <div className="text-center">
+          <div className="flex items-center gap-5">
+            <span className="w-10 rule-gold" />
             <span className="eyebrow">The Reality</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-5xl text-foreground">
-              Sound familiar?
-            </h2>
           </div>
+          <h2 className="mt-10 display-lg text-foreground max-w-[14ch]">Sound familiar?</h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-20 sm:mt-28">
           {pains.map((p, i) => (
-            <motion.div
+            <motion.article
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "0px 0px -12% 0px" }}
+              transition={{ duration: 1, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className={i % 2 === 1 ? "lg:pl-[16%]" : ""}
             >
-              <div className="card-hairline rounded-2xl p-7 sm:p-9 h-full transition-all duration-500">
-                <div className="flex items-start gap-4">
-                  <div className="font-display text-3xl gold-gradient-text leading-none">
-                    0{i + 1}
-                  </div>
-                  <div>
-                    <h3 className="font-display text-xl sm:text-2xl text-foreground">
-                      {p.title}
-                    </h3>
-                    <p className="mt-3 text-foreground/70 leading-relaxed">{p.body}</p>
-                  </div>
+              <div className="rule-faint" />
+              <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 py-12 sm:py-16">
+                <div className="lg:col-span-1">
+                  <span className="font-display text-lg text-gold/70 tracking-[0.2em]">
+                    {numerals[i]}
+                  </span>
                 </div>
+                <h3 className="lg:col-span-6 display-md text-foreground max-w-[22ch]">
+                  {p.title}
+                </h3>
+                <p className="lg:col-span-5 body-editorial text-foreground/55">{p.body}</p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+          <div className="rule-faint" />
         </div>
       </div>
     </section>

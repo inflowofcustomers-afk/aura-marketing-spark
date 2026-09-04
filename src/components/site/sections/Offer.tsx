@@ -1,7 +1,7 @@
-import { Check, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/Motion";
 import { CTALink } from "@/components/site/CTA";
 import { usePriceCounter } from "@/hooks/usePriceCounter";
+import interior from "@/assets/interior-suite.jpg";
 
 const includes = [
   "AURA platform deployment",
@@ -15,72 +15,98 @@ const includes = [
 ];
 
 export function Offer() {
-  const { value, ref } = usePriceCounter(5000, 800);
+  const { value, ref } = usePriceCounter(5000, 1400);
 
   return (
-    <section className="navy-section py-20 sm:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_oklch(0.72_0.12_80/_0.12),_transparent_55%)]" />
-      <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
-        <Reveal>
-          <div className="text-center">
-            <span className="eyebrow">The Offer</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-5xl">
+    <>
+      {/* Full-bleed editorial band */}
+      <div className="relative navy-section">
+        <img
+          src={interior}
+          alt="A quiet, warm-toned aesthetic treatment suite in soft daylight"
+          width={1600}
+          height={1008}
+          loading="lazy"
+          className="w-full h-[42vh] sm:h-[62vh] object-cover img-duotone"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(6,22,37,0.55) 0%, rgba(6,22,37,0.1) 40%, rgba(6,22,37,0.85) 100%)",
+          }}
+        />
+      </div>
+
+      <section className="navy-section pt-24 sm:pt-36 pb-28 sm:pb-44">
+        <div className="mx-auto max-w-[72rem] px-6 sm:px-12">
+          <Reveal>
+            <div className="flex items-center gap-5">
+              <span className="w-10 rule-gold" />
+              <span className="eyebrow">The Offer</span>
+            </div>
+            <h2 className="mt-10 display-lg text-foreground max-w-[16ch]">
               The AURA Reactivation Pilot.
             </h2>
-            <p className="mt-4 text-foreground/70 max-w-xl mx-auto">
+            <p className="mt-8 body-editorial text-foreground/55 max-w-xl">
               Three founder spots. Lower setup cost. Direct access to our team. Locked-in rate
               that won't be available to anyone else.
             </p>
-          </div>
-        </Reveal>
+          </Reveal>
 
-        <Reveal delay={0.15}>
-          <div className="mt-12 offer-card-border">
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-navy to-navy-deep p-8 sm:p-12 gold-glow">
-              <div className="absolute -top-px inset-x-10 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <Reveal delay={0.12}>
+            <div className="mt-20 rule-gold" />
 
-              <div className="grid sm:grid-cols-2 gap-6 sm:gap-10">
-                <div>
-                  <div className="eyebrow">Founder Pricing</div>
-                  <div className="mt-3 flex items-baseline gap-2">
-                    {/* Price counter — ref attached to the span for IntersectionObserver */}
-                    <span
-                      ref={ref as React.RefObject<HTMLSpanElement>}
-                      className="font-display text-5xl sm:text-6xl gold-gradient-text block pt-2"
-                      style={{ lineHeight: 1.2, overflow: "visible" }}
-                    >
-                      ${value.toLocaleString()}
-                    </span>
-                    <span className="text-foreground/60 text-sm">setup fee</span>
-                  </div>
-                  <p className="mt-3 text-sm text-foreground/60">
-                    Includes your first 20 booked appointments. $250 per booking after that.
-                  </p>
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 py-14 sm:py-20 items-start">
+              <div className="lg:col-span-6">
+                <div className="eyebrow">Founder Pricing</div>
+                <div className="mt-6 flex items-baseline gap-4">
+                  <span
+                    ref={ref as React.RefObject<HTMLSpanElement>}
+                    className="font-display text-[4.5rem] sm:text-[7rem] text-gold leading-[1.05] tracking-[-0.02em]"
+                  >
+                    ${value.toLocaleString()}
+                  </span>
+                  <span className="text-[11px] uppercase tracking-[0.24em] text-foreground/45">
+                    setup fee
+                  </span>
                 </div>
-                <div className="flex sm:justify-end sm:items-end">
+                <p className="mt-6 body-editorial text-foreground/55 max-w-md">
+                  Includes your first 20 booked appointments. $250 per booking after that.
+                </p>
+                <div className="mt-12">
                   <CTALink to="/apply" variant="gold">
-                    Apply for a Founder Spot <ArrowRight size={16} />
+                    Apply for a Founder Spot
                   </CTALink>
                 </div>
               </div>
 
-              <div className="mt-10 pt-8 border-t border-border">
-                <div className="eyebrow mb-5">What's Included</div>
-                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+              <div className="lg:col-span-6 lg:pl-12 lg:border-l" style={{ borderColor: "rgba(198,161,91,0.18)" }}>
+                <div className="eyebrow">What's Included</div>
+                <ul className="mt-8">
                   {includes.map((line, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-0.5 w-5 h-5 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center flex-shrink-0">
-                        <Check size={12} className="text-gold" />
+                    <li
+                      key={i}
+                      className="flex items-baseline gap-6 py-4"
+                      style={{ borderBottom: "1px solid rgba(198,161,91,0.12)" }}
+                    >
+                      <span className="text-[10px] tracking-[0.2em] text-gold/60 tabular-nums">
+                        {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="text-foreground/85 text-sm leading-relaxed">{line}</span>
+                      <span className="text-foreground/75 text-[15px] font-light leading-relaxed">
+                        {line}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
+
+            <div className="rule-faint" />
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 }

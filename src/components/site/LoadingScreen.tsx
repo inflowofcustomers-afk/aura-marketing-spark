@@ -45,7 +45,7 @@ export function LoadingScreen() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#0D1B2A",
+        backgroundColor: "#061625",
         opacity: phase === "out" ? 0 : 1,
         transition: phase === "out" ? "opacity 0.7s ease" : "none",
         pointerEvents: phase === "out" ? "none" : "all",
@@ -61,10 +61,10 @@ export function LoadingScreen() {
       >
         <span
           style={{
-            fontFamily: "'Playfair Display', ui-serif, Georgia, serif",
+            fontFamily: "'Cormorant Garamond', ui-serif, Georgia, serif",
             fontSize: "clamp(2.5rem, 8vw, 4rem)",
             letterSpacing: "0.2em",
-            color: "#B8963E",
+            color: "#C6A15B",
             display: "block",
             lineHeight: 1,
           }}
@@ -76,7 +76,7 @@ export function LoadingScreen() {
           style={{
             height: "1px",
             marginTop: "10px",
-            background: "linear-gradient(90deg, transparent, #B8963E, transparent)",
+            background: "linear-gradient(90deg, transparent, #C6A15B, transparent)",
             width: phase === "hold" || phase === "out" ? "100%" : "0%",
             transition: phase === "hold" ? "width 0.5s ease 0.05s" : "none",
           }}

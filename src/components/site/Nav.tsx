@@ -8,17 +8,18 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
 
-  // Pages whose top section is cream — nav needs dark text when transparent
+  // Pages whose top section is navy — nav needs light text when transparent
   const darkTopPages = ["/privacy", "/terms", "/sms-policy"];
   const isLightPage = pathname !== "/" && !darkTopPages.includes(pathname);
 
-  // Unscrolled text colours: dark on cream pages, light on dark hero
-  const navText = !scrolled && isLightPage ? "text-navy-deep/70 hover:text-navy-deep" : "text-foreground/80 hover:text-gold";
-  const logoText = !scrolled && isLightPage ? "text-navy-deep" : "text-foreground";
-  const eyebrowText = !scrolled && isLightPage ? "text-navy-deep/60" : "";
+  const ink = !scrolled && isLightPage;
+  const navText = ink
+    ? "text-[color:var(--ink)]/60 hover:text-[color:var(--ink)]"
+    : "text-foreground/60 hover:text-gold";
+  const logoText = ink ? "text-[color:var(--ink)]" : "text-foreground";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -31,64 +32,80 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-xl bg-navy-deep/75 border-b border-border"
-          : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-700 ${
+        scrolled ? "bg-navy-deep/85 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className={`font-display text-xl sm:text-2xl tracking-wider transition-colors duration-300 ${logoText}`}>
+      <div
+        className={`mx-auto max-w-[92rem] px-6 sm:px-12 flex items-center justify-between transition-all duration-700 ${
+          scrolled ? "h-16" : "h-20 sm:h-28"
+        }`}
+      >
+        <Link to="/" className="flex items-baseline gap-2.5">
+          <span
+            className={`font-display text-2xl sm:text-[1.75rem] leading-none tracking-[0.28em] transition-colors duration-500 ${logoText}`}
+          >
             AURA
           </span>
-          <span className={`text-[10px] eyebrow inline-block translate-y-[1px] transition-colors duration-300 ${eyebrowText}`}>
+          <span
+            className={`text-[9px] uppercase tracking-[0.34em] transition-colors duration-500 ${
+              ink ? "text-[color:var(--warm-gray)]" : "text-foreground/45"
+            }`}
+          >
             Invites
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-14">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm transition-colors duration-300 ${navText}`}
+              className={`text-[11px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
             >
               {l.label}
             </a>
           ))}
           <Link
             to="/apply"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-navy-deep hover:bg-gold-light transition-all hover:gold-glow"
+            className={`text-[11px] uppercase tracking-[0.22em] pb-1 border-b transition-colors duration-500 ${
+              ink
+                ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:border-[color:var(--gold-dark)]"
+                : "text-gold border-gold/40 hover:border-gold"
+            }`}
           >
             Apply
           </Link>
         </nav>
 
         <button
-          className={`md:hidden p-2 transition-colors duration-300 ${!scrolled && isLightPage ? "text-navy-deep" : "text-foreground"}`}
+          className={`md:hidden p-2 transition-colors duration-500 ${
+            ink ? "text-[color:var(--ink)]" : "text-foreground"
+          }`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} strokeWidth={1} /> : <Menu size={20} strokeWidth={1} />}
         </button>
       </div>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden border-t border-border bg-navy-deep/95 backdrop-blur-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden bg-navy-deep"
           >
-            <div className="px-5 py-6 flex flex-col gap-4">
+            <div className="rule-faint" />
+            <div className="px-6 py-10 flex flex-col gap-7">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-foreground/90 py-2"
+                  className="font-display text-2xl text-foreground/90"
                 >
                   {l.label}
                 </a>
@@ -96,7 +113,7 @@ export function Nav() {
               <Link
                 to="/apply"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-gold px-5 py-3 text-sm font-medium text-navy-deep"
+                className="mt-2 text-[11px] uppercase tracking-[0.22em] text-gold self-start border-b border-gold/40 pb-1"
               >
                 Apply
               </Link>
