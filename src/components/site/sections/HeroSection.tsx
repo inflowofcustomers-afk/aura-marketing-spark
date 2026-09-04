@@ -1,183 +1,93 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useReducedMotion } from "framer-motion";
-import { gsap } from "gsap";
-import { ArrowRight } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 import { CTALink } from "@/components/site/CTA";
+import heroPortrait from "@/assets/hero-portrait.jpg";
 
-const GOLD = "#B8963E";
-const COUNT = 70;
-
-function PersonSVG({ size }: { size: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill={GOLD}
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block" }}
-    >
-      <circle cx="12" cy="8" r="3.5" />
-      <path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8" strokeWidth="0" />
-    </svg>
-  );
-}
-
-interface Particle {
-  id: number;
-  startXPct: number;
-  startYPct: number;
-  size: number;
-  driftAmpX: number;
-  driftAmpY: number;
-  driftDuration: number;
-  driftDelay: number;
-  opacity: number;
-}
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function HeroSection() {
-  const particleRefs = useRef<HTMLDivElement[]>([]);
   const reduce = useReducedMotion();
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  const particles = useMemo<Particle[]>(
-    () =>
-      Array.from({ length: COUNT }).map((_, id) => ({
-        id,
-        startXPct: (Math.random() - 0.5) * 1.6,
-        startYPct: (Math.random() - 0.5) * 1.6,
-        size: 12 + Math.random() * 14,
-        driftAmpX: (Math.random() - 0.5) * 50,
-        driftAmpY: (Math.random() - 0.5) * 50,
-        driftDuration: 4 + Math.random() * 5,
-        driftDelay: Math.random() * 5,
-        opacity: 0.15 + Math.random() * 0.15,
-      })),
-    []
-  );
-
-  useEffect(() => {
-    const els = particleRefs.current.filter(Boolean);
-    if (reduce || els.length === 0) return;
-
-    const hw = window.innerWidth / 2;
-    const hh = window.innerHeight / 2;
-
-    // Place particles at their random starting positions
-    els.forEach((el, i) => {
-      const p = particles[i];
-      if (!p) return;
-      gsap.set(el, {
-        xPercent: -50,
-        yPercent: -50,
-        x: p.startXPct * hw,
-        y: p.startYPct * hh,
-        opacity: p.opacity,
-        scale: 1,
-      });
-    });
-
-    // Continuous idle drift — runs forever, no scroll dependency
-    const tweens = els.map((el, i) => {
-      const p = particles[i];
-      if (!p) return null;
-      return gsap.to(el, {
-        x: `+=${p.driftAmpX}`,
-        y: `+=${p.driftAmpY}`,
-        duration: p.driftDuration,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        delay: p.driftDelay,
-      });
-    });
-
-    return () => {
-      tweens.forEach((t) => t?.kill());
-    };
-  }, [particles, reduce, isMobile]);
+  const rise = (delay: number) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: 22 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 1.2, delay, ease },
+        };
 
   return (
-    <section className="relative overflow-hidden navy-section pt-32 sm:pt-40 pb-20 sm:pb-32">
-      {/* Background aurora */}
-      <div className="aurora" aria-hidden />
+    <section className="relative navy-section grain overflow-hidden">
+      <div className="mx-auto max-w-[92rem] px-6 sm:px-12 pt-32 sm:pt-44 pb-20 sm:pb-32">
+        <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-center">
+          {/* Editorial column */}
+          <div className="lg:col-span-7">
+            <motion.div {...rise(0)} className="flex items-center gap-5">
+              <span className="w-10 rule-gold" />
+              <span className="eyebrow">Purpose-built for MedSpa owners</span>
+            </motion.div>
 
-      {/* Grain */}
-      <div className="absolute inset-0 pointer-events-none grain" aria-hidden />
+            <motion.h1 {...rise(0.12)} className="mt-10 display-xl text-foreground max-w-[16ch]">
+              Your dormant patient list is hiding{" "}
+              <span className="gold-italic">$30,000</span> in booked revenue.
+            </motion.h1>
 
-      {/* Gold hairlines */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-
-      {/* Floating particle background — desktop only, after hydration */}
-      {isMobile === false && !reduce && (
-        <div
-          className="absolute inset-0 overflow-hidden pointer-events-none"
-          aria-hidden
-          style={{ zIndex: 1 }}
-        >
-          {particles.map((p, i) => (
-            <div
-              key={p.id}
-              ref={(el) => {
-                if (el) particleRefs.current[i] = el;
-              }}
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                width: p.size,
-                height: p.size,
-                filter: `drop-shadow(0 0 4px ${GOLD}70)`,
-              }}
+            <motion.p
+              {...rise(0.24)}
+              className="mt-10 max-w-xl body-editorial text-foreground/60"
             >
-              <PersonSVG size={p.size} />
-            </div>
-          ))}
-        </div>
-      )}
+              AURA finds every patient who visited once and disappeared, and brings them back —
+              with a personalized SMS and email sequence that books appointments automatically.
+              No ads. No new leads. Just revenue from people who already know you.
+            </motion.p>
 
-      {/* Hero content — always visible */}
-      <div
-        className="relative mx-auto max-w-6xl px-5 sm:px-8 text-center"
-        style={{ zIndex: 3 }}
-      >
-        <span className="eyebrow inline-block">Purpose-built for MedSpa owners</span>
+            <motion.div
+              {...rise(0.36)}
+              className="mt-14 flex flex-col sm:flex-row gap-5 sm:gap-8 sm:items-center"
+            >
+              <CTALink to="/apply" variant="gold" className="self-start">
+                Apply for a Founder Spot
+              </CTALink>
+              <a
+                href="#how-it-works"
+                className="self-start text-[11px] uppercase tracking-[0.22em] text-foreground/60 hover:text-gold transition-colors duration-500 link-underline"
+              >
+                See How It Works
+              </a>
+            </motion.div>
 
-        <h1 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl leading-[1.05] text-foreground">
-          Your dormant patient list is hiding{" "}
-          <span className="gold-gradient-text italic">$30,000</span> in booked revenue.
-        </h1>
+            <motion.div {...rise(0.5)} className="mt-20 flex items-center gap-5">
+              <span className="w-14 rule-faint" />
+              <span className="text-[10px] uppercase tracking-[0.32em] text-foreground/35">
+                Limited founder spots
+              </span>
+            </motion.div>
+          </div>
 
-        <p className="mt-7 mx-auto max-w-2xl text-base sm:text-lg text-foreground/75 leading-relaxed">
-          AURA finds every patient who visited once and disappeared, and brings them back —
-          with a personalized SMS and email sequence that books appointments automatically.
-          No ads. No new leads. Just revenue from people who already know you.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-          <CTALink to="/apply" variant="gold">
-            Apply for a Founder Spot <ArrowRight size={16} />
-          </CTALink>
-          <a
-            href="#how-it-works"
-            className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-medium border border-foreground/25 text-foreground hover:border-gold hover:text-gold transition-all"
-          >
-            See How It Works
-          </a>
-        </div>
-
-        <div className="mt-16 flex items-center justify-center gap-3 text-xs eyebrow opacity-70">
-          <span className="h-px w-8 bg-gold/50" />
-          <span>Limited founder spots</span>
-          <span className="h-px w-8 bg-gold/50" />
+          {/* Photographic column */}
+          <div className="lg:col-span-5">
+            <motion.div
+              initial={reduce ? undefined : { opacity: 0, scale: 1.04 }}
+              animate={reduce ? undefined : { opacity: 1, scale: 1 }}
+              transition={{ duration: 1.8, delay: 0.2, ease }}
+              className="relative overflow-hidden"
+            >
+              <img
+                src={heroPortrait}
+                alt="A woman with luminous, natural skin in soft warm light"
+                width={1024}
+                height={1408}
+                className="w-full h-[58vh] lg:h-[76vh] object-cover img-duotone"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(6,22,37,0.28) 0%, rgba(6,22,37,0) 35%, rgba(6,22,37,0.35) 100%)",
+                }}
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

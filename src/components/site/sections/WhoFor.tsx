@@ -1,4 +1,3 @@
-import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/site/Motion";
 
@@ -16,78 +15,73 @@ const notForYou = [
   "You're looking for a general marketing agency",
 ];
 
-const itemAnim = (i: number) => ({
+const anim = (i: number) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "0px 0px -10% 0px" },
-  transition: { duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
+  transition: { duration: 1, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
 });
+
+function Column({
+  label,
+  items,
+  marker,
+  muted,
+}: {
+  label: string;
+  items: string[];
+  marker: string;
+  muted?: boolean;
+}) {
+  return (
+    <div>
+      <div className="eyebrow eyebrow-dark">{label}</div>
+      <ul className="mt-10">
+        {items.map((t, i) => (
+          <li
+            key={i}
+            className="flex items-baseline gap-6 py-6"
+            style={{ borderTop: "1px solid rgba(21,21,21,0.1)" }}
+          >
+            <span
+              className="text-sm leading-none w-4 shrink-0"
+              style={{ color: muted ? "var(--warm-gray)" : "var(--gold-dark)" }}
+              aria-hidden
+            >
+              {marker}
+            </span>
+            <span
+              className={`text-[1.0625rem] font-light leading-relaxed ${
+                muted ? "text-navy-deep/45" : "text-navy-deep/80"
+              }`}
+            >
+              {t}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function WhoFor() {
   return (
-    <section id="who-its-for" className="cream-section py-20 sm:py-32 relative">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="who-its-for" className="cream-section pt-28 sm:pt-44 pb-28 sm:pb-44">
+      <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
         <Reveal>
-          <div className="text-center">
-            <span className="eyebrow" style={{ color: "var(--gold-dark)" }}>The Fit</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-5xl text-navy-deep">Who It's For</h2>
+          <div className="flex items-center gap-5">
+            <span className="w-10" style={{ height: 1, background: "var(--gold-dark)" }} />
+            <span className="eyebrow eyebrow-dark">The Fit</span>
           </div>
+          <h2 className="mt-10 display-lg text-navy-deep">Who It's For</h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <motion.div {...itemAnim(0)}>
-            <div
-              className="rounded-2xl p-8 h-full border"
-              style={{
-                background: "linear-gradient(180deg, #ffffff, oklch(0.95 0.015 80))",
-                borderColor: "oklch(0.72 0.16 150 / 40%)",
-                boxShadow: "0 4px 24px -8px oklch(0.72 0.16 150 / 15%)",
-              }}
-            >
-              <div className="eyebrow" style={{ color: "oklch(0.55 0.16 150)" }}>
-                Built for you if
-              </div>
-              <ul className="mt-6 space-y-4">
-                {forYou.map((t, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span
-                      className="mt-0.5 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border"
-                      style={{ background: "oklch(0.72 0.16 150 / 12%)", borderColor: "oklch(0.72 0.16 150 / 50%)" }}
-                    >
-                      <Check size={14} className="text-success" />
-                    </span>
-                    <span className="text-navy-deep/80">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="mt-20 sm:mt-28 grid lg:grid-cols-2 gap-16 lg:gap-24">
+          <motion.div {...anim(0)}>
+            <Column label="Built for you if" items={forYou} marker="—" />
           </motion.div>
-          <motion.div {...itemAnim(1)}>
-            <div
-              className="rounded-2xl p-8 h-full border"
-              style={{
-                background: "linear-gradient(180deg, #ffffff, oklch(0.95 0.015 80))",
-                borderColor: "oklch(0.65 0.22 25 / 30%)",
-                boxShadow: "0 4px 24px -8px oklch(0.65 0.22 25 / 10%)",
-              }}
-            >
-              <div className="eyebrow" style={{ color: "oklch(0.55 0.22 25)" }}>
-                Not a fit if
-              </div>
-              <ul className="mt-6 space-y-4">
-                {notForYou.map((t, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span
-                      className="mt-0.5 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 border"
-                      style={{ background: "oklch(0.65 0.22 25 / 10%)", borderColor: "oklch(0.65 0.22 25 / 40%)" }}
-                    >
-                      <X size={14} className="text-destructive" />
-                    </span>
-                    <span className="text-navy-deep/60">{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <motion.div {...anim(1)}>
+            <Column label="Not a fit if" items={notForYou} marker="×" muted />
           </motion.div>
         </div>
       </div>

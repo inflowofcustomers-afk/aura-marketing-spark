@@ -1,20 +1,19 @@
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/site/Motion";
-import { Database, MessageSquareText, CalendarCheck2 } from "lucide-react";
 
 const steps = [
   {
-    icon: Database,
+    numeral: "I",
     title: "Connect",
     body: "You connect your Mangomint or Boulevard account — or upload a CSV export. Takes 15 minutes. We handle everything after that.",
   },
   {
-    icon: MessageSquareText,
+    numeral: "II",
     title: "Launch",
     body: "Our team builds your campaign — segmentation, copy, sequencing, dedicated phone number. Your campaign goes live within 7 days.",
   },
   {
-    icon: CalendarCheck2,
+    numeral: "III",
     title: "Collect",
     body: "Patients respond. Appointments book. You get a weekly report showing exactly what came in. The only thing you do is show up for the appointment.",
   },
@@ -22,47 +21,47 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="navy-section py-20 sm:py-32 relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="how-it-works" className="navy-section pt-28 sm:pt-44 pb-28 sm:pb-44">
+      <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
         <Reveal>
-          <div className="text-center">
+          <div className="flex items-center gap-5">
+            <span className="w-10 rule-gold" />
             <span className="eyebrow">The Process</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-5xl">How It Works</h2>
-            <p className="mt-4 max-w-xl mx-auto text-foreground/70">
+          </div>
+          <div className="mt-10 grid lg:grid-cols-12 gap-8 items-end">
+            <h2 className="lg:col-span-7 display-lg text-foreground">How It Works</h2>
+            <p className="lg:col-span-5 body-editorial text-foreground/55 lg:pb-3">
               Three steps. Seven days. Appointments on your calendar.
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-16 relative">
-          <div className="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-          <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
-            {steps.map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-                  transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <div className="relative text-center lg:text-left">
-                    <div className="relative inline-flex">
-                      <div className="w-24 h-24 rounded-full border border-gold/30 bg-navy flex items-center justify-center mx-auto lg:mx-0">
-                        <Icon className="text-gold" size={28} />
-                      </div>
-                      <span className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-gold text-navy-deep font-display text-lg flex items-center justify-center gold-glow">
-                        {i + 1}
-                      </span>
-                    </div>
-                    <h3 className="mt-6 font-display text-2xl sm:text-3xl">{s.title}</h3>
-                    <p className="mt-3 text-foreground/70 leading-relaxed">{s.body}</p>
+        <div className="mt-20 sm:mt-28">
+          {steps.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -12% 0px" }}
+              transition={{ duration: 1, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="rule-faint" />
+              <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 py-14 sm:py-20">
+                <div className="lg:col-span-2 flex lg:block items-baseline gap-5">
+                  <div className="font-display text-3xl sm:text-4xl text-gold/70 tracking-[0.18em] leading-none">
+                    {s.numeral}
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                </div>
+                <h3 className="lg:col-span-4 font-display text-3xl sm:text-5xl text-foreground leading-none tracking-[0.02em]">
+                  {s.title}
+                </h3>
+                <p className="lg:col-span-6 body-editorial text-foreground/55 max-w-xl">
+                  {s.body}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+          <div className="rule-faint" />
         </div>
       </div>
     </section>
