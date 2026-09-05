@@ -41,11 +41,21 @@ export function Pain() {
                     {numerals[i]}
                   </span>
                 </div>
-                <h3 className="lg:col-span-6 font-display font-light text-foreground max-w-[20ch]"
+                <h3
+                  className={`font-display font-light text-foreground max-w-[20ch] ${
+                    i % 2 === 0 ? "lg:col-span-6" : "lg:col-span-5 lg:col-start-3"
+                  }`}
                   style={{ fontSize: "clamp(2.35rem, 4.1vw, 3.5rem)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
                   {p.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/85 lg:pt-3">{p.body}</p>
+                <p
+                  className={`body-editorial text-foreground/85 lg:pt-3 ${
+                    i % 2 === 0 ? "lg:col-span-5" : "lg:col-span-4"
+                  }`}
+                >
+                  {p.body}
+                </p>
+
               </div>
             </motion.article>
           ))}
