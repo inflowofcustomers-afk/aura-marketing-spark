@@ -17,12 +17,12 @@ export function Nav() {
 
   const ink = !scrolled && isLightPage;
   const navText = ink
-    ? "text-[color:var(--ink)]/65 hover:text-[color:var(--ink)]"
-    : "text-foreground/70 hover:text-gold";
+    ? "text-[color:var(--ink)]/75 hover:text-[color:var(--ink)]"
+    : "text-foreground/80 hover:text-gold";
   const logoText = ink ? "text-[color:var(--ink)]" : "text-foreground";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 56);
+    const onScroll = () => setScrolled(window.scrollY > 64);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -63,8 +63,8 @@ export function Nav() {
               AURA
             </span>
             <span
-              className={`text-[11px] uppercase tracking-[0.34em] transition-colors duration-500 ${
-                ink ? "text-[color:var(--warm-gray)]" : "text-foreground/65"
+              className={`text-[12px] uppercase tracking-[0.34em] transition-colors duration-500 ${
+                ink ? "text-[color:var(--warm-gray)]" : "text-foreground/75"
               }`}
             >
               Invites
@@ -81,20 +81,20 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className={`text-[12px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
+              className={`text-[13px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
             >
               {l.label}
             </a>
           ))}
           <a
             href="https://app.aurainvites.com"
-            className={`text-[12px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
+            className={`text-[13px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
           >
             Login
           </a>
           <Link
             to="/apply"
-            className={`text-[12px] uppercase tracking-[0.22em] leading-none pb-1 border-b transition-colors duration-500 ${
+            className={`text-[13px] uppercase tracking-[0.22em] leading-none pb-1 border-b transition-colors duration-500 ${
               ink
                 ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:border-[color:var(--gold-dark)]"
                 : "text-gold border-gold/40 hover:border-gold"
