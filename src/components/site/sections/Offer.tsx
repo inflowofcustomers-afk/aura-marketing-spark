@@ -91,7 +91,7 @@ export function Offer() {
 
 
           <Reveal delay={0.12}>
-            <div className="mt-20 rule-gold" />
+            <div className="mt-24 sm:mt-32 rule-gold" />
 
             <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 py-16 sm:py-24 items-start">
               <div className="lg:col-span-6">
