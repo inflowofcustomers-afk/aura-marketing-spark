@@ -42,7 +42,7 @@ export function Pain() {
                   style={{ fontSize: "clamp(2.35rem, 4.1vw, 3.5rem)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
                   {p.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/78 lg:pt-3">{p.body}</p>
+                <p className="lg:col-span-5 body-editorial text-foreground/85 lg:pt-3">{p.body}</p>
               </div>
             </motion.article>
           ))}

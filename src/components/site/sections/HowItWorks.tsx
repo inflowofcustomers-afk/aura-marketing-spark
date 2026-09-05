@@ -30,7 +30,7 @@ export function HowItWorks() {
           </div>
           <div className="mt-10 grid lg:grid-cols-12 gap-8 items-end">
             <h2 className="lg:col-span-7 display-lg text-foreground">How It Works</h2>
-            <p className="lg:col-span-5 body-editorial text-foreground/75 lg:pb-4">
+            <p className="lg:col-span-5 body-editorial text-foreground/85 lg:pb-4">
               Three steps. Seven days. Appointments on your calendar.
             </p>
           </div>
@@ -53,7 +53,7 @@ export function HowItWorks() {
                 <h3 className="lg:col-span-4 font-display text-[2.6rem] sm:text-[4.25rem] text-foreground leading-[0.95] tracking-[0.01em]">
                   {s.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/78 max-w-2xl">
+                <p className="lg:col-span-5 body-editorial text-foreground/85 max-w-2xl">
                   {s.body}
                 </p>
               </div>
