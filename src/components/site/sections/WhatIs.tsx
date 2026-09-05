@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/site/Motion";
-import stillLife from "@/assets/still-life.jpg";
+import patientDetail from "@/assets/patient-detail.jpg";
 
 export function WhatIs() {
   return (
@@ -28,10 +28,10 @@ export function WhatIs() {
 
           <Reveal delay={0.2}>
             <img
-              src={stillLife}
-              alt="Luxury skincare bottle and folded linen on a travertine ledge in warm daylight"
+              src={patientDetail}
+              alt="A woman resting her hand near her collarbone in warm daylight against a travertine wall"
               width={1200}
-              height={1504}
+              height={1280}
               loading="lazy"
               className="w-full h-[480px] lg:h-[880px] object-cover img-duotone"
             />
