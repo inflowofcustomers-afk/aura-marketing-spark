@@ -44,17 +44,26 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter] duration-300 ${
-        scrolled ? "bg-navy-deep/80 backdrop-blur-md" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-[padding] duration-300 ${
+        scrolled ? "pt-3 sm:pt-4" : "pt-0"
       }`}
       style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
     >
       <div
-        className={`container-grid grid grid-cols-[minmax(0,1fr)_auto] items-center transition-[height] duration-300 ${
+        className={`transition-[background-color,backdrop-filter,border-radius,margin,max-width] duration-500 ${
+          scrolled
+            ? "bg-navy-deep/80 backdrop-blur-md rounded-sm mx-3 sm:mx-6 lg:mx-10"
+            : "bg-transparent mx-0"
+        }`}
+        style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
+      >
+      <div
+        className={`${scrolled ? "px-6 sm:px-8 lg:px-10 max-w-[96rem] mx-auto" : "container-grid"} grid grid-cols-[minmax(0,1fr)_auto] items-center transition-[height] duration-300 ${
           scrolled ? "h-[4.25rem]" : "h-20 sm:h-28"
         }`}
         style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
       >
+
         <motion.div {...enter(0.05)} className="min-w-0">
           <Link to="/" className="inline-flex items-baseline gap-2.5">
             <span
