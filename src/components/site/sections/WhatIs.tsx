@@ -1,9 +1,9 @@
 import { Reveal } from "@/components/site/Motion";
-import patientDetail from "@/assets/patient-detail.jpg";
+import interiorDetail from "@/assets/interior-detail.jpg";
 
 export function WhatIs() {
   return (
-    <section className="cream-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+    <section className="cream-section pt-28 sm:pt-44 pb-28 sm:pb-44">
       <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
@@ -28,8 +28,8 @@ export function WhatIs() {
 
           <Reveal delay={0.2}>
             <img
-              src={patientDetail}
-              alt="A woman resting her hand near her collarbone in warm daylight against a travertine wall"
+              src={interiorDetail}
+              alt="Warm daylight across travertine stone, sheer linen and fluted glass in a luxury aesthetic clinic"
               width={1024}
               height={1280}
               loading="lazy"
