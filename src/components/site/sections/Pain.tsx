@@ -13,16 +13,19 @@ const numerals = ["01", "02", "03", "04"];
 export function Pain() {
   return (
     <section className="navy-section pt-28 sm:pt-44 pb-20 sm:pb-28">
-      <div className="container-grid">
+      <div className="canvas-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12 rule-gold" />
             <span className="eyebrow">The Reality</span>
           </div>
-          <h2 className="mt-10 display-lg text-foreground max-w-[14ch]">Sound familiar?</h2>
+          <h2 className="mt-12 display-canvas text-foreground w-[85%]">Sound familiar?</h2>
         </Reveal>
+      </div>
 
+      <div className="container-grid">
         <div className="mt-20 sm:mt-32">
+
           {pains.map((p, i) => (
             <motion.article
               key={i}
