@@ -20,7 +20,7 @@ export function WhatIs() {
 
         <div className="mt-20 sm:mt-32 grid lg:grid-cols-[45fr_55fr] gap-16 lg:gap-24 items-center">
           <Reveal delay={0.12}>
-            <div className="space-y-10 body-editorial text-navy-deep/80">
+            <div className="space-y-10 body-editorial text-navy-deep/85">
               <p>Most patient reactivation attempts fail because they're generic: a newsletter blast, a promo email, a discount nobody asked for. Patients ignore them because they feel like junk mail.</p>
               <p>AURA connects directly to your Mangomint or Boulevard account, analyzes your full patient history, segments your dormant list by treatment type and last visit, and deploys a personalized SMS and email sequence that feels like it came from your practice, not from a marketing platform.</p>
             </div>

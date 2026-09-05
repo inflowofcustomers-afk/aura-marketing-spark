@@ -52,7 +52,7 @@ function Column({
             </span>
             <span
               className={`font-display text-[1.75rem] sm:text-[2.15rem] leading-[1.24] tracking-[-0.005em] ${
-                muted ? "text-navy-deep/80" : "text-navy-deep"
+                muted ? "text-navy-deep/85" : "text-navy-deep"
               }`}
             >
               {t}
