@@ -25,8 +25,8 @@ export function HeroSection() {
             <span className="eyebrow">Purpose-built for MedSpa owners</span>
           </motion.div>
 
-          <motion.h1 {...rise(0.12)} className="mt-10 font-display font-light text-foreground max-w-[22ch]"
-            style={{ fontSize: "clamp(2.75rem, 5.2vw, 5.25rem)", lineHeight: 1.02, letterSpacing: "-0.02em" }}>
+          <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground max-w-[20ch]"
+            style={{ fontSize: "clamp(3rem, 5.9vw, 5.9rem)", lineHeight: 1.01, letterSpacing: "-0.022em" }}>
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
@@ -75,15 +75,21 @@ export function HeroSection() {
             alt="A woman with luminous, natural skin in soft warm light"
             width={1024}
             height={1408}
-            className="absolute inset-0 w-full h-full object-cover object-[52%_35%] img-duotone"
+            className="absolute inset-0 w-full h-full object-cover object-[58%_28%] img-duotone"
           />
           <div
             aria-hidden
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(90deg, rgba(6,22,37,0.92) 0%, rgba(6,22,37,0.35) 22%, rgba(6,22,37,0) 55%), linear-gradient(180deg, rgba(6,22,37,0.55) 0%, rgba(6,22,37,0) 30%, rgba(6,22,37,0.5) 100%)",
+                "linear-gradient(90deg, rgba(6,22,37,0.96) 0%, rgba(6,22,37,0.6) 14%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0) 70%), linear-gradient(180deg, rgba(6,22,37,0.6) 0%, rgba(6,22,37,0) 28%, rgba(6,22,37,0.62) 100%)",
+              mixBlendMode: "multiply",
             }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "rgba(6,22,37,0.22)" }}
           />
         </motion.div>
       </div>

@@ -23,7 +23,7 @@ export function FAQ() {
           <h2 className="mt-10 display-lg text-foreground">Frequently Asked</h2>
         </Reveal>
 
-        <div className="mt-20 sm:mt-32 max-w-[800px]">
+        <div className="mt-20 sm:mt-32 max-w-[760px]">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -41,7 +41,7 @@ export function FAQ() {
                   aria-expanded={isOpen}
                 >
                   <span
-                    className={`font-display text-[1.75rem] sm:text-[2.375rem] leading-[1.18] transition-colors duration-500 ${
+                    className={`font-display text-[1.875rem] sm:text-[2.5rem] leading-[1.16] transition-colors duration-500 ${
                       isOpen ? "text-gold" : "text-foreground group-hover:text-gold"
                     }`}
                   >
