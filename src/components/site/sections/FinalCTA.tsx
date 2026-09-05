@@ -3,7 +3,7 @@ import { CTALink } from "@/components/site/CTA";
 
 export function FinalCTA() {
   return (
-    <section className="cream-section py-40 sm:py-72 relative overflow-hidden">
+    <section className="cream-section py-32 sm:py-60 relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 sm:px-12 text-center">
         <Reveal>
           <div className="flex items-center justify-center gap-5">

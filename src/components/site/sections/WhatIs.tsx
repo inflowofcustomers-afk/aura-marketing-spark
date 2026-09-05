@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/site/Motion";
-import patientDetail from "@/assets/patient-detail.jpg";
+import interiorDetail from "@/assets/interior-detail.jpg";
 
 export function WhatIs() {
   return (
@@ -28,8 +28,8 @@ export function WhatIs() {
 
           <Reveal delay={0.2}>
             <img
-              src={patientDetail}
-              alt="A woman resting her hand near her collarbone in warm daylight against a travertine wall"
+              src={interiorDetail}
+              alt="Warm daylight across travertine stone, sheer linen and fluted glass in a luxury aesthetic clinic"
               width={1024}
               height={1280}
               loading="lazy"
