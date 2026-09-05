@@ -36,24 +36,26 @@ function Column({
   return (
     <div>
       <div className="eyebrow eyebrow-dark">{label}</div>
-      <ul className="mt-12">
+      <div className="mt-8" style={{ height: 1, background: "rgba(21,21,21,0.28)" }} />
+      <ul className="mt-2">
         {items.map((t, i) => (
           <li
             key={i}
-            className="flex items-baseline gap-7 py-7"
-            style={{ borderTop: "1px solid rgba(21,21,21,0.18)" }}
+            className="flex items-baseline gap-6 sm:gap-8 py-8 sm:py-10"
+            style={i === 0 ? undefined : { borderTop: "1px solid rgba(21,21,21,0.14)" }}
           >
             <span
-              className="text-base leading-none w-4 shrink-0"
+              className="text-sm leading-none w-4 shrink-0"
               style={{ color: "var(--gold-dark)" }}
               aria-hidden
             >
               {marker}
             </span>
             <span
-              className={`font-display text-[1.75rem] sm:text-[2.15rem] leading-[1.24] tracking-[-0.005em] ${
-                muted ? "text-navy-deep/85" : "text-navy-deep"
+              className={`font-display leading-[1.2] tracking-[-0.008em] ${
+                muted ? "text-navy-deep/80" : "text-navy-deep"
               }`}
+              style={{ fontSize: "clamp(1.5rem, 2.3vw, 2.125rem)" }}
             >
               {t}
             </span>
@@ -66,21 +68,30 @@ function Column({
 
 export function WhoFor() {
   return (
-    <section id="who-its-for" className="cream-section pt-28 sm:pt-44 pb-28 sm:pb-44">
-      <div className="container-grid">
+    <section id="who-its-for" className="cream-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+      <div className="canvas-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12" style={{ height: 1, background: "var(--gold-dark)" }} />
             <span className="eyebrow eyebrow-dark">The Fit</span>
           </div>
-          <h2 className="mt-10 display-lg text-navy-deep">Who It's For</h2>
+          <h2
+            className="mt-10 sm:mt-14 font-display font-light text-navy-deep tracking-[-0.025em]"
+            style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)", lineHeight: 0.98 }}
+          >
+            Who It's For
+          </h2>
         </Reveal>
 
-        <div className="mt-20 sm:mt-32 grid lg:grid-cols-2 gap-16 lg:gap-28">
-          <motion.div {...anim(0)}>
+        <div className="mt-20 sm:mt-36 grid lg:grid-cols-2 gap-20 lg:gap-0">
+          <motion.div {...anim(0)} className="lg:pr-16 xl:pr-24">
             <Column label="Built for you if" items={forYou} marker="/" />
           </motion.div>
-          <motion.div {...anim(1)}>
+          <motion.div
+            {...anim(1)}
+            className="lg:pl-16 xl:pl-24 lg:border-l"
+            style={{ borderColor: "rgba(21,21,21,0.14)" }}
+          >
             <Column label="Not a fit if" items={notForYou} marker="×" muted />
           </motion.div>
         </div>
@@ -88,3 +99,4 @@ export function WhoFor() {
     </section>
   );
 }
+

@@ -62,24 +62,36 @@ export function Offer() {
     <>
       <CinematicBand />
 
-      <section className="navy-section pt-24 sm:pt-36 pb-28 sm:pb-44">
-        <div className="container-grid">
+      <section className="navy-section pt-28 sm:pt-44 pb-28 sm:pb-48">
+        <div className="canvas-grid">
           <Reveal>
             <div className="flex items-center gap-5">
               <span className="w-12 rule-gold" />
               <span className="eyebrow">The Offer</span>
             </div>
-            <h2 className="mt-10 display-lg text-foreground max-w-[16ch]">
-              The AURA INVITES™ Reactivation Pilot.
+            <h2
+              className="mt-12 sm:mt-16 font-display font-light text-foreground tracking-[-0.025em]"
+              style={{ fontSize: "clamp(2.75rem, 7.4vw, 6.25rem)", lineHeight: 0.98 }}
+            >
+              The AURA INVITES&trade;
+              <br />
+              Reactivation Pilot.
             </h2>
-            <p className="mt-10 body-editorial text-foreground/85 max-w-2xl">
+            <p
+              className="mt-10 sm:mt-14 text-foreground/85 font-light max-w-[60ch] w-[92%] lg:w-[64%]"
+              style={{ fontSize: "clamp(1.0625rem, 1.35vw, 1.375rem)", lineHeight: 1.68 }}
+            >
               Three founder spots. Lower setup cost. Direct access to our team. Locked-in rate
               that won't be available to anyone else.
             </p>
           </Reveal>
+        </div>
+
+        <div className="container-grid">
+
 
           <Reveal delay={0.12}>
-            <div className="mt-20 rule-gold" />
+            <div className="mt-24 sm:mt-32 rule-gold" />
 
             <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 py-16 sm:py-24 items-start">
               <div className="lg:col-span-6">
