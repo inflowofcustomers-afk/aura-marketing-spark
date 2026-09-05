@@ -131,21 +131,21 @@
     line-height: 1.12;
   }
   .body-editorial {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 1.78;
     font-weight: 300;
     letter-spacing: 0.005em;
   }
   @media (min-width: 1024px) {
-    .body-editorial { font-size: 1.1875rem; }
+    .body-editorial { font-size: 1.25rem; }
   }
   .body-support {
-    font-size: 0.975rem;
+    font-size: 1.0625rem;
     line-height: 1.75;
     font-weight: 300;
   }
   @media (min-width: 1024px) {
-    .body-support { font-size: 1.0625rem; }
+    .body-support { font-size: 1.125rem; }
   }
   .numeral-xl {
     font-family: var(--font-display);
@@ -197,7 +197,7 @@
     border-color: var(--gold);
     color: var(--navy-deep);
     padding: 1.25rem 3rem;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     letter-spacing: 0.2em;
   }
   .btn-quiet-solid:hover {
