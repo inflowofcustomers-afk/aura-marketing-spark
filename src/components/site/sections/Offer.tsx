@@ -24,10 +24,12 @@ function CinematicBand() {
     offset: ["start end", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+  const inset = useTransform(scrollYProgress, [0, 0.42], ["7vw", "0vw"]);
 
   return (
-    <div
+    <motion.div
       ref={ref}
+      style={reduce ? undefined : { paddingLeft: inset, paddingRight: inset }}
       className="relative navy-section overflow-hidden h-[58vh] sm:h-[86vh]"
     >
       <motion.img
