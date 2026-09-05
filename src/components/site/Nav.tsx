@@ -64,23 +64,22 @@ export function Nav() {
             transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
           }}
         >
-          <div className={scrolled ? "" : "py-6 sm:py-9"}>
+          <div className={scrolled ? "" : "py-7 sm:py-10"}>
             <motion.div {...enter(0.05)} className="min-w-0">
-              <Link to="/" className="inline-flex items-baseline gap-2.5">
+              <Link to="/" className="group inline-flex flex-col leading-none">
                 <span
-                  className={`font-display text-2xl sm:text-[1.75rem] leading-none tracking-[0.28em] transition-colors duration-500 ${
+                  className={`font-display text-[1.6rem] sm:text-[1.8rem] leading-none tracking-[0.42em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--ink)]" : "text-foreground"
                   }`}
                 >
                   AURA
                 </span>
                 <span
-                  className={`text-[12px] uppercase tracking-[0.34em] transition-colors duration-500 ${
-                    ink ? "text-[color:var(--warm-gray)]" : "text-foreground/75"
+                  className={`mt-2 text-[9px] uppercase tracking-[0.58em] transition-colors duration-500 ${
+                    ink ? "text-[color:var(--gold-dark)]" : "text-gold/90"
                   }`}
                 >
-                  Invites
-                  <span className="align-super text-[7px] tracking-normal ml-0.5">&trade;</span>
+                  Invites&trade;
                 </span>
               </Link>
             </motion.div>
@@ -88,29 +87,33 @@ export function Nav() {
 
           <motion.nav
             {...enter(0.16)}
-            className="hidden md:flex items-baseline gap-9 lg:gap-11"
+            className="hidden md:flex items-center gap-8 lg:gap-10"
           >
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className={`text-[13px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
+                className={`text-[12px] uppercase tracking-[0.26em] leading-none transition-colors duration-500 link-underline ${navText}`}
               >
                 {l.label}
               </a>
             ))}
             <a
               href="https://app.aurainvites.com"
-              className={`text-[13px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
+              className={`text-[12px] uppercase tracking-[0.26em] leading-none transition-colors duration-500 link-underline ${navText}`}
             >
               Login
             </a>
+            <span
+              aria-hidden
+              className={`h-4 w-px ${ink ? "bg-[color:var(--gold-dark)]/30" : "bg-gold/30"}`}
+            />
             <Link
               to="/apply"
-              className={`text-[13px] uppercase tracking-[0.22em] leading-none pb-1 border-b transition-colors duration-500 ${
+              className={`text-[11px] uppercase tracking-[0.3em] leading-none px-6 py-2.5 border transition-all duration-500 ${
                 ink
-                  ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:border-[color:var(--gold-dark)]"
-                  : "text-gold border-gold/40 hover:border-gold"
+                  ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:bg-[color:var(--gold-dark)] hover:text-foreground"
+                  : "text-gold border-gold/50 hover:bg-gold hover:text-[color:var(--navy-deep)]"
               }`}
             >
               Apply
