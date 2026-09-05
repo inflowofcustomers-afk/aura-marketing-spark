@@ -49,7 +49,7 @@ export function HeroSection() {
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start text-xs uppercase tracking-[0.22em] text-foreground/65 hover:text-gold transition-colors duration-500 link-underline"
+              className="self-start whitespace-nowrap text-xs uppercase tracking-[0.22em] text-foreground/70 hover:text-gold transition-colors duration-500 link-underline"
             >
               See How It Works
             </a>

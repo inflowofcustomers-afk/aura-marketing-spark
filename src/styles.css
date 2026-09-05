@@ -178,6 +178,7 @@
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    white-space: nowrap;
     padding: 1.15rem 2.5rem;
     border: 1px solid rgba(198, 161, 91, 0.5);
     color: var(--gold);
