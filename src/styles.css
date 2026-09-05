@@ -272,6 +272,27 @@
   @media (min-width: 1024px) { .container-grid { padding-inline: 4rem; } }
   @media (min-width: 1440px) { .container-grid { padding-inline: 5rem; } }
 
+  /* Wider editorial canvas: display typography and photography may break out */
+  .canvas-grid {
+    width: 100%;
+    max-width: 96rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 640px) { .canvas-grid { padding-inline: 2.5rem; } }
+  @media (min-width: 1024px) { .canvas-grid { padding-inline: 4rem; } }
+  @media (min-width: 1440px) { .canvas-grid { padding-inline: 5rem; } }
+
+  /* Dominant display type for a small number of editorial moments */
+  .display-canvas {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.25rem, 9.2vw, 6.25rem);
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+  }
+
+
   /* Aligns a full-bleed column's content to the same left grid line */
   .grid-left-align { padding-left: 1.5rem; padding-right: 1.5rem; }
   @media (min-width: 640px) { .grid-left-align { padding-left: 2.5rem; padding-right: 2.5rem; } }

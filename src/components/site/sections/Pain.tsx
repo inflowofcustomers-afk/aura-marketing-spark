@@ -13,16 +13,19 @@ const numerals = ["01", "02", "03", "04"];
 export function Pain() {
   return (
     <section className="navy-section pt-28 sm:pt-44 pb-20 sm:pb-28">
-      <div className="container-grid">
+      <div className="canvas-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12 rule-gold" />
             <span className="eyebrow">The Reality</span>
           </div>
-          <h2 className="mt-10 display-lg text-foreground max-w-[14ch]">Sound familiar?</h2>
+          <h2 className="mt-12 display-canvas text-foreground w-[85%]">Sound familiar?</h2>
         </Reveal>
+      </div>
 
+      <div className="container-grid">
         <div className="mt-20 sm:mt-32">
+
           {pains.map((p, i) => (
             <motion.article
               key={i}
@@ -38,11 +41,21 @@ export function Pain() {
                     {numerals[i]}
                   </span>
                 </div>
-                <h3 className="lg:col-span-6 font-display font-light text-foreground max-w-[20ch]"
+                <h3
+                  className={`font-display font-light text-foreground max-w-[20ch] ${
+                    i % 2 === 0 ? "lg:col-span-6" : "lg:col-span-5 lg:col-start-3"
+                  }`}
                   style={{ fontSize: "clamp(2.35rem, 4.1vw, 3.5rem)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
                   {p.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/85 lg:pt-3">{p.body}</p>
+                <p
+                  className={`body-editorial text-foreground/85 lg:pt-3 ${
+                    i % 2 === 0 ? "lg:col-span-5" : "lg:col-span-4"
+                  }`}
+                >
+                  {p.body}
+                </p>
+
               </div>
             </motion.article>
           ))}
