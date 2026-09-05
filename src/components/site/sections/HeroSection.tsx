@@ -35,7 +35,7 @@ export function HeroSection() {
             {...rise(0.24)}
             className="mt-10 max-w-[36rem] body-editorial text-foreground/65"
           >
-            AURA finds every patient who visited once and disappeared, and brings them back —
+            AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
             No ads. No new leads. Just revenue from people who already know you.
           </motion.p>
@@ -63,7 +63,7 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Photographic column — full-height, edge to edge */}
+        {/* Photographic column: full-height, edge to edge */}
         <motion.div
           initial={reduce ? undefined : { opacity: 0, scale: 1.06 }}
           animate={reduce ? undefined : { opacity: 1, scale: 1 }}

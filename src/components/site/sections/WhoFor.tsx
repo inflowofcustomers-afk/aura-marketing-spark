@@ -78,7 +78,7 @@ export function WhoFor() {
 
         <div className="mt-20 sm:mt-32 grid lg:grid-cols-2 gap-16 lg:gap-28">
           <motion.div {...anim(0)}>
-            <Column label="Built for you if" items={forYou} marker="—" />
+            <Column label="Built for you if" items={forYou} marker="/" />
           </motion.div>
           <motion.div {...anim(1)}>
             <Column label="Not a fit if" items={notForYou} marker="×" muted />

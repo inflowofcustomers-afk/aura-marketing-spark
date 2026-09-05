@@ -5,12 +5,12 @@ const steps = [
   {
     numeral: "01",
     title: "Connect",
-    body: "You connect your Mangomint or Boulevard account — or upload a CSV export. Takes 15 minutes. We handle everything after that.",
+    body: "You connect your Mangomint or Boulevard account, or upload a CSV export. Takes 15 minutes. We handle everything after that.",
   },
   {
     numeral: "02",
     title: "Launch",
-    body: "Our team builds your campaign — segmentation, copy, sequencing, dedicated phone number. Your campaign goes live within 7 days.",
+    body: "Our team builds your campaign: segmentation, copy, sequencing, and a dedicated phone number. Your campaign goes live within 7 days.",
   },
   {
     numeral: "03",
