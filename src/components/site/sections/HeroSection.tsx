@@ -33,7 +33,7 @@ export function HeroSection() {
 
           <motion.p
             {...rise(0.24)}
-            className="mt-10 max-w-[36rem] body-editorial text-foreground/65"
+            className="mt-10 max-w-[36rem] body-editorial text-foreground/78"
           >
             AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
@@ -49,7 +49,7 @@ export function HeroSection() {
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start whitespace-nowrap text-xs uppercase tracking-[0.22em] text-foreground/70 hover:text-gold transition-colors duration-500 link-underline"
+              className="self-start whitespace-nowrap text-[13px] uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors duration-500 link-underline"
             >
               See How It Works
             </a>
@@ -57,7 +57,7 @@ export function HeroSection() {
 
           <motion.div {...rise(0.5)} className="mt-20 flex items-center gap-5">
             <span className="w-14 rule-faint" />
-            <span className="text-[11px] uppercase tracking-[0.32em] text-foreground/45">
+            <span className="text-[12px] uppercase tracking-[0.32em] text-foreground/60">
               Limited founder spots
             </span>
           </motion.div>

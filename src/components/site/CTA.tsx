@@ -1,13 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import type { ComponentProps } from "react";
 
-type Variant = "gold" | "ghost" | "outline" | "dark";
+type Variant = "gold" | "ghost" | "outline" | "dark" | "solid";
 
 const styles: Record<Variant, string> = {
   gold: "btn-quiet",
   outline: "btn-quiet",
   ghost: "btn-quiet btn-quiet-plain",
   dark: "btn-quiet btn-quiet-dark",
+  solid: "btn-quiet btn-quiet-solid",
 };
 
 export function CTA({

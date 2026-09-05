@@ -41,7 +41,7 @@ export function FAQ() {
                   aria-expanded={isOpen}
                 >
                   <span
-                    className={`font-display text-[1.875rem] sm:text-[2.5rem] leading-[1.16] transition-colors duration-500 ${
+                    className={`font-display text-[2rem] sm:text-[2.7rem] leading-[1.16] transition-colors duration-500 ${
                       isOpen ? "text-gold" : "text-foreground group-hover:text-gold"
                     }`}
                   >
@@ -66,7 +66,7 @@ export function FAQ() {
                       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-12 max-w-2xl body-editorial text-foreground/65">{f.a}</p>
+                      <p className="pb-12 max-w-2xl body-editorial text-foreground/80">{f.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

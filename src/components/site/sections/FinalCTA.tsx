@@ -16,7 +16,7 @@ export function FinalCTA() {
           <h2
             className="mt-16 font-display font-light text-navy-deep"
             style={{
-              fontSize: "clamp(3rem, 7.5vw, 6.5rem)",
+              fontSize: "clamp(3.5rem, 8.6vw, 7.6rem)",
               lineHeight: 0.98,
               letterSpacing: "-0.025em",
             }}
@@ -26,7 +26,7 @@ export function FinalCTA() {
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-16 body-editorial text-navy-deep/70 max-w-2xl mx-auto">
+          <p className="mt-16 body-editorial text-navy-deep/80 max-w-2xl mx-auto">
             If the math makes sense for your practice, the application takes 3 minutes. We'll reach out within 24 hours, and if it's a fit, your campaign goes live within 7 days.
           </p>
         </Reveal>

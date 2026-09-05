@@ -70,9 +70,9 @@ export function Offer() {
               <span className="eyebrow">The Offer</span>
             </div>
             <h2 className="mt-10 display-lg text-foreground max-w-[16ch]">
-              The AURA Reactivation Pilot.
+              The AURA INVITES™ Reactivation Pilot.
             </h2>
-            <p className="mt-10 body-editorial text-foreground/65 max-w-2xl">
+            <p className="mt-10 body-editorial text-foreground/78 max-w-2xl">
               Three founder spots. Lower setup cost. Direct access to our team. Locked-in rate
               that won't be available to anyone else.
             </p>
@@ -91,15 +91,15 @@ export function Offer() {
                   >
                     ${value.toLocaleString()}
                   </span>
-                  <span className="text-xs uppercase tracking-[0.24em] text-foreground/55">
+                  <span className="text-[13px] uppercase tracking-[0.24em] text-foreground/70">
                     setup fee
                   </span>
                 </div>
-                <p className="mt-8 body-editorial text-foreground/70 max-w-md">
+                <p className="mt-8 body-editorial text-foreground/80 max-w-md">
                   Includes your first 20 booked appointments. $250 per booking after that.
                 </p>
                 <div className="mt-14">
-                  <CTALink to="/apply" variant="gold">
+                  <CTALink to="/apply" variant="solid">
                     Apply for a Founder Spot
                   </CTALink>
                 </div>
@@ -117,7 +117,7 @@ export function Offer() {
                       className="flex items-baseline gap-7 py-5"
                       style={{ borderBottom: "1px solid rgba(198,161,91,0.12)" }}
                     >
-                      <span className="text-[11px] tracking-[0.2em] text-gold/70 tabular-nums">
+                      <span className="text-[12px] tracking-[0.2em] text-gold/80 tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="text-foreground/85 body-support">{line}</span>
