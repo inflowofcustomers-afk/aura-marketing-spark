@@ -13,7 +13,7 @@ const numerals = ["01", "02", "03", "04"];
 export function Pain() {
   return (
     <section className="navy-section pt-32 sm:pt-52 pb-24 sm:pb-32">
-      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
+      <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12 rule-gold" />

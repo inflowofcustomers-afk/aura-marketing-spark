@@ -14,7 +14,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="navy-section pt-32 sm:pt-52 pb-32 sm:pb-52">
-      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
+      <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-10 rule-gold" />

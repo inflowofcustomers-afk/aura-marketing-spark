@@ -22,7 +22,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="navy-section pt-32 sm:pt-52 pb-32 sm:pb-52">
-      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
+      <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12 rule-gold" />

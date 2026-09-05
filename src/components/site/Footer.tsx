@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 const linkCls =
-  "text-[14px] font-light text-foreground/70 hover:text-gold transition-colors duration-500";
+  "text-[15px] font-light text-foreground/75 hover:text-gold transition-colors duration-500";
 
 export function Footer() {
   return (
     <footer className="navy-section">
-      <div className="mx-auto max-w-[92rem] px-6 sm:px-12">
+      <div className="container-grid">
         <div className="rule-faint" />
         <div className="py-20 sm:py-28 grid gap-14 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
@@ -17,7 +17,7 @@ export function Footer() {
               Invites
               <span className="align-super text-[8px] tracking-normal ml-1">&trade;</span>
             </div>
-            <p className="mt-8 text-[14px] font-light leading-relaxed text-foreground/60 max-w-[26ch]">
+            <p className="mt-8 text-[15px] font-light leading-relaxed text-foreground/70 max-w-[26ch]">
               Purpose-built patient reactivation for MedSpa owners.
             </p>
           </div>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
         </div>
         <div className="rule-faint" />
-        <div className="py-10 text-[12px] font-light tracking-wide text-foreground/50">
+        <div className="py-10 text-[13px] font-light tracking-wide text-foreground/60">
           © {new Date().getFullYear()} AURA Invites™ by AI Ops, LLC. All rights reserved.
         </div>
       </div>

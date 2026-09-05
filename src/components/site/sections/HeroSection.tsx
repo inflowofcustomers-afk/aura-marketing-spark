@@ -19,7 +19,7 @@ export function HeroSection() {
     <section className="relative navy-section grain overflow-hidden">
       <div className="grid lg:grid-cols-2 items-stretch">
         {/* Editorial column */}
-        <div className="order-2 lg:order-1 px-6 sm:px-12 lg:pl-[6vw] lg:pr-14 pt-16 lg:pt-52 pb-24 lg:pb-40 flex flex-col justify-center">
+        <div className="order-2 lg:order-1 grid-left-align pt-16 lg:pt-52 pb-24 lg:pb-40 flex flex-col justify-center">
           <motion.div {...rise(0)} className="flex items-center gap-5">
             <span className="w-12 rule-gold" />
             <span className="eyebrow">Purpose-built for MedSpa owners</span>

@@ -1,29 +1,41 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const reduce = useReducedMotion();
 
-  // Pages whose top section is navy — nav needs light text when transparent
+  // Pages whose top section is navy, nav needs light text when transparent
   const darkTopPages = ["/privacy", "/terms", "/sms-policy"];
   const isLightPage = pathname !== "/" && !darkTopPages.includes(pathname);
 
   const ink = !scrolled && isLightPage;
   const navText = ink
-    ? "text-[color:var(--ink)]/60 hover:text-[color:var(--ink)]"
-    : "text-foreground/60 hover:text-gold";
+    ? "text-[color:var(--ink)]/65 hover:text-[color:var(--ink)]"
+    : "text-foreground/70 hover:text-gold";
   const logoText = ink ? "text-[color:var(--ink)]" : "text-foreground";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 56);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const enter = (delay: number) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: -6 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.6, delay, ease },
+        };
 
   const links = [
     { label: "How It Works", href: "/#how-it-works" },
@@ -32,50 +44,57 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-700 ${
-        scrolled ? "bg-navy-deep/85 backdrop-blur-md" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter] duration-300 ${
+        scrolled ? "bg-navy-deep/80 backdrop-blur-md" : "bg-transparent"
       }`}
+      style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
     >
       <div
-        className={`mx-auto max-w-[92rem] px-6 sm:px-12 flex items-center justify-between transition-all duration-700 ${
-          scrolled ? "h-16" : "h-20 sm:h-28"
+        className={`container-grid grid grid-cols-[minmax(0,1fr)_auto] items-center transition-[height] duration-300 ${
+          scrolled ? "h-[4.25rem]" : "h-20 sm:h-28"
         }`}
+        style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
       >
-        <Link to="/" className="flex items-baseline gap-2.5">
-          <span
-            className={`font-display text-2xl sm:text-[1.75rem] leading-none tracking-[0.28em] transition-colors duration-500 ${logoText}`}
-          >
-            AURA
-          </span>
-          <span
-            className={`text-[10px] uppercase tracking-[0.34em] transition-colors duration-500 ${
-              ink ? "text-[color:var(--warm-gray)]" : "text-foreground/55"
-            }`}
-          >
-            Invites
-            <span className="align-super text-[7px] tracking-normal ml-0.5">&trade;</span>
-          </span>
-        </Link>
+        <motion.div {...enter(0.05)} className="min-w-0">
+          <Link to="/" className="inline-flex items-baseline gap-2.5">
+            <span
+              className={`font-display text-2xl sm:text-[1.75rem] leading-none tracking-[0.28em] transition-colors duration-500 ${logoText}`}
+            >
+              AURA
+            </span>
+            <span
+              className={`text-[11px] uppercase tracking-[0.34em] transition-colors duration-500 ${
+                ink ? "text-[color:var(--warm-gray)]" : "text-foreground/65"
+              }`}
+            >
+              Invites
+              <span className="align-super text-[7px] tracking-normal ml-0.5">&trade;</span>
+            </span>
+          </Link>
+        </motion.div>
 
-        <nav className="hidden md:flex items-center gap-10 lg:gap-12">
+        <motion.nav
+          {...enter(0.16)}
+          className="hidden md:flex items-baseline gap-10 lg:gap-12 justify-self-end"
+        >
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`text-[12px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
+              className={`text-[12px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
             >
               {l.label}
             </a>
           ))}
           <a
             href="https://app.aurainvites.com"
-            className={`text-[12px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
+            className={`text-[12px] uppercase tracking-[0.22em] leading-none transition-colors duration-500 link-underline ${navText}`}
           >
             Login
           </a>
           <Link
             to="/apply"
-            className={`text-[12px] uppercase tracking-[0.22em] pb-1 border-b transition-colors duration-500 ${
+            className={`text-[12px] uppercase tracking-[0.22em] leading-none pb-1 border-b transition-colors duration-500 ${
               ink
                 ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:border-[color:var(--gold-dark)]"
                 : "text-gold border-gold/40 hover:border-gold"
@@ -83,10 +102,10 @@ export function Nav() {
           >
             Apply
           </Link>
-        </nav>
+        </motion.nav>
 
         <button
-          className={`md:hidden p-2 transition-colors duration-500 ${
+          className={`md:hidden justify-self-end p-2 -mr-2 transition-colors duration-500 ${
             ink ? "text-[color:var(--ink)]" : "text-foreground"
           }`}
           onClick={() => setOpen((v) => !v)}
@@ -102,11 +121,11 @@ export function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: reduce ? 0 : 0.3, ease }}
             className="md:hidden bg-navy-deep"
           >
             <div className="rule-faint" />
-            <div className="px-6 py-10 flex flex-col gap-7">
+            <div className="container-grid py-10 flex flex-col gap-7">
               {links.map((l) => (
                 <a
                   key={l.href}

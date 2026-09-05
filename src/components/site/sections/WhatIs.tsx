@@ -1,10 +1,10 @@
 import { Reveal } from "@/components/site/Motion";
-import stillLife from "@/assets/still-life.jpg";
+import patientDetail from "@/assets/patient-detail.jpg";
 
 export function WhatIs() {
   return (
     <section className="cream-section pt-32 sm:pt-52 pb-32 sm:pb-52">
-      <div className="mx-auto max-w-[84rem] px-6 sm:px-12">
+      <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
             <span className="w-12" style={{ height: 1, background: "var(--gold-dark)" }} />
@@ -28,10 +28,10 @@ export function WhatIs() {
 
           <Reveal delay={0.2}>
             <img
-              src={stillLife}
-              alt="Luxury skincare bottle and folded linen on a travertine ledge in warm daylight"
-              width={1200}
-              height={1504}
+              src={patientDetail}
+              alt="A woman resting her hand near her collarbone in warm daylight against a travertine wall"
+              width={1024}
+              height={1280}
               loading="lazy"
               className="w-full h-[480px] lg:h-[880px] object-cover img-duotone"
             />
