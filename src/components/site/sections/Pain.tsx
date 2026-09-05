@@ -34,15 +34,15 @@ export function Pain() {
               <div className="rule-faint" />
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 py-16 sm:py-24 items-start">
                 <div className="lg:col-span-1">
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-gold/70 tabular-nums">
+                  <span className="text-[12px] uppercase tracking-[0.3em] text-gold/80 tabular-nums">
                     {numerals[i]}
                   </span>
                 </div>
                 <h3 className="lg:col-span-6 font-display font-light text-foreground max-w-[20ch]"
-                  style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", lineHeight: 1.1, letterSpacing: "-0.01em" }}>
+                  style={{ fontSize: "clamp(2.35rem, 4.1vw, 3.5rem)", lineHeight: 1.08, letterSpacing: "-0.01em" }}>
                   {p.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/70 lg:pt-3">{p.body}</p>
+                <p className="lg:col-span-5 body-editorial text-foreground/78 lg:pt-3">{p.body}</p>
               </div>
             </motion.article>
           ))}

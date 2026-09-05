@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 const linkCls =
-  "text-[13px] font-light text-foreground/55 hover:text-gold transition-colors duration-500";
+  "text-[14px] font-light text-foreground/70 hover:text-gold transition-colors duration-500";
 
 export function Footer() {
   return (
@@ -12,12 +12,12 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="font-display text-2xl tracking-[0.28em]">
               AURA
-              <span className="text-[9px] align-top tracking-normal ml-1">&trade;</span>
             </div>
-            <div className="mt-1 text-[9px] uppercase tracking-[0.34em] text-foreground/40">
+            <div className="mt-1 text-[10px] uppercase tracking-[0.34em] text-foreground/55">
               Invites
+              <span className="align-super text-[8px] tracking-normal ml-1">&trade;</span>
             </div>
-            <p className="mt-8 text-[13px] font-light leading-relaxed text-foreground/45 max-w-[24ch]">
+            <p className="mt-8 text-[14px] font-light leading-relaxed text-foreground/60 max-w-[26ch]">
               Purpose-built patient reactivation for MedSpa owners.
             </p>
           </div>
@@ -33,6 +33,7 @@ export function Footer() {
             <div className="eyebrow">Get Started</div>
             <ul className="mt-7 space-y-4">
               <li><Link to="/apply" className={linkCls}>Apply</Link></li>
+              <li><a href="https://app.aurainvites.com" className={linkCls}>Login</a></li>
             </ul>
           </div>
           <div>
@@ -46,8 +47,8 @@ export function Footer() {
           </div>
         </div>
         <div className="rule-faint" />
-        <div className="py-10 text-[11px] font-light tracking-wide text-foreground/35">
-          © {new Date().getFullYear()} AURA Invites by AI Ops, LLC. All rights reserved.
+        <div className="py-10 text-[12px] font-light tracking-wide text-foreground/50">
+          © {new Date().getFullYear()} AURA Invites™ by AI Ops, LLC. All rights reserved.
         </div>
       </div>
     </footer>

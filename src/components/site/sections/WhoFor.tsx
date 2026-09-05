@@ -41,18 +41,18 @@ function Column({
           <li
             key={i}
             className="flex items-baseline gap-7 py-7"
-            style={{ borderTop: "1px solid rgba(21,21,21,0.14)" }}
+            style={{ borderTop: "1px solid rgba(21,21,21,0.18)" }}
           >
             <span
               className="text-base leading-none w-4 shrink-0"
-              style={{ color: muted ? "var(--warm-gray)" : "var(--gold-dark)" }}
+              style={{ color: "var(--gold-dark)" }}
               aria-hidden
             >
               {marker}
             </span>
             <span
-              className={`font-display text-[1.625rem] sm:text-[2rem] leading-[1.24] tracking-[-0.005em] ${
-                muted ? "text-navy-deep/70" : "text-navy-deep"
+              className={`font-display text-[1.75rem] sm:text-[2.15rem] leading-[1.24] tracking-[-0.005em] ${
+                muted ? "text-navy-deep/80" : "text-navy-deep"
               }`}
             >
               {t}
