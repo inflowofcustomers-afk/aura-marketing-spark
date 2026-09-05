@@ -30,26 +30,28 @@ function CinematicBand() {
     <motion.div
       ref={ref}
       style={reduce ? undefined : { paddingLeft: inset, paddingRight: inset }}
-      className="relative navy-section overflow-hidden h-[58vh] sm:h-[86vh]"
+      className="navy-section"
     >
-      <motion.img
-        src={interior}
-        alt="A quiet, warm-toned aesthetic treatment suite in soft daylight"
-        width={1600}
-        height={1008}
-        loading="lazy"
-        style={reduce ? undefined : { y }}
-        className="absolute inset-0 w-full h-[118%] -top-[9%] object-cover img-duotone"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(6,22,37,0.55) 0%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0.92) 100%)",
-        }}
-      />
-    </div>
+      <div className="relative overflow-hidden h-[58vh] sm:h-[86vh]">
+        <motion.img
+          src={interior}
+          alt="A quiet, warm-toned aesthetic treatment suite in soft daylight"
+          width={1600}
+          height={1008}
+          loading="lazy"
+          style={reduce ? undefined : { y }}
+          className="absolute inset-0 w-full h-[118%] -top-[9%] object-cover img-duotone"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(6,22,37,0.55) 0%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0.92) 100%)",
+          }}
+        />
+      </div>
+    </motion.div>
   );
 }
 
