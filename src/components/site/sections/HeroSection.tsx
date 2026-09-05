@@ -25,15 +25,15 @@ export function HeroSection() {
             <span className="eyebrow">Purpose-built for MedSpa owners</span>
           </motion.div>
 
-          <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground max-w-[20ch]"
-            style={{ fontSize: "clamp(3rem, 5.9vw, 5.9rem)", lineHeight: 1.01, letterSpacing: "-0.022em" }}>
+          <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground w-full"
+            style={{ fontSize: "clamp(3rem, 5.2vw, 5.6rem)", lineHeight: 1.04, letterSpacing: "-0.02em" }}>
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
 
           <motion.p
             {...rise(0.24)}
-            className="mt-10 max-w-[36rem] body-editorial text-foreground/85"
+            className="mt-10 w-full max-w-none body-editorial text-foreground/85"
           >
             AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
