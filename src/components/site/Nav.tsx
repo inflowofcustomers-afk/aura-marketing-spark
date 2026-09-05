@@ -48,27 +48,34 @@ export function Nav() {
             AURA
           </span>
           <span
-            className={`text-[9px] uppercase tracking-[0.34em] transition-colors duration-500 ${
-              ink ? "text-[color:var(--warm-gray)]" : "text-foreground/45"
+            className={`text-[10px] uppercase tracking-[0.34em] transition-colors duration-500 ${
+              ink ? "text-[color:var(--warm-gray)]" : "text-foreground/55"
             }`}
           >
             Invites
+            <span className="align-super text-[7px] tracking-normal ml-0.5">&trade;</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-14">
+        <nav className="hidden md:flex items-center gap-10 lg:gap-12">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`text-[11px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
+              className={`text-[12px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
             >
               {l.label}
             </a>
           ))}
+          <a
+            href="https://app.aurainvites.com"
+            className={`text-[12px] uppercase tracking-[0.22em] transition-colors duration-500 link-underline ${navText}`}
+          >
+            Login
+          </a>
           <Link
             to="/apply"
-            className={`text-[11px] uppercase tracking-[0.22em] pb-1 border-b transition-colors duration-500 ${
+            className={`text-[12px] uppercase tracking-[0.22em] pb-1 border-b transition-colors duration-500 ${
               ink
                 ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:border-[color:var(--gold-dark)]"
                 : "text-gold border-gold/40 hover:border-gold"
@@ -110,10 +117,17 @@ export function Nav() {
                   {l.label}
                 </a>
               ))}
+              <a
+                href="https://app.aurainvites.com"
+                onClick={() => setOpen(false)}
+                className="font-display text-2xl text-foreground/90"
+              >
+                Login
+              </a>
               <Link
                 to="/apply"
                 onClick={() => setOpen(false)}
-                className="mt-2 text-[11px] uppercase tracking-[0.22em] text-gold self-start border-b border-gold/40 pb-1"
+                className="mt-2 text-[12px] uppercase tracking-[0.22em] text-gold self-start border-b border-gold/40 pb-1"
               >
                 Apply
               </Link>
