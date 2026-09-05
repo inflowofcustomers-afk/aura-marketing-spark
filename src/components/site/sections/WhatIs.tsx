@@ -30,7 +30,7 @@ export function WhatIs() {
             <img
               src={patientDetail}
               alt="A woman resting her hand near her collarbone in warm daylight against a travertine wall"
-              width={1200}
+              width={1024}
               height={1280}
               loading="lazy"
               className="w-full h-[480px] lg:h-[880px] object-cover img-duotone"
