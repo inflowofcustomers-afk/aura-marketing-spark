@@ -63,7 +63,7 @@ export function Offer() {
       <CinematicBand />
 
       <section className="navy-section pt-28 sm:pt-40 pb-32 sm:pb-52">
-        <div className="mx-auto max-w-[80rem] px-6 sm:px-12">
+        <div className="container-grid">
           <Reveal>
             <div className="flex items-center gap-5">
               <span className="w-12 rule-gold" />

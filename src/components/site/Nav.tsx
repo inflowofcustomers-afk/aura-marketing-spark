@@ -37,7 +37,7 @@ export function Nav() {
       }`}
     >
       <div
-        className={`mx-auto max-w-[92rem] px-6 sm:px-12 flex items-center justify-between transition-all duration-700 ${
+        className={`container-grid flex items-center justify-between transition-all duration-700 ${
           scrolled ? "h-16" : "h-20 sm:h-28"
         }`}
       >

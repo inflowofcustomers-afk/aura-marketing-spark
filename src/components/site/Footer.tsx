@@ -6,7 +6,7 @@ const linkCls =
 export function Footer() {
   return (
     <footer className="navy-section">
-      <div className="mx-auto max-w-[92rem] px-6 sm:px-12">
+      <div className="container-grid">
         <div className="rule-faint" />
         <div className="py-20 sm:py-28 grid gap-14 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
