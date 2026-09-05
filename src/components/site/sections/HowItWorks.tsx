@@ -5,12 +5,12 @@ const steps = [
   {
     numeral: "01",
     title: "Connect",
-    body: "You connect your Mangomint or Boulevard account — or upload a CSV export. Takes 15 minutes. We handle everything after that.",
+    body: "You connect your Mangomint or Boulevard account, or upload a CSV export. Takes 15 minutes. We handle everything after that.",
   },
   {
     numeral: "02",
     title: "Launch",
-    body: "Our team builds your campaign — segmentation, copy, sequencing, dedicated phone number. Your campaign goes live within 7 days.",
+    body: "Our team builds your campaign: segmentation, copy, sequencing, and a dedicated phone number. Your campaign goes live within 7 days.",
   },
   {
     numeral: "03",
@@ -30,7 +30,7 @@ export function HowItWorks() {
           </div>
           <div className="mt-10 grid lg:grid-cols-12 gap-8 items-end">
             <h2 className="lg:col-span-7 display-lg text-foreground">How It Works</h2>
-            <p className="lg:col-span-5 body-editorial text-foreground/60 lg:pb-4">
+            <p className="lg:col-span-5 body-editorial text-foreground/75 lg:pb-4">
               Three steps. Seven days. Appointments on your calendar.
             </p>
           </div>
@@ -50,10 +50,10 @@ export function HowItWorks() {
                 <div className="lg:col-span-3">
                   <div className="numeral-xl tabular-nums">{s.numeral}</div>
                 </div>
-                <h3 className="lg:col-span-4 font-display text-4xl sm:text-6xl text-foreground leading-[0.95] tracking-[0.01em]">
+                <h3 className="lg:col-span-4 font-display text-[2.6rem] sm:text-[4.25rem] text-foreground leading-[0.95] tracking-[0.01em]">
                   {s.title}
                 </h3>
-                <p className="lg:col-span-5 body-editorial text-foreground/65 max-w-2xl">
+                <p className="lg:col-span-5 body-editorial text-foreground/78 max-w-2xl">
                   {s.body}
                 </p>
               </div>

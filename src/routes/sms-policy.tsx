@@ -4,7 +4,7 @@ import { LegalLayout, LegalSection } from "@/components/site/PageShell";
 export const Route = createFileRoute("/sms-policy")({
   head: () => ({
     meta: [
-      { title: "SMS Policy — AURA Invites" },
+      { title: "SMS Policy | AURA Invites™" },
       { name: "description", content: "AURA Invites SMS communication policy." },
     ],
   }),
@@ -47,7 +47,7 @@ function SmsPolicy() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="4. Opt-Out — STOP">
+      <LegalSection heading="4. Opt-Out (STOP)">
         <p>
           Recipients may opt out at any time by replying STOP to any marketing text message.
         </p>
@@ -68,7 +68,7 @@ function SmsPolicy() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="7. Help — HELP">
+      <LegalSection heading="7. Help (HELP)">
         <p>
           Reply HELP to any message for assistance or contact <a href="mailto:privacy@aurainvites.com" className="text-gold underline hover:text-gold-light">privacy@aurainvites.com</a>.
         </p>

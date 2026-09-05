@@ -23,7 +23,7 @@ export function Hero() {
 
         <Reveal delay={0.2}>
           <p className="mt-7 mx-auto max-w-2xl text-base sm:text-lg text-foreground/75 leading-relaxed">
-            AURA finds every patient who visited once and disappeared, and brings them back —
+            AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
             No ads. No new leads. Just revenue from people who already know you.
           </p>

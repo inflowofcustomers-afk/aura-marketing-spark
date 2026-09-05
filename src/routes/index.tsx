@@ -12,13 +12,13 @@ import { FinalCTA } from "@/components/site/sections/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AURA Invites — Patient reactivation for MedSpa owners" },
+      { title: "AURA Invites™ | Patient reactivation for MedSpa owners" },
       {
         name: "description",
         content:
           "AURA reactivates dormant MedSpa patients with personalized SMS and email sequences that book appointments automatically.",
       },
-      { property: "og:title", content: "AURA Invites — Patient reactivation for MedSpa owners" },
+      { property: "og:title", content: "AURA Invites™ | Patient reactivation for MedSpa owners" },
       {
         property: "og:description",
         content:

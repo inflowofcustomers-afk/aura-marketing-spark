@@ -4,7 +4,7 @@ import { LegalLayout, LegalSection } from "@/components/site/PageShell";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — AURA Invites" },
+      { title: "Privacy Policy | AURA Invites™" },
       { name: "description", content: "AURA Invites privacy policy." },
     ],
   }),
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/privacy")({
 
 function Privacy() {
   return (
-    <LegalLayout title="AURA Invites — Privacy Policy" eyebrow="Legal" updated="August 20, 2026">
+    <LegalLayout title="AURA Invites™ Privacy Policy" eyebrow="Legal" updated="August 20, 2026">
       <LegalSection heading="1. Who We Are">
         <p>
           AI Ops, LLC ("Company," "we," "us," or "our") operates the Aura Invites platform. We provide marketing automation and patient reactivation services for MedSpa businesses. For questions about this policy, contact us at privacy@aurainvites.com.

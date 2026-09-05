@@ -10,13 +10,13 @@ const SMS_CONSENT_TEXT =
 export const Route = createFileRoute("/sms-opt-in")({
   head: () => ({
     meta: [
-      { title: "Aura Invites Marketing SMS — Opt In" },
+      { title: "Aura Invites Marketing SMS Opt-In" },
       {
         name: "description",
         content:
           "Opt in to receive recurring marketing text messages from AI Ops, LLC regarding Aura Invites. Message and data rates may apply.",
       },
-      { property: "og:title", content: "Aura Invites Marketing SMS — Opt In" },
+      { property: "og:title", content: "Aura Invites Marketing SMS Opt-In" },
       {
         property: "og:description",
         content:
@@ -134,7 +134,7 @@ function SmsOptInPage() {
                   </div>
                   <h2 className="mt-6 font-display text-3xl text-navy-deep">You're Opted In</h2>
                   <p className="mt-3 text-navy-deep/65">
-                    Thanks — your mobile number has been submitted for marketing text messages
+                    Thanks. Your mobile number has been submitted for marketing text messages
                     from AI Ops, LLC regarding Aura Invites. Reply STOP at any time to
                     unsubscribe or HELP for help.
                   </p>

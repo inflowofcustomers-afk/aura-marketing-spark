@@ -7,13 +7,13 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
-      { title: "Apply — AURA Invites" },
+      { title: "Apply | AURA Invites™" },
       {
         name: "description",
         content:
           "Apply for a founder spot. AURA is accepting a limited number of MedSpa partners.",
       },
-      { property: "og:title", content: "Apply — AURA Invites" },
+      { property: "og:title", content: "Apply | AURA Invites™" },
       {
         property: "og:description",
         content: "Apply for a founder spot with AURA Invites.",
@@ -133,7 +133,7 @@ function ApplyPage() {
                     Application Received
                   </h2>
                   <p className="mt-3 text-navy-deep/65">
-                    [Confirmation copy — we'll reach out within X business days.]
+                    [Confirmation copy: we'll reach out within X business days.]
                   </p>
                 </div>
               ) : (

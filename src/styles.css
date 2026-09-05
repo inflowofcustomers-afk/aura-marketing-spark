@@ -101,9 +101,9 @@
 @layer utilities {
   .eyebrow {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.32em;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold);
   }
@@ -140,7 +140,7 @@
     .body-editorial { font-size: 1.1875rem; }
   }
   .body-support {
-    font-size: 0.9375rem;
+    font-size: 0.975rem;
     line-height: 1.75;
     font-weight: 300;
   }
@@ -190,6 +190,19 @@
   .btn-quiet:hover {
     background: var(--gold);
     border-color: var(--gold);
+    color: var(--navy-deep);
+  }
+  .btn-quiet-solid {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy-deep);
+    padding: 1.25rem 3rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+  }
+  .btn-quiet-solid:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
     color: var(--navy-deep);
   }
   .btn-quiet-dark {
