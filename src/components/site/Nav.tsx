@@ -163,6 +163,8 @@ export function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </header>
+
   );
 }
