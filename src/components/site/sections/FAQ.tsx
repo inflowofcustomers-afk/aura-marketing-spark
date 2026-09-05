@@ -13,7 +13,7 @@ const faqs = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="navy-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+    <section id="faq" className="navy-section pt-28 sm:pt-44 pb-28 sm:pb-44">
       <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">

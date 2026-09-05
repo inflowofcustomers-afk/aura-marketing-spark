@@ -3,7 +3,7 @@ import patientDetail from "@/assets/patient-detail.jpg";
 
 export function WhatIs() {
   return (
-    <section className="cream-section pt-32 sm:pt-52 pb-32 sm:pb-52">
+    <section className="cream-section pt-28 sm:pt-44 pb-28 sm:pb-44">
       <div className="container-grid">
         <Reveal>
           <div className="flex items-center gap-5">
