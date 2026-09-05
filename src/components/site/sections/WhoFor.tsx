@@ -51,8 +51,8 @@ function Column({
               {marker}
             </span>
             <span
-              className={`font-display text-[1.5rem] sm:text-[1.875rem] leading-[1.25] tracking-[-0.005em] ${
-                muted ? "text-navy-deep/60" : "text-navy-deep/90"
+              className={`font-display text-[1.625rem] sm:text-[2rem] leading-[1.24] tracking-[-0.005em] ${
+                muted ? "text-navy-deep/70" : "text-navy-deep"
               }`}
             >
               {t}

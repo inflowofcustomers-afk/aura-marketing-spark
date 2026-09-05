@@ -120,8 +120,8 @@
   .display-lg {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.04;
+    font-size: clamp(2.75rem, 5.8vw, 4.5rem);
+    line-height: 1.03;
     letter-spacing: -0.015em;
   }
   .display-md {
@@ -132,12 +132,12 @@
   }
   .body-editorial {
     font-size: 1.0625rem;
-    line-height: 1.8;
+    line-height: 1.78;
     font-weight: 300;
     letter-spacing: 0.005em;
   }
   @media (min-width: 1024px) {
-    .body-editorial { font-size: 1.125rem; }
+    .body-editorial { font-size: 1.1875rem; }
   }
   .body-support {
     font-size: 0.9375rem;
@@ -145,7 +145,7 @@
     font-weight: 300;
   }
   @media (min-width: 1024px) {
-    .body-support { font-size: 1rem; }
+    .body-support { font-size: 1.0625rem; }
   }
   .numeral-xl {
     font-family: var(--font-display);
@@ -178,6 +178,7 @@
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    white-space: nowrap;
     padding: 1.15rem 2.5rem;
     border: 1px solid rgba(198, 161, 91, 0.5);
     color: var(--gold);
