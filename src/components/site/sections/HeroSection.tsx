@@ -26,7 +26,7 @@ export function HeroSection() {
           </motion.div>
 
           <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground w-full"
-            style={{ fontSize: "clamp(3rem, 5.2vw, 5.6rem)", lineHeight: 1.04, letterSpacing: "-0.02em" }}>
+            style={{ fontSize: "clamp(3.25rem, 6.6vw, 7rem)", lineHeight: 1.02, letterSpacing: "-0.02em" }}>
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
