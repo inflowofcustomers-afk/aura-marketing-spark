@@ -26,14 +26,15 @@ export function HeroSection() {
           </motion.div>
 
           <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground w-full"
-            style={{ fontSize: "clamp(3rem, 5.2vw, 5.6rem)", lineHeight: 1.04, letterSpacing: "-0.02em" }}>
+            style={{ fontSize: "clamp(3.25rem, 6.6vw, 7rem)", lineHeight: 1.02, letterSpacing: "-0.02em" }}>
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
 
           <motion.p
             {...rise(0.24)}
-            className="mt-10 w-full max-w-none body-editorial text-foreground/85"
+            className="mt-10 w-full max-w-none text-foreground/85"
+            style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.4rem)", lineHeight: 1.8, fontWeight: 300, letterSpacing: "0.005em" }}
           >
             AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
@@ -42,25 +43,19 @@ export function HeroSection() {
 
           <motion.div
             {...rise(0.36)}
-            className="mt-14 flex flex-col sm:flex-row gap-6 sm:gap-10 sm:items-center"
+            className="mt-14 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center"
           >
             <CTALink to="/apply" variant="gold" className="self-start">
               Apply for a Founder Spot
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start whitespace-nowrap text-[13px] uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors duration-500 link-underline"
+              className="self-start inline-flex items-center justify-center whitespace-nowrap px-7 py-4 text-[12px] uppercase tracking-[0.2em] border border-foreground/25 text-foreground hover:border-gold hover:text-gold transition-all duration-500"
             >
               See How It Works
             </a>
           </motion.div>
 
-          <motion.div {...rise(0.5)} className="mt-20 flex items-center gap-5">
-            <span className="w-14 rule-faint" />
-            <span className="text-[13px] uppercase tracking-[0.32em] text-foreground/70">
-              Limited founder spots
-            </span>
-          </motion.div>
         </div>
 
         {/* Photographic column: full-height, edge to edge */}

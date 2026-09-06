@@ -64,18 +64,18 @@ export function Nav() {
             transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
           }}
         >
-          <div className={scrolled ? "" : "py-7 sm:py-10"}>
+          <div className={scrolled ? "" : "py-6 sm:py-8"}>
             <motion.div {...enter(0.05)} className="min-w-0">
-              <Link to="/" className="group inline-flex flex-col leading-none">
+              <Link to="/" className="group inline-flex items-baseline gap-3 leading-none">
                 <span
-                  className={`font-display text-[1.6rem] sm:text-[1.8rem] leading-none tracking-[0.42em] transition-colors duration-500 ${
+                  className={`font-display text-[1.55rem] sm:text-[1.7rem] leading-none tracking-[0.42em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--ink)]" : "text-foreground"
                   }`}
                 >
                   AURA
                 </span>
                 <span
-                  className={`mt-2 text-[9px] uppercase tracking-[0.58em] transition-colors duration-500 ${
+                  className={`text-[9px] uppercase tracking-[0.5em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--gold-dark)]" : "text-gold/90"
                   }`}
                 >
