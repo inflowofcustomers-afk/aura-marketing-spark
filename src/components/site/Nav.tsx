@@ -27,7 +27,7 @@ export function Nav() {
     : "text-foreground/80 hover:text-gold";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 70);
+    const onScroll = () => setScrolled(window.scrollY > 64);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -68,15 +68,15 @@ export function Nav() {
             <motion.div {...enter(0.05)} className="min-w-0">
               <Link to="/" className="group inline-flex items-baseline gap-3 leading-none">
                 <span
-                  className={`font-display text-[1.55rem] sm:text-[1.7rem] leading-none tracking-[0.42em] transition-colors duration-500 ${
+                  className={`font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.3em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--ink)]" : "text-foreground"
                   }`}
                 >
                   AURA
                 </span>
                 <span
-                  className={`text-[9px] uppercase tracking-[0.5em] transition-colors duration-500 ${
-                    ink ? "text-[color:var(--gold-dark)]" : "text-gold/90"
+                  className={`text-[9px] uppercase tracking-[0.42em] transition-colors duration-500 ${
+                    ink ? "text-[color:var(--gold-dark)]" : "text-gold/85"
                   }`}
                 >
                   Invites&trade;
@@ -93,28 +93,20 @@ export function Nav() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`text-[12px] uppercase tracking-[0.26em] leading-none transition-colors duration-500 link-underline ${navText}`}
+                className={`text-[11px] uppercase tracking-[0.2em] leading-none transition-colors duration-500 link-underline ${navText}`}
               >
                 {l.label}
               </a>
             ))}
             <a
               href="https://app.aurainvites.com"
-              className={`text-[12px] uppercase tracking-[0.26em] leading-none transition-colors duration-500 link-underline ${navText}`}
+              className={`text-[11px] uppercase tracking-[0.2em] leading-none transition-colors duration-500 link-underline ${navText}`}
             >
               Login
             </a>
-            <span
-              aria-hidden
-              className={`h-4 w-px ${ink ? "bg-[color:var(--gold-dark)]/30" : "bg-gold/30"}`}
-            />
             <Link
               to="/apply"
-              className={`text-[11px] uppercase tracking-[0.3em] leading-none px-6 py-2.5 border transition-all duration-500 ${
-                ink
-                  ? "text-[color:var(--gold-dark)] border-[color:var(--gold-dark)]/50 hover:bg-[color:var(--gold-dark)] hover:text-foreground"
-                  : "text-gold border-gold/50 hover:bg-gold hover:text-[color:var(--navy-deep)]"
-              }`}
+              className="ml-2 inline-flex items-center justify-center bg-gold text-[color:var(--navy-deep)] px-7 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold leading-none transition-colors duration-300 hover:bg-[color:var(--gold-light)]"
             >
               Apply
             </Link>
@@ -162,7 +154,7 @@ export function Nav() {
                 <Link
                   to="/apply"
                   onClick={() => setOpen(false)}
-                  className="mt-2 text-[12px] uppercase tracking-[0.22em] text-gold self-start border-b border-gold/40 pb-1"
+                  className="mt-2 self-start inline-flex items-center justify-center bg-gold text-[color:var(--navy-deep)] px-7 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold leading-none"
                 >
                   Apply
                 </Link>
