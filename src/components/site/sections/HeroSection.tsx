@@ -16,25 +16,44 @@ export function HeroSection() {
         };
 
   return (
-    <section className="relative navy-section grain overflow-hidden">
-      <div className="grid lg:grid-cols-2 items-stretch">
-        {/* Editorial column */}
-        <div className="order-2 lg:order-1 grid-left-align pt-28 lg:pt-36 pb-20 lg:pb-28 flex flex-col justify-center">
+    <section className="relative navy-section grain overflow-hidden min-h-[54rem] lg:min-h-[min(60rem,100svh)]">
+      <motion.img
+        initial={reduce ? undefined : { opacity: 0, scale: 1.04 }}
+        animate={reduce ? undefined : { opacity: 1, scale: 1 }}
+        transition={{ duration: 2, delay: 0.1, ease }}
+        src={heroPortrait}
+        alt="A woman with luminous, natural skin in soft warm light"
+        width={1024}
+        height={1408}
+        className="absolute inset-0 h-full w-full object-cover object-[66%_center] img-duotone"
+      />
+      <div aria-hidden className="absolute inset-0 bg-[color:var(--navy-deep)]/55" />
+      <div
+        aria-hidden
+        className="absolute inset-y-0 left-0 w-full lg:w-[74%] bg-gradient-to-r from-[color:var(--navy-deep)] via-[color:var(--navy-deep)]/90 to-transparent"
+      />
+
+      <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-end lg:items-center">
+        <div className="w-full pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-40 lg:pb-24">
+          <div className="max-w-[68rem]">
           <motion.div {...rise(0)} className="flex items-center gap-5">
             <span className="w-12 rule-gold" />
             <span className="eyebrow">Purpose-built for MedSpa owners</span>
           </motion.div>
 
-          <motion.h1 {...rise(0.12)} className="mt-12 font-display font-light text-foreground w-full"
-            style={{ fontSize: "clamp(3.25rem, 6.6vw, 7rem)", lineHeight: 1.02, letterSpacing: "-0.02em" }}>
+          <motion.h1
+            {...rise(0.12)}
+            className="mt-9 sm:mt-12 max-w-[13ch] font-display font-light text-foreground"
+            style={{ fontSize: "clamp(3.5rem, 6.8vw, 7rem)", lineHeight: 0.98 }}
+          >
             Your dormant patient list is hiding{" "}
             <span className="gold-italic">$30,000</span> in booked revenue.
           </motion.h1>
 
           <motion.p
             {...rise(0.24)}
-            className="mt-10 w-full max-w-none text-foreground/85"
-            style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.4rem)", lineHeight: 1.8, fontWeight: 300, letterSpacing: "0.005em" }}
+            className="mt-8 sm:mt-10 max-w-[49rem] text-foreground/90"
+            style={{ fontSize: "clamp(1.15rem, 1.45vw, 1.4rem)", lineHeight: 1.72, fontWeight: 300 }}
           >
             AURA finds every patient who visited once and disappeared, and brings them back,
             with a personalized SMS and email sequence that books appointments automatically.
@@ -55,38 +74,8 @@ export function HeroSection() {
               See How It Works
             </a>
           </motion.div>
-
+          </div>
         </div>
-
-        {/* Photographic column: full-height, edge to edge */}
-        <motion.div
-          initial={reduce ? undefined : { opacity: 0, scale: 1.06 }}
-          animate={reduce ? undefined : { opacity: 1, scale: 1 }}
-          transition={{ duration: 2, delay: 0.15, ease }}
-          className="order-1 lg:order-2 relative overflow-hidden min-h-[62vh] lg:min-h-screen"
-        >
-          <img
-            src={heroPortrait}
-            alt="A woman with luminous, natural skin in soft warm light"
-            width={1024}
-            height={1408}
-            className="absolute inset-0 w-full h-full object-cover object-[58%_28%] img-duotone"
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(6,22,37,0.96) 0%, rgba(6,22,37,0.6) 14%, rgba(6,22,37,0.12) 42%, rgba(6,22,37,0) 70%), linear-gradient(180deg, rgba(6,22,37,0.28) 0%, rgba(6,22,37,0) 18%, rgba(6,22,37,0.62) 100%)",
-              mixBlendMode: "multiply",
-            }}
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "rgba(6,22,37,0.22)" }}
-          />
-        </motion.div>
       </div>
     </section>
   );
