@@ -75,7 +75,7 @@ export function Nav() {
                   AURA
                 </span>
                 <span
-                  className={`text-[9px] uppercase tracking-[0.42em] transition-colors duration-500 ${
+                  className={`font-display text-[1rem] sm:text-[1.1rem] tracking-[0.08em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--gold-dark)]" : "text-gold/85"
                   }`}
                 >
