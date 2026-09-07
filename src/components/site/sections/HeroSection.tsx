@@ -76,6 +76,18 @@ export function HeroSection() {
               See How It Works
             </a>
           </motion.div>
+
+          {/* Mobile: full portrait below the copy so nothing covers her face */}
+          <motion.img
+            initial={reduce ? undefined : { opacity: 0 }}
+            animate={reduce ? undefined : { opacity: 1 }}
+            transition={{ duration: 1.4, delay: 0.4, ease }}
+            src={heroPortrait}
+            alt="A woman with luminous, natural skin in soft warm light"
+            width={1024}
+            height={1408}
+            className="lg:hidden mt-14 mx-auto w-full max-w-[30rem] h-auto object-contain img-duotone"
+          />
         </div>
       </div>
     </section>
