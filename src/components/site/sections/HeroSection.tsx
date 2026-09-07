@@ -17,25 +17,27 @@ export function HeroSection() {
 
   return (
     <section className="relative navy-section grain overflow-hidden min-h-[54rem] lg:min-h-[min(60rem,100svh)]">
-      <motion.img
-        initial={reduce ? undefined : { opacity: 0, scale: 1.04 }}
-        animate={reduce ? undefined : { opacity: 1, scale: 1 }}
-        transition={{ duration: 2, delay: 0.1, ease }}
-        src={heroPortrait}
-        alt="A woman with luminous, natural skin in soft warm light"
-        width={1024}
-        height={1408}
-        className="absolute inset-0 h-full w-full object-cover object-[66%_center] img-duotone"
-      />
-      <div aria-hidden className="absolute inset-0 bg-[color:var(--navy-deep)]/55" />
+      {/* Full portrait, right side — never cropped, never behind the copy */}
+      <div className="hidden lg:flex absolute inset-0 justify-end items-center pointer-events-none">
+        <motion.img
+          initial={reduce ? undefined : { opacity: 0, scale: 1.03 }}
+          animate={reduce ? undefined : { opacity: 1, scale: 1 }}
+          transition={{ duration: 2, delay: 0.1, ease }}
+          src={heroPortrait}
+          alt="A woman with luminous, natural skin in soft warm light"
+          width={1024}
+          height={1408}
+          className="h-full w-auto max-w-none object-contain object-right-center img-duotone"
+        />
+      </div>
+      {/* Soft edge so the portrait melts into the navy, left edge of the photo */}
       <div
         aria-hidden
-        className="absolute inset-y-0 left-0 w-full lg:w-[74%] bg-gradient-to-r from-[color:var(--navy-deep)] via-[color:var(--navy-deep)]/90 to-transparent"
+        className="hidden lg:block absolute inset-y-0 right-0 w-[58%] bg-gradient-to-l from-transparent via-transparent to-[color:var(--navy-deep)]"
       />
 
-      <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-end lg:items-center">
-        <div className="w-full pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-40 lg:pb-24">
-          <div className="max-w-[68rem]">
+      <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-center">
+        <div className="w-full pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-40 lg:pb-24 lg:max-w-[52%]">
           <motion.div {...rise(0)} className="flex items-center gap-5">
             <span className="w-12 rule-gold" />
             <span className="eyebrow">Purpose-built for MedSpa owners</span>
@@ -74,7 +76,18 @@ export function HeroSection() {
               See How It Works
             </a>
           </motion.div>
-          </div>
+
+          {/* Mobile: full portrait below the copy so nothing covers her face */}
+          <motion.img
+            initial={reduce ? undefined : { opacity: 0 }}
+            animate={reduce ? undefined : { opacity: 1 }}
+            transition={{ duration: 1.4, delay: 0.4, ease }}
+            src={heroPortrait}
+            alt="A woman with luminous, natural skin in soft warm light"
+            width={1024}
+            height={1408}
+            className="lg:hidden mt-14 mx-auto w-full max-w-[30rem] h-auto object-contain img-duotone"
+          />
         </div>
       </div>
     </section>
