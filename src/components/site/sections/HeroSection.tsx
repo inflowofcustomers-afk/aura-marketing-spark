@@ -18,7 +18,7 @@ export function HeroSection() {
   return (
     <section className="relative navy-section grain overflow-hidden min-h-[54rem] lg:min-h-[min(60rem,100svh)]">
       {/* Full portrait, right side — never cropped, never behind the copy */}
-      <div className="absolute inset-0 flex justify-end items-center pointer-events-none">
+      <div className="hidden lg:flex absolute inset-0 justify-end items-center pointer-events-none">
         <motion.img
           initial={reduce ? undefined : { opacity: 0, scale: 1.03 }}
           animate={reduce ? undefined : { opacity: 1, scale: 1 }}
@@ -33,7 +33,7 @@ export function HeroSection() {
       {/* Soft edge so the portrait melts into the navy, left edge of the photo */}
       <div
         aria-hidden
-        className="absolute inset-y-0 right-0 w-full lg:w-[58%] bg-gradient-to-l from-transparent via-transparent to-[color:var(--navy-deep)]"
+        className="hidden lg:block absolute inset-y-0 right-0 w-[58%] bg-gradient-to-l from-transparent via-transparent to-[color:var(--navy-deep)]"
       />
 
       <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-center">
