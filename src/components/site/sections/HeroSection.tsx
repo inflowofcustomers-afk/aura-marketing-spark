@@ -27,13 +27,13 @@ export function HeroSection() {
           alt="A woman with luminous, natural skin in soft warm light"
           width={1024}
           height={1408}
-          className="h-[82%] w-auto max-w-none object-contain object-right-center img-duotone"
+          className="h-[82%] w-auto max-w-none object-contain object-right-center img-duotone hero-portrait-blend"
         />
       </div>
-      {/* Soft edge so the portrait melts into the navy, left edge of the photo */}
+      {/* A broad tonal veil completes the seamless fade between portrait and navy. */}
       <div
         aria-hidden
-        className="hidden lg:block absolute inset-y-0 right-0 w-[58%] bg-gradient-to-l from-transparent via-transparent to-[color:var(--navy-deep)]"
+        className="hidden lg:block absolute inset-y-0 right-0 w-[64%] hero-portrait-veil"
       />
 
       <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-center">
