@@ -249,6 +249,15 @@
     filter: saturate(0.85) contrast(1.02);
   }
 
+  .hero-portrait-blend {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.16) 10%, #000 35%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.16) 10%, #000 35%);
+  }
+
+  .hero-portrait-veil {
+    background: linear-gradient(to right, var(--navy-deep) 0%, color-mix(in oklab, var(--navy-deep) 70%, transparent) 18%, transparent 48%);
+  }
+
   /* Legacy aliases kept so unrelated pages keep rendering, now restrained */
   .card-hairline {
     background: transparent;

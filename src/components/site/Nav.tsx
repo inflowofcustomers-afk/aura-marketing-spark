@@ -66,7 +66,7 @@ export function Nav() {
         >
           <div className={scrolled ? "" : "py-6 sm:py-8"}>
             <motion.div {...enter(0.05)} className="min-w-0">
-              <Link to="/" className="group inline-flex items-baseline gap-3 leading-none">
+              <Link to="/" className="group inline-flex items-center gap-3 leading-none">
                 <span
                   className={`font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.3em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--ink)]" : "text-foreground"
@@ -75,7 +75,7 @@ export function Nav() {
                   AURA
                 </span>
                 <span
-                  className={`font-display text-[1rem] sm:text-[1.1rem] tracking-[0.08em] transition-colors duration-500 ${
+                  className={`relative -top-[0.18rem] font-display text-[1rem] sm:text-[1.1rem] tracking-[0.08em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--gold-dark)]" : "text-gold/85"
                   }`}
                 >
