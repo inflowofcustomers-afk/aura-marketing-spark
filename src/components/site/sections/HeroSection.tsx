@@ -27,7 +27,7 @@ export function HeroSection() {
           alt="A woman with luminous, natural skin in soft warm light"
           width={1024}
           height={1408}
-          className="h-full w-auto max-w-none object-contain object-right-center img-duotone"
+          className="h-[82%] w-auto max-w-none object-contain object-right-center img-duotone"
         />
       </div>
       {/* Soft edge so the portrait melts into the navy, left edge of the photo */}
