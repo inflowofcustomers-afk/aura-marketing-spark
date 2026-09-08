@@ -35,6 +35,15 @@ export function HeroSection() {
         aria-hidden
         className="hidden lg:block absolute inset-y-0 right-0 w-[64%] hero-portrait-veil"
       />
+      {/* Bottom fade blends the portrait's lower edge into the navy ground. */}
+      <div
+        aria-hidden
+        className="hidden lg:block absolute inset-x-0 bottom-0 h-[40%] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent 0%, var(--navy-deep) 78%)",
+        }}
+      />
 
       <div className="relative z-10 canvas-grid min-h-[54rem] lg:min-h-[min(60rem,100svh)] flex items-center">
         <div className="w-full pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-40 lg:pb-24 lg:max-w-[52%]">
@@ -71,23 +80,34 @@ export function HeroSection() {
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start inline-flex items-center justify-center whitespace-nowrap px-7 py-4 text-[12px] uppercase tracking-[0.2em] border border-foreground/25 text-foreground hover:border-gold hover:text-gold transition-all duration-500"
+              className="self-start btn-quiet btn-quiet-plain"
             >
               See How It Works
             </a>
           </motion.div>
 
           {/* Mobile: full portrait below the copy so nothing covers her face */}
-          <motion.img
-            initial={reduce ? undefined : { opacity: 0 }}
-            animate={reduce ? undefined : { opacity: 1 }}
-            transition={{ duration: 1.4, delay: 0.4, ease }}
-            src={heroPortrait}
-            alt="A woman with luminous, natural skin in soft warm light"
-            width={1024}
-            height={1408}
-            className="lg:hidden mt-14 mx-auto w-full max-w-[30rem] h-auto object-contain img-duotone"
-          />
+          <div className="lg:hidden relative mt-14 mx-auto w-full max-w-[30rem]">
+            <motion.img
+              initial={reduce ? undefined : { opacity: 0 }}
+              animate={reduce ? undefined : { opacity: 1 }}
+              transition={{ duration: 1.4, delay: 0.4, ease }}
+              src={heroPortrait}
+              alt="A woman with luminous, natural skin in soft warm light"
+              width={1024}
+              height={1408}
+              className="w-full h-auto object-contain img-duotone"
+            />
+            {/* Bottom fade into navy on mobile too */}
+            <div
+              aria-hidden
+              className="absolute inset-x-0 bottom-0 h-[35%] pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, var(--navy-deep) 85%)",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
