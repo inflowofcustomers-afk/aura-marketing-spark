@@ -71,7 +71,7 @@ export function HeroSection() {
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start inline-flex items-center justify-center whitespace-nowrap px-7 py-4 text-[12px] uppercase tracking-[0.2em] border border-foreground/25 text-foreground hover:border-gold hover:text-gold transition-all duration-500"
+              className="self-start btn-quiet btn-quiet-plain"
             >
               See How It Works
             </a>
