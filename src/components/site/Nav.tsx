@@ -66,20 +66,31 @@ export function Nav() {
         >
           <div className={scrolled ? "" : "py-6 sm:py-8"}>
             <motion.div {...enter(0.05)} className="min-w-0">
-              <Link to="/" className="group inline-flex items-center gap-3 leading-none">
+              <Link
+                to="/"
+                className="group inline-flex flex-col leading-none"
+                style={{ lineHeight: 1 }}
+              >
                 <span
-                  className={`font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.3em] transition-colors duration-500 ${
+                  className={`font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.28em] transition-colors duration-500 ${
                     ink ? "text-[color:var(--ink)]" : "text-foreground"
                   }`}
                 >
                   AURA
                 </span>
                 <span
-                  className={`relative -top-[0.18rem] font-display text-[1rem] sm:text-[1.1rem] tracking-[0.08em] transition-colors duration-500 ${
-                    ink ? "text-[color:var(--gold-dark)]" : "text-gold/85"
+                  className={`mt-1 font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.28em] uppercase transition-colors duration-500 ${
+                    ink ? "text-[color:var(--gold-dark)]" : "text-gold"
                   }`}
                 >
-                  Invites&trade;
+                  Invites
+                  <span
+                    className={`align-super text-[0.5em] tracking-normal ml-1 ${
+                      ink ? "text-[color:var(--gold-dark)]" : "text-gold"
+                    }`}
+                  >
+                    &trade;
+                  </span>
                 </span>
               </Link>
             </motion.div>
