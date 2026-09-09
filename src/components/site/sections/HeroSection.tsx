@@ -86,8 +86,8 @@ export function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Mobile: full portrait below the copy so nothing covers her face */}
-          <div className="lg:hidden relative mt-14 mx-auto w-full max-w-[30rem]">
+          {/* Mobile: full-bleed portrait feathered on all edges into the navy field */}
+          <div className="lg:hidden relative mt-14 -mx-[1.5rem] sm:-mx-[2.5rem]">
             <motion.img
               initial={reduce ? undefined : { opacity: 0 }}
               animate={reduce ? undefined : { opacity: 1 }}
@@ -96,16 +96,7 @@ export function HeroSection() {
               alt="A woman with luminous, natural skin in soft warm light"
               width={1024}
               height={1408}
-              className="w-full h-auto object-contain img-duotone"
-            />
-            {/* Bottom fade into navy on mobile too */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 bottom-0 h-[35%] pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to bottom, transparent 0%, var(--navy-deep) 85%)",
-              }}
+              className="block w-full h-auto object-contain img-duotone hero-portrait-mobile-blend"
             />
           </div>
         </div>
