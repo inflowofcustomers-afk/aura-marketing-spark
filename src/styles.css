@@ -258,6 +258,18 @@
     background: linear-gradient(to right, var(--navy-deep) 0%, color-mix(in oklab, var(--navy-deep) 70%, transparent) 18%, transparent 48%);
   }
 
+  /* Mobile portrait: feather all four edges so it emerges from the navy field */
+  .hero-portrait-mobile-blend {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 13%, #000 62%, transparent 93%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 13%, #000 62%, transparent 93%);
+    mask-composite: intersect;
+  }
+
   /* Legacy aliases kept so unrelated pages keep rendering, now restrained */
   .card-hairline {
     background: transparent;
