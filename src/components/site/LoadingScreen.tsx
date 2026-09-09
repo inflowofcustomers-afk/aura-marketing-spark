@@ -69,7 +69,8 @@ export function LoadingScreen() {
             lineHeight: 1,
           }}
         >
-          AURA
+          AURA <span style={{ fontSize: "0.76em", letterSpacing: "0.04em" }}>Invites</span>
+          <span style={{ fontSize: "0.28em", verticalAlign: "top", letterSpacing: 0 }}>™</span>
         </span>
         {/* Underline that draws in during "hold" phase */}
         <div

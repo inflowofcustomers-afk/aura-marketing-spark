@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { BrandLogo } from "./BrandLogo";
 
 const linkCls =
   "text-base font-light text-foreground/85 hover:text-gold transition-colors duration-500";
@@ -10,13 +11,7 @@ export function Footer() {
         <div className="rule-faint" />
         <div className="py-20 sm:py-28 grid gap-14 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="font-display text-2xl tracking-[0.28em]">
-              AURA
-            </div>
-            <div className="mt-1 text-[11px] uppercase tracking-[0.34em] text-foreground/70">
-              Invites
-              <span className="align-super text-[8px] tracking-normal ml-1">&trade;</span>
-            </div>
+            <BrandLogo className="text-2xl text-foreground" />
             <p className="mt-8 text-base font-light leading-relaxed text-foreground/80 max-w-[26ch]">
               Purpose-built patient reactivation for MedSpa owners.
             </p>
