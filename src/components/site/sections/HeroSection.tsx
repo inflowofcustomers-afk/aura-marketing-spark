@@ -86,7 +86,7 @@ export function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Mobile: full-bleed portrait that blends into the navy field like desktop */}
+          {/* Mobile: full-bleed portrait feathered on all edges into the navy field */}
           <div className="lg:hidden relative mt-14 -mx-[1.5rem] sm:-mx-[2.5rem]">
             <motion.img
               initial={reduce ? undefined : { opacity: 0 }}
@@ -96,42 +96,7 @@ export function HeroSection() {
               alt="A woman with luminous, natural skin in soft warm light"
               width={1024}
               height={1408}
-              className="block w-full h-auto object-contain img-duotone"
-            />
-            {/* Top fade blends the portrait's upper edge into the navy copy field */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 top-0 h-[26%] pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to bottom, var(--navy-deep) 0%, transparent 100%)",
-              }}
-            />
-            {/* Bottom fade blends the portrait's lower edge into the navy ground */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 bottom-0 h-[42%] pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to bottom, transparent 0%, var(--navy-deep) 82%)",
-              }}
-            />
-            {/* Side fades complete the seamless edge blend into navy */}
-            <div
-              aria-hidden
-              className="absolute inset-y-0 left-0 w-[16%] pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to right, var(--navy-deep) 0%, transparent 100%)",
-              }}
-            />
-            <div
-              aria-hidden
-              className="absolute inset-y-0 right-0 w-[16%] pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to left, var(--navy-deep) 0%, transparent 100%)",
-              }}
+              className="block w-full h-auto object-contain img-duotone hero-portrait-mobile-blend"
             />
           </div>
         </div>
