@@ -73,7 +73,7 @@ export function Offer() {
               className="mt-12 sm:mt-16 font-display font-light text-foreground tracking-[-0.025em]"
               style={{ fontSize: "clamp(2.75rem, 7.4vw, 6.25rem)", lineHeight: 0.98 }}
             >
-              The AURA INVITES&trade;
+              The AURA Invites&trade;
               <br />
               Reactivation Pilot.
             </h2>

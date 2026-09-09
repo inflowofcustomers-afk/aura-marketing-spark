@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { BrandLogo } from "./BrandLogo";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -66,33 +67,12 @@ export function Nav() {
         >
           <div className={scrolled ? "" : "py-6 sm:py-8"}>
             <motion.div {...enter(0.05)} className="min-w-0">
-              <Link
-                to="/"
-                className="group inline-flex flex-col leading-none"
-                style={{ lineHeight: 1 }}
-              >
-                <span
-                  className={`font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.28em] transition-colors duration-500 ${
-                    ink ? "text-[color:var(--ink)]" : "text-foreground"
-                  }`}
-                >
-                  AURA
-                </span>
-                <span
-                  className={`mt-1 font-display text-[1.5rem] sm:text-[1.65rem] leading-none tracking-[0.28em] uppercase transition-colors duration-500 ${
-                    ink ? "text-[color:var(--gold-dark)]" : "text-gold"
-                  }`}
-                >
-                  Invites
-                  <span
-                    className={`align-super text-[0.5em] tracking-normal ml-1 ${
-                      ink ? "text-[color:var(--gold-dark)]" : "text-gold"
-                    }`}
-                  >
-                    &trade;
-                  </span>
-                </span>
-              </Link>
+              <BrandLogo
+                dark={ink}
+                className={`text-[1.45rem] sm:text-[1.6rem] transition-colors duration-500 ${
+                  ink ? "text-ink" : "text-foreground"
+                }`}
+              />
             </motion.div>
           </div>
 
