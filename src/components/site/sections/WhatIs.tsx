@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/site/Motion";
-import interiorDetail from "@/assets/interior-detail.jpg";
+import whatIsAura from "@/assets/what-is-aura.jpg";
 
 export function WhatIs() {
   return (
