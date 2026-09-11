@@ -8,7 +8,7 @@ export function FinalCTA() {
         <Reveal>
           <div className="flex items-center justify-center gap-5">
             <span className="w-12" style={{ height: 1, background: "var(--gold-dark)" }} />
-            <span className="eyebrow eyebrow-dark">Founder Spots Are Limited</span>
+            <span className="eyebrow eyebrow-dark">Founder Applications Are Closed</span>
             <span className="w-12" style={{ height: 1, background: "var(--gold-dark)" }} />
           </div>
         </Reveal>
@@ -27,13 +27,13 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-16 body-editorial text-navy-deep/85 max-w-2xl mx-auto">
-            If the math makes sense for your practice, the application takes 3 minutes. We'll reach out within 24 hours, and if it's a fit, your campaign goes live within 7 days.
+            Founder applications are closed for now. Join the waitlist in under 2 minutes and you'll be first to hear when the next round opens, at the same founder rate.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-16">
             <CTALink to="/apply" variant="dark">
-              Apply for a Founder Spot
+              Join the Waitlist
             </CTALink>
           </div>
         </Reveal>

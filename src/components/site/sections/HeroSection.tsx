@@ -76,7 +76,7 @@ export function HeroSection() {
             className="mt-14 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center"
           >
             <CTALink to="/apply" variant="gold" className="self-start">
-              Apply for a Founder Spot
+              Join the Waitlist
             </CTALink>
             <a
               href="#how-it-works"

@@ -27,7 +27,7 @@ export function Footer() {
           <div>
             <div className="eyebrow">Get Started</div>
             <ul className="mt-7 space-y-4">
-              <li><Link to="/apply" className={linkCls}>Apply</Link></li>
+              <li><Link to="/apply" className={linkCls}>Join Waitlist</Link></li>
               <li><a href="https://app.aurainvites.com" className={linkCls}>Login</a></li>
             </ul>
           </div>

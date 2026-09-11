@@ -99,7 +99,7 @@ export function Nav() {
               to="/apply"
               className="ml-2 inline-flex items-center justify-center bg-gold text-[color:var(--navy-deep)] px-7 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold leading-none transition-colors duration-300 hover:bg-[color:var(--gold-light)]"
             >
-              Apply
+              Join Waitlist
             </Link>
           </motion.nav>
 
@@ -147,7 +147,7 @@ export function Nav() {
                   onClick={() => setOpen(false)}
                   className="mt-2 self-start inline-flex items-center justify-center bg-gold text-[color:var(--navy-deep)] px-7 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold leading-none"
                 >
-                  Apply
+                  Join Waitlist
                 </Link>
               </div>
             </motion.div>
