@@ -8,7 +8,7 @@ const faqs = [
   { q: "What booking software do you support?", a: "Mangomint and Boulevard natively. If you use something else, we work from a CSV export. Most owners can generate that in under 5 minutes." },
   { q: "What do I have to do?", a: "Twenty minutes on an onboarding call. Connect your account or send the CSV. Answer a few questions so we write messaging that sounds like you. That's it." },
   { q: "Is there a guarantee?", a: "The $5,000 setup includes 20 booked appointments. If we don't deliver 20 in the 60-day window, we keep working at no additional cost until we do." },
-  { q: "Can't I just do this myself, or have someone in-house handle it?", a: "You can, and if you have a marketing background, even better. The real question is whether you have the time to run a multi-touch sequence, track every reply, and follow up at the right moment without it falling through the cracks. If you've run a reactivation campaign recently, what were the results? If you booked 20 appointments from it, you may not need us. If not, that's exactly the gap we fill." },
+  { q: "Can't I just do this myself, or have someone in-house handle it?", a: "You can, and if you have a marketing background, even better. The real question is whether you have the time to run a multi-touch sequence, track every reply, and follow up at the right moment without it falling through the cracks. If you've run a reactivation campaign recently, what were the results? If you booked 20 appointments from it, you may not need us. If not, that's exactly the gap we fill. Our specialized knowledge, proprietary IP, and proven process are often the missing link between effort and appointments on the books." },
 ];
 
 export function FAQ() {
