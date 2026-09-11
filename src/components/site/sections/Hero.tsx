@@ -32,7 +32,7 @@ export function Hero() {
         <Reveal delay={0.3}>
           <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <CTALink to="/apply" variant="gold">
-              Apply for a Founder Spot <ArrowRight size={16} />
+              Join the Waitlist <ArrowRight size={16} />
             </CTALink>
             <a
               href="#how-it-works"
@@ -46,7 +46,7 @@ export function Hero() {
         <Reveal delay={0.45}>
           <div className="mt-16 flex items-center justify-center gap-3 text-xs eyebrow opacity-70">
             <span className="h-px w-8 bg-gold/50" />
-            <span>Limited founder spots</span>
+            <span>Founder spots closed, waitlist open</span>
             <span className="h-px w-8 bg-gold/50" />
           </div>
         </Reveal>

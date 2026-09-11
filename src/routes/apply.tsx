@@ -7,16 +7,17 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
-      { title: "Apply | AURA Invites™" },
+      { title: "Join the Waitlist | AURA Invites™" },
       {
         name: "description",
         content:
-          "Apply for a founder spot. AURA is accepting a limited number of MedSpa partners.",
+          "Founder applications are closed. Join the AURA Invites waitlist to be first in line when the next round of MedSpa partners opens.",
       },
-      { property: "og:title", content: "Apply | AURA Invites™" },
+      { property: "og:title", content: "Join the Waitlist | AURA Invites™" },
       {
         property: "og:description",
-        content: "Apply for a founder spot with AURA Invites.",
+        content:
+          "Founder applications are closed. Join the AURA Invites waitlist for the next round.",
       },
     ],
   }),
@@ -94,16 +95,16 @@ function ApplyPage() {
           <Reveal>
             <div className="text-center">
               <span className="eyebrow" style={{ color: "var(--gold-dark)" }}>
-                Founder Application
+                Applications Closed, Waitlist Open
               </span>
               <h1 className="mt-4 font-display text-4xl sm:text-6xl leading-[1.05] text-navy-deep">
-                Apply for a{" "}
-                <span className="gold-gradient-text italic">Founder Spot</span>
+                Join the{" "}
+                <span className="gold-gradient-text italic">Waitlist</span>
               </h1>
               <p className="mt-5 text-navy-deep/65 max-w-xl mx-auto">
-                Three founder spots available at locked-in pricing. Tell us about your
-                practice and we'll reach out within 24 hours. If it's a fit, your
-                campaign goes live within 7 days.
+                All three founder spots are filled, so applications are closed for now.
+                Tell us about your practice and we'll hold your place in line. Waitlist
+                practices hear first when the next round opens, at the same founder rate.
               </p>
             </div>
           </Reveal>
@@ -130,10 +131,11 @@ function ApplyPage() {
                     <CheckCircle2 style={{ color: "var(--gold-dark)" }} size={28} />
                   </div>
                   <h2 className="mt-6 font-display text-3xl text-navy-deep">
-                    Application Received
+                    You're on the Waitlist
                   </h2>
                   <p className="mt-3 text-navy-deep/65">
-                    [Confirmation copy: we'll reach out within X business days.]
+                    Your place is saved. We'll email you the moment the next round of
+                    founder spots opens, before it goes public.
                   </p>
                 </div>
               ) : (
@@ -178,8 +180,8 @@ function ApplyPage() {
                         />
                       </label>
                       <p className="mt-2 text-xs text-navy-deep/45 leading-relaxed">
-                        Used only to follow up regarding your application. Providing your
-                        phone number does not enroll you in marketing SMS.
+                        Used only to follow up regarding your waitlist request. Providing
+                        your phone number does not enroll you in marketing SMS.
                       </p>
                     </div>
                   </div>
@@ -200,7 +202,7 @@ function ApplyPage() {
                     type="submit"
                     className="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy-deep px-7 py-3.5 text-[15px] font-medium hover:bg-gold-light transition-all hover:-translate-y-0.5 shadow-[0_10px_40px_-12px_rgba(184,150,62,0.5)]"
                   >
-                    Submit Application <ArrowRight size={16} />
+                    Join the Waitlist <ArrowRight size={16} />
                   </button>
                   <p className="text-xs text-navy-deep/45">
                     By submitting this form you agree to our{" "}
@@ -219,7 +221,7 @@ function ApplyPage() {
                     >
                       Privacy Policy
                     </Link>
-                    . Submitting this application does not enroll you in SMS
+                    . Joining the waitlist does not enroll you in SMS
                     marketing. AI Ops, LLC operates the Aura Invites platform.
                   </p>
                 </form>

@@ -81,8 +81,8 @@ export function Offer() {
               className="mt-10 sm:mt-14 text-foreground/85 font-light max-w-[60ch] w-[92%] lg:w-[64%]"
               style={{ fontSize: "clamp(1.0625rem, 1.35vw, 1.375rem)", lineHeight: 1.68 }}
             >
-              Three founder spots. Lower setup cost. Direct access to our team. Locked-in rate
-              that won't be available to anyone else.
+              All three founder spots are now filled. The waitlist is open for the next round, at the
+              same locked-in founder rate for everyone we bring on from the list.
             </p>
           </Reveal>
         </div>
@@ -95,7 +95,7 @@ export function Offer() {
 
             <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 py-16 sm:py-24 items-start">
               <div className="lg:col-span-6">
-                <div className="eyebrow">Founder Pricing</div>
+                <div className="eyebrow">Founder Pricing, Held for the Waitlist</div>
                 <div className="mt-8 flex flex-wrap items-baseline gap-5">
                   <span
                     ref={ref as React.RefObject<HTMLSpanElement>}
@@ -112,7 +112,7 @@ export function Offer() {
                 </p>
                 <div className="mt-14">
                   <CTALink to="/apply" variant="solid">
-                    Apply for a Founder Spot
+                    Join the Waitlist
                   </CTALink>
                 </div>
               </div>
