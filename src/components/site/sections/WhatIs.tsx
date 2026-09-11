@@ -29,8 +29,8 @@ export function WhatIs() {
 
         <Reveal delay={0.2}>
           <img
-            src={interiorDetail}
-            alt="Warm daylight across travertine stone, sheer linen and fluted glass in a luxury aesthetic clinic"
+            src={whatIsAura}
+            alt="A phone glowing softly with a notification on a warm marble vanity, beside folded linen and a ceramic cup"
             width={1024}
             height={1280}
             loading="lazy"
