@@ -30,7 +30,7 @@ export function WhatIs() {
         <Reveal delay={0.2}>
           <img
             src={whatIsAura}
-            alt="A busy medspa waiting lobby seen from the chest down: five seated figures in woven lounge chairs, hands holding phones and cups, on a polished travertine floor"
+            alt="A woman's hand holding a phone showing a soft message glow, in a marble mansion bathroom with warm daylight"
             width={1024}
             height={1280}
             loading="lazy"
