@@ -35,7 +35,7 @@ function CinematicBand() {
       <div className="relative overflow-hidden h-[58vh] sm:h-[86vh]">
         <motion.img
           src={appointmentBook}
-          alt="An open leather-bound appointment book on a warm wood desk in a luxury MedSpa, with a fountain pen and soft daylight"
+          alt="A laptop calendar full of booked MedSpa appointments on a warm travertine desk, with a fountain pen and soft daylight"
           width={1600}
           height={1008}
           loading="lazy"
