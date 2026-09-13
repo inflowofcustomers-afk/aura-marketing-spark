@@ -34,7 +34,7 @@ export function WhatIs() {
             width={1024}
             height={1280}
             loading="lazy"
-            className="w-full h-[480px] lg:h-[920px] object-cover img-duotone"
+            className="w-full h-[480px] lg:h-[920px] object-cover img-duotone img-cream-blend"
           />
         </Reveal>
       </div>
