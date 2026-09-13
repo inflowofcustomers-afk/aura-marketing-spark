@@ -270,6 +270,18 @@
     mask-composite: intersect;
   }
 
+  /* What Is AURA image: feather all four edges into the cream background */
+  .img-cream-blend {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 8%, #000 84%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 8%, #000 84%, transparent 100%);
+    mask-composite: intersect;
+  }
+
   /* Legacy aliases kept so unrelated pages keep rendering, now restrained */
   .card-hairline {
     background: transparent;
