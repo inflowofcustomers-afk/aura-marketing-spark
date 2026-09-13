@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { Reveal } from "@/components/site/Motion";
 import { CTALink } from "@/components/site/CTA";
 import { usePriceCounter } from "@/hooks/usePriceCounter";
-import interior from "@/assets/interior-suite.jpg";
+import appointmentBook from "@/assets/appointment-book.jpg";
 
 const includes = [
   "AURA platform deployment",
@@ -34,8 +34,8 @@ function CinematicBand() {
     >
       <div className="relative overflow-hidden h-[58vh] sm:h-[86vh]">
         <motion.img
-          src={interior}
-          alt="A quiet, warm-toned aesthetic treatment suite in soft daylight"
+          src={appointmentBook}
+          alt="An open leather-bound appointment book on a warm wood desk in a luxury MedSpa, with a fountain pen and soft daylight"
           width={1600}
           height={1008}
           loading="lazy"
