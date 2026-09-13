@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { Reveal } from "@/components/site/Motion";
 import { CTALink } from "@/components/site/CTA";
 import { usePriceCounter } from "@/hooks/usePriceCounter";
-import interior from "@/assets/interior-suite.jpg";
+import appointmentBook from "@/assets/appointment-book.jpg";
 
 const includes = [
   "AURA platform deployment",
