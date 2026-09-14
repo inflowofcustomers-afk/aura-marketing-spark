@@ -73,14 +73,14 @@ export function HeroSection() {
 
           <motion.div
             {...rise(0.36)}
-            className="mt-14 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center"
+            className="mt-14 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center items-center sm:items-start"
           >
-            <CTALink to="/apply" variant="gold" className="self-start">
+            <CTALink to="/apply" variant="gold" className="self-center sm:self-start">
               Join the Waitlist
             </CTALink>
             <a
               href="#how-it-works"
-              className="self-start btn-quiet btn-quiet-plain"
+              className="self-center sm:self-start btn-quiet btn-quiet-plain"
             >
               See How It Works
             </a>
